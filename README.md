@@ -8,4 +8,6 @@
 
     4) Mi nombre es Gonzalo Esposito, tengo 31 anios. Soy Argentino, vivo en Capital Federal, provincia de Buenos Aires. Actualmente me dedico a la gastronomia, la cual me encanta y hace algunos meses que comence a estudiar la carrera de Programacion Web Full Stack con la idea, a futuro, de poder trabajar desde cualquier parte acompañando mi carrera como emprendedor gastronomico.
     
-    5. Hola soy Alejandra Ruiz integrante de grupo n 4 , vivo en San Miguel de Tucuman, soy contadora, y estudiante de Programacion Web Full Stack en DH, mi razon por aprender programacion es para poder trabajar remoto desde mi casa.
+    5) Hola soy Alejandra Ruiz integrante de grupo n 4 , vivo en San Miguel de Tucuman, soy contadora, y estudiante de Programacion Web Full Stack en DH, mi razon por aprender programacion es para poder trabajar remoto desde mi casa.
+
+    6) Mi nombre es Milagros Ferrini, soy Licencia en Comercialización y Comercio Internacional. Actualmente trabajo en General Electric, donde construimos parques eolicos a nuestros clientes y prestamos servicio de garantia y manteniemiento posterior. Decidí realizar este curso para conocer las bases de la programación y saber en un futuro que camino me gustaria seguir dentro de este mundo.
