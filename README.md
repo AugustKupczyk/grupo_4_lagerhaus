@@ -8,4 +8,4 @@
 
     4) Mi nombre es Gonzalo Esposito, tengo 31 anios. Soy Argentino, vivo en Capital Federal, provincia de Buenos Aires. Actualmente me dedico a la gastronomia, la cual me encanta y hace algunos meses que comence a estudiar la carrera de Programacion Web Full Stack con la idea, a futuro, de poder trabajar desde cualquier parte acompañando mi carrera como emprendedor gastronomico.
     
-    5. Hola soy Alejandra Ruiz integrante del grupo 4 soy contadora estamos para brindar nuestro servicios 
+    5. Hola soy Alejandra Ruiz integrante de grupo n 4 , vivo en San Miguel de Tucuman, soy contadora, y estudiante de Programacion Web Full Stack en DH, mi razon por aprender programacion es para poder trabajar remoto desde mi casa.
