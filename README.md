@@ -13,6 +13,8 @@
 
     Mi nombre es Milagros Ferrini, soy Licencia en Comercialización y Comercio Internacional. Actualmente trabajo en General Electric, donde construimos parques eolicos a nuestros clientes y prestamos servicio de garantia y manteniemiento posterior. Decidí realizar este curso para conocer las bases de la programación y saber en un futuro que camino me gustaria seguir dentro de este mundo.
 
+    Mi nombre es Benjamin Pons. Trabajo en un Registro de la Propiedad del Automotor y decidí hacer este curso como un desafío propio, ya que no conozco nada del tema, pero siempre me interesó. Además es un herramienta muy útil para salir a buscar trabajo, ya que creo que es un rubro que está en auge.
+    
     4) Sitios referentes:
     PedidosYa y Rappi: Plataformas ya establecidas en el mercado de delivery de comida, que presentan las mismas funcionalidades que se busca tener en LagerHaus.
     Desarmadero y Antares: Hamburgueserias/cervecerias que ofrecen no solo la misma linea de productos que LagerHaus, sino también presentan una proyeccion estetica similar a la buscada en el proyecto.
