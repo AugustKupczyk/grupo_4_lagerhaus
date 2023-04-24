@@ -1,0 +1,23 @@
+{
+  "name": "proyectogrupo4",
+  "version": "1.0.0",
+  "description": "git    1) Producto y/o servicios que brindara nuestro sitio:         Nuestra empresa brindara productos de comida y bebida para delivery: Tapeos, Hamburguesas, Sandwiches, Pizzas, Parrilla, Ensaladas, Bebidas con y sin alcohol.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AugustKupczyk/grupo_4_lagerhaus.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AugustKupczyk/grupo_4_lagerhaus/issues"
+  },
+  "homepage": "https://github.com/AugustKupczyk/grupo_4_lagerhaus#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

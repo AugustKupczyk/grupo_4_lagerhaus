@@ -20,3 +20,5 @@ git    1) Producto y/o servicios que brindara nuestro sitio:
     Desarmadero y Antares: Hamburgueserias/cervecerias que ofrecen no solo la misma linea de productos que LagerHaus, sino también presentan una proyeccion estetica similar a la buscada en el proyecto.
     La Birra Bar: Misma situación que los últimos referentes, pero también cuenta con la funcionalidad de venta online y delivery propio, que se busca ofrecer en LagerHaus.
     Fabric Sushi: Si bien el producto final no es el mismo, la funcionalidad que presenta la página web y app del restaurant, se asemeja a la deseada en LagerHaus.
+
+    Link de tablero hecho en Trello:  https://trello.com/b/vX83WEzY/sprint-2
