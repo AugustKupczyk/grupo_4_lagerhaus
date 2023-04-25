@@ -1,0 +1,26 @@
+*{
+    background-color: black;
+    color: white;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    width: 7vw;
+}
+
+.opciones-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.opcion{
+    margin-left: 15px;
+}
