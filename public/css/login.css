@@ -3,24 +3,85 @@
     color: white;
 }
 
-nav{
+main{
     display: flex;
-    flex-wrap: wrap;
-    font-size: 20px;
-    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 90px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 75vw;
+    align-self: center;
     align-items: center;
 }
 
-.logo{
-    width: 7vw;
+p{
+    margin-bottom: 30px;
+    font-size: 20px;
 }
 
-.opciones-nav{
+input[type="text"]{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 35px;
+    box-sizing:border-box;
+    padding: 12px;
+    border: 2px solid white;
+}
+
+input[type="password"]{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 35px;
+    box-sizing:border-box;
+    padding: 10px;
+    border: 2px solid white;
+}
+
+.recordar-ft-olvidar{
+    width: 100%;
+    margin-bottom: 25px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 12px;
 }
 
-.opcion{
-    margin-left: 15px;
+.recordar-check{
+    display: flex;
+}
+
+input[type="checkbox"] {
+    margin:0px 5px 0px 0px;
+    height: 12px;
+}
+
+#olvide{
+    color: rgb(129, 129, 129)
+}
+
+main button{
+    width: 100%;
+    height: 40px;
+    box-sizing:border-box;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ingresar{
+    margin-bottom: 20px;
+    height: 30px;
+    border: 2px solid #ff6a0098;
+    background-color: #FF6900;
+}
+
+.register{
+    margin-top: 30px;
+    align-self:center;
+    font-size: 13px;
+
 }

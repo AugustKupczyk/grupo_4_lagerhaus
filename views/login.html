@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header>
+    <!--<header>
         <nav>
             <a href="index.html"> <img class="logo" src="https://lagerhausbar.com/wp-content/uploads/2020/05/logo-lagerhaus.svg" alt="Logo Largerhaus"> </a>
             <div class="opciones-nav">
@@ -26,9 +26,33 @@
                 </span>
             </div>
         </nav>
-    </header>
-    
+    </header>-->
+    <br>
+    <br>
+    <br>
     <main>
+
+        <form action="/home" method="get">
+            <p>Ingresar</p>
+            <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+            <input type="password" name="password" id="password" placeholder="Contraseña">
+            <div class="recordar-ft-olvidar">
+                <div class="recordar-check">
+                    <input type="checkbox" name="Recordarme" id="Recordarme" value="Recordarme">
+                    <label for="Recordarme">Recordarme</label>
+                </div>
+                    <a id="olvide" href="#">Olvidé mi contraseña</a>
+            </div>
+            <button id ="ingresar" type="submit">Ingresar</button>
+        </form>
+        <br>
+        <form action="/Google" method="get">
+            <button type="submit">Ingresa con Google</button>
+        </form>
+        <form action="/Facebook" method="get">
+            <button type="submit">Ingresa con Facebook</button>
+        </form>
+        <a class="register" href="/register">Crea tu cuenta</a>
 
     </main>
 </body>
