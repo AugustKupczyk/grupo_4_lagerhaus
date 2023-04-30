@@ -1,0 +1,26 @@
+.logo-container {
+    display: flex;
+    height: 50vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#logo-main{
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+.fotos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* add 20 pixels of space between the images */
+
+}
+  
+.fotos img {
+    max-width: 100%; /* ensure that the images don't exceed their container */
+ }
