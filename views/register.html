@@ -3,11 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/register.css" rel="stylesheet">
 </head>
 <body>
     
+    <header>
+        <div class="list-container">
+            <nav class="navbar">
+                <div id="navbar-left">
+                    <a href="index.html"> <img class="logo" src="https://lagerhausbar.com/wp-content/uploads/2020/05/logo-lagerhaus.svg" alt="Logo Largerhaus" id="logo-navbar"> </a>
+                </div>
+                <ul class="navbar-right">
+                    <li><a href="#menu">HACE TU PEDIDO</a></li>
+                    <li><a href="#locales">LOCALES</a></li>
+                    <li><a href="#franquicias">FRANQUICIAS</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                </ul>
+                <div class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <form action="/home" method="get">
+            <p>Registro</p>
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+            <input type="password" name="password" id="password" placeholder="Contraseña">
+            <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirmar contraseña">
+            <button id ="enviar" type="submit">Enviar</button>
+        </form>
+        <br>
+        <form action="/Google" method="get">
+            <button class="botones-app" type="submit"><i class="fa-brands fa-google" style="color: #000000;"></i>Regístrate con Google</button>
+        </form>
+        <form action="/Facebook" method="get">
+            <button class="botones-app" type="submit"><i class="fa-brands fa-facebook-f" style="color: #000000;"></i>Regístrate con Facebook</button>
+        </form>
+        <a class="login" href="/login">¿Ya tienes una cuenta?</a>
+
+    </main>
+
+
 </body>
 </html>
