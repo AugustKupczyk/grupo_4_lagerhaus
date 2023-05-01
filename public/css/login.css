@@ -6,7 +6,7 @@
 main{
     display: flex;
     flex-direction: column;
-    margin-top: 90px;
+    margin-top: 110px;
 }
 
 form{
@@ -19,7 +19,7 @@ form{
 }
 
 p{
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     font-size: 20px;
 }
 
@@ -34,7 +34,7 @@ input[type="text"]{
 
 input[type="password"]{
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
     height: 35px;
     box-sizing:border-box;
     padding: 10px;
@@ -73,15 +73,38 @@ main button{
 }
 
 #ingresar{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     height: 30px;
     border: 2px solid #ff6a0098;
     background-color: #FF6900;
+}
+
+
+.botones-app{
+    border-radius: 12px;
+    background-color: white;
+    color: black;
+    border: solid 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-facebook-f{
+    margin-right: 8px;
+    background-color: white;
+}
+
+.fa-google{
+    margin-right: 8px;
+    background-color: white;
 }
 
 .register{
     margin-top: 30px;
     align-self:center;
     font-size: 13px;
-
 }
