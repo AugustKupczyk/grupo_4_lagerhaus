@@ -3,7 +3,7 @@ const app = express();
 const path = require ("path");
 
 app.use(express.static("public"));
-app.listen(3030,() => console.log("Levantando un servidor con Express"));
+app.listen(3030,() => console.log("Levantando un servidor con Express, puerto 3030"));
 
 
 
