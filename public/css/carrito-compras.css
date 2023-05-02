@@ -6,32 +6,93 @@ color: #fff;
 main{
     display: flex;
     flex-direction: column;
-
+    margin: 20px;
 }
 
-p{
-    align-self: center;
+h1{
+    font-size: 18px;
+    font-weight: normal;
+}
+
+h2{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 14px;
+    font-weight: normal;
+}
+
+h4{
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+h5{
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+h6{
+    margin-top: 4px;
+    font-size: 18px;
+    font-weight: normal;
+    color: orange;
+}
+
+
+.carrito{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
 }
 
 ul{
-    width: 75vw;
+    width: 100%;
     align-self: center;
     align-items: center;
     display: flex;
     flex-direction: column;
 }
 
-li{
+.item-carrito{
     width: 100%;
+    margin-bottom: 18px;
     align-self: center;
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+    align-items: baseline;
+    overflow: hidden;
 }
+
 .foto-nombre-cantidad{
     display: flex;
     flex-direction: row;
+}
+
+.nombre-cantidad{
+    margin-left: 10px;
+}
+
+.subtotales{
+    width: 100%;
+    margin-bottom: 4px;
+    align-self: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    overflow: hidden;
+
 }
 
 /*navbar*/
