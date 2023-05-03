@@ -24,3 +24,36 @@
 .fotos img {
     max-width: 100%; /* ensure that the images don't exceed their container */
  }
+
+.sponsors-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fotos-sponsors{
+    max-width: 20%;
+}
+
+.fa-brands{
+    color:orange;
+    font-size: 30px;
+}
+
+.redes-container{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#redes-paragraph{
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    text-align: center;
+}
+
+p{
+    color: white;
+    text-align: center;
+}
