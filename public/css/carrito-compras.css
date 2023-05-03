@@ -1,0 +1,169 @@
+*{
+background-color:black;
+color: #fff;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+h1{
+    font-size: 18px;
+    font-weight: normal;
+}
+
+h2{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 14px;
+    font-weight: normal;
+}
+
+h4{
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+h5{
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+h6{
+    margin-top: 4px;
+    font-size: 18px;
+    font-weight: normal;
+    color: orange;
+}
+
+
+.carrito{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+ul{
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-carrito{
+    width: 100%;
+    margin-bottom: 18px;
+    align-self: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    overflow: hidden;
+}
+
+.foto-nombre-cantidad{
+    display: flex;
+    flex-direction: row;
+}
+
+.nombre-cantidad{
+    margin-left: 10px;
+}
+
+.subtotales{
+    width: 100%;
+    margin-bottom: 4px;
+    align-self: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    overflow: hidden;
+
+}
+
+/*navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid orange;
+}
+#logo-navbar{
+width: 50px;
+height: 25px;
+}
+.fa-arrow-left{
+    margin-left: 8px;
+}
+.fa-cart-shopping{
+    margin-right: 8px;
+}
+
+@media(min-width:0px) and (max-width:576px){
+    nav{
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav ul{
+        display: none;
+    }
+}
+
+@media(min-width:576px){
+    nav{
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav ul{
+        display: none;
+    }
+}
+
+@media(min-width:768px){
+    nav{
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav ul{
+        display: none;
+    }
+}
+
+@media(min-width:992px){
+    .burger-menu{
+        display: none;
+    }
+    nav{
+        display: flex;
+    }
+    nav ul{
+        display: flex;
+    }
+}
+
+@media(min-width:1200px){
+    .burger-menu{
+        display: none;
+    }
+    nav{
+        display: flex;
+    }
+    nav ul{
+        display: flex;
+    }
+}

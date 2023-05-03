@@ -6,30 +6,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link href="css/Login.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
 </head>
 
 <body>
-    <!--<header>
-        <nav>
-            <a href="index.html"> <img class="logo" src="https://lagerhausbar.com/wp-content/uploads/2020/05/logo-lagerhaus.svg" alt="Logo Largerhaus"> </a>
-            <div class="opciones-nav">
-                <a class="opcion" href="productChart.html"> HACÉ TU PEDIDO </a>
-                <a class="opcion" href="">LOCALES</a>
-                <a class="opcion" href="">FRANQUICIAS</a>
-                <a class="opcion" href="">CONTACTO</a>
-                <span class="opcion">
-                    <form action="/buscar" method="get">
-                    <input type="text" name="q" placeholder="Buscar">
-                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                </span>
-            </div>
-        </nav>
-    </header>-->
+
+    <header>
+        <div class="list-container">
+            <nav class="navbar">
+                <div id="navbar-left">
+                    <a href="index.html"> <img class="logo" src="https://lagerhausbar.com/wp-content/uploads/2020/05/logo-lagerhaus.svg" alt="Logo Largerhaus" id="logo-navbar"> </a>
+                </div>
+                <ul class="navbar-right">
+                    <li><a href="#menu">HACE TU PEDIDO</a></li>
+                    <li><a href="#locales">LOCALES</a></li>
+                    <li><a href="#franquicias">FRANQUICIAS</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                </ul>
+                <div class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
     <br>
-    <br>
-    <br>
+    
     <main>
 
         <form action="/home" method="get">
@@ -47,10 +50,10 @@
         </form>
         <br>
         <form action="/Google" method="get">
-            <button type="submit">Ingresa con Google</button>
+            <button class="botones-app" type="submit"><i class="fa-brands fa-google" style="color: #000000;"></i>Ingresa con Google</button>
         </form>
         <form action="/Facebook" method="get">
-            <button type="submit">Ingresa con Facebook</button>
+            <button class="botones-app" type="submit"><i class="fa-brands fa-facebook-f" style="color: #000000;"></i>Ingresa con Facebook</button>
         </form>
         <a class="register" href="/register">Crea tu cuenta</a>
 
