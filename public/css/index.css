@@ -40,7 +40,8 @@
 }
 
 .redes-container{
-    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 30px;
