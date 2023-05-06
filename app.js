@@ -7,7 +7,7 @@ app.listen(3030,() => console.log("Levantando un servidor con Express, puerto 30
 
 
 
-app.get("/", function(req,res){
+app.get("/home", function(req,res){
     res.sendFile(path.join(__dirname,"/views/index.html"));
 });
 
