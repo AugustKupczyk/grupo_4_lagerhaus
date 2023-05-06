@@ -1,0 +1,26 @@
+input[type="text"]{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 35px;
+    box-sizing:border-box;
+    padding: 12px;
+    border: 2px solid white;
+}
+
+input[type="tel"]{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 35px;
+    box-sizing:border-box;
+    padding: 12px;
+    border: 2px solid white;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 75vw;
+    align-self: center;
+    align-items: center;
+}
