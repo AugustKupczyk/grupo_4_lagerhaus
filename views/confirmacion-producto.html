@@ -10,7 +10,7 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="css/styles.css" rel="stylesheet">
-    <link href="css/carrito-compras.css" rel="stylesheet">
+    <link href="css/confirmacion-producto.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
@@ -19,19 +19,65 @@
         <nav class="navbar">
             <i class="fa-solid fa-arrow-left fa-lg" style="color: #ffa500;" alt="Ir hacia atrás"></i> </a>
             <a href="/home"> <img class="logo"
-                    src="https://lagerhausbar.com/wp-content/uploads/2020/05/logo-lagerhaus.svg" alt="Logo Largerhaus"
+                    src="/imgs/logo-lagerhaus - blanco.png" alt="Logo Largerhaus"
                     id="logo-navbar"> </a>
             <i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffa500;"></i>
         </nav>
     </header>
 
     <main>
+        <section>
+            <form class="form-datos" action="/" method="get">
+                <h3 id="mis-datos"> MIS DATOS </h3>
+                <p>DIRECCION</p>
+                <input type="text" name="direccion" id="direccion" placeholder="DIRECCION">
+                <p>TELEFONO MOVIL</p>
+                <input type="tel" name="telefono" id="telefono" placeholder="TELÉFONO MÓVIL">
+            </form>
+        </section> 
+        
+        
+        <section id="section-total">
+            <h3> RESUMEN DE TU COMPRA </h3>
+            <div class="total-carrito">
+                <ul>
+                    <li id="subtotal" class="subtotales">
+                        <h5>SUBTOTAL</h5>
+                        <h5>$ Subtotal</h5>
+                    </li>
+                    <li id="envio"  class="subtotales">
+                        <h5>ENVÍO</h5>
+                        <h5>$ Envio</h5>
+                    </li>
+                    <li id="total"  class="subtotales">
+                        <h6>TOTAL</h6>
+                        <h6>$ Total</h6>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-        <form action="/" method="get">
-            <p>DIRECCION</p>
-            <input type="text" name="direccion" id="direccion" placeholder="DIRECCION">
-            <p>TELEFONO MOVIL</p>
-            <input type="tel" name="telefono" id="telefono" placeholder="TELÉFONO MÓVIL">
-        </form>
+        <section id="section-metodo-pago">
+            <h3> MÉTODO DE PAGO </h3>
+            <form class="form-pago" action="/" method="get">
+                <label for="metodo-pago"> Selecciona el método de pago: </label>
+                <br>
+                <input id="efectivo" type="radio" name="metodo-pago" value="efectivo">
+                <label for="metodo-pago"> EFECTIVO </label>
+                <br>
+                <input id="debito-credito" type="radio" name="metodo-pago" value="debito-credito">
+                <label for="metodo-pago"> DEBITO/CREDITO </label>
+            </form>
 
+        </section>
     </main>
+
+    <footer>
+        <div class="container-button">
+            <a href="#" class="btn">PAGAR</a>
+        </div>
+    </footer>
+
+
+</body>
+</html>

@@ -1,4 +1,17 @@
+*{
+    background-color:black;
+    color: #fff;
+ }
+    
+
+p{
+    color: whitesmoke;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
 input[type="text"]{
+    color: whitesmoke;
     width: 100%;
     margin-bottom: 10px;
     height: 35px;
@@ -8,6 +21,7 @@ input[type="text"]{
 }
 
 input[type="tel"]{
+    color: whitesmoke;
     width: 100%;
     margin-bottom: 10px;
     height: 35px;
@@ -16,11 +30,96 @@ input[type="tel"]{
     border: 2px solid white;
 }
 
-form{
+.form-datos{
+    margin: 10px;
+    margin-left: 0px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
-    width: 75vw;
+    width: 100vw;
     align-self: center;
+    align-items: center;
+    /* border: 2px solid orange; */
+    padding: 10px;
+}
+
+#mis-datos{
+    color: whitesmoke;
+    margin-bottom: 10px;
+}
+
+.subtotales{
+    width: 100%;
+    margin-bottom: 4px;
+    align-self: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    overflow: hidden;
+}
+
+h3{
+color: whitesmoke;
+margin-left: 5px;
+}
+
+h5{
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+h6{
+    margin-top: 4px;
+    font-size: 18px;
+    font-weight: normal;
+    color: orange;
+}
+
+#section-total{
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.total-carrito{
+    border-top: 1px solid whitesmoke;
+    padding: 10px;
+}
+
+#section-metodo-pago{
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.form-pago{
+    border-top: 1px solid whitesmoke;
+    padding: 10px;
+}
+
+.container-button {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#efectivo{
+margin-top: 10px;
+}
+
+#debito-credito{
+margin-top: 10px;
+}
+
+.btn {
+    display: flex;
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    justify-content: center;
+    height: 40px;
     align-items: center;
 }
