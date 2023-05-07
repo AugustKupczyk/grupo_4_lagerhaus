@@ -13,7 +13,7 @@ app.get("/carrito-compras", function(req,res){
     res.sendFile(path.join(__dirname,"/views/carrito-compras.html"));
 });
 
-app.get("/detalleProducto", function(req,res){
+app.get("/detalle-producto", function(req,res){
     res.sendFile(path.join(__dirname,"/views/detalle-producto.html"));
 });
 
