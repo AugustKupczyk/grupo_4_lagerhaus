@@ -14,7 +14,7 @@ app.get("/carrito-compras", function(req,res){
 });
 
 app.get("/detalleProducto", function(req,res){
-    res.sendFile(path.join(__dirname,"/views/productDetail.html"));
+    res.sendFile(path.join(__dirname,"/views/detalle-producto.html"));
 });
 
 app.get("/register", function(req,res){

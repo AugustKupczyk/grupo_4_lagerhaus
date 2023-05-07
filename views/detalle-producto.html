@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de producto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/detalle-producto.css" rel="stylesheet">
+</head>
+<body>
+    <header class="detalle-main-header">
+        <i class="fa-solid fa-circle-arrow-left" style="color: #000000;"></i>
+        <img src="/imgs/burger-jack.jpg" alt="Foto de Burger Jack" id="burger-jack">
+    </header>
+    
+    <main>
+        <section class="detalle-descripcion-producto">
+            <p class="mas-vendido">Mas vendido</p>
+
+            <h2 class="titulo-producto">Burger Jack</h2>
+
+            <p class="descripcion-producto">Medallon de carne, cheddar, panceta, aros de cebolla y salsa BBQ Jack Daniel's</p>
+
+            <h3 class="precio">$1900</h3>
+        </section>
+
+        
+
+        <section class="detalle-section-combinacion">
+            
+            <h3>Otras personas los combinaron con:</h3>
+            
+            <ul class="detalle-ul-combinacion">
+                <li class="container-combinacion">
+                    <img src="/imgs/burger-cervecera.jpg" alt="Foto de Burger Cervecera" id="burger-cervecera">
+                    <p class="titulo-precio-producto">Burger Cervecera <br><br><strong>$2000</strong></p>
+                </li>
+
+                <li class="container-combinacion">
+                    <img src="/imgs/tapeo-tequeños.jpg" alt="Foto de Tequeños" id="tapeo-tequeños">                    
+                    <p class="titulo-precio-producto">Tequeños <br><br><strong>$2000</strong></p>
+                </li>
+
+                <li class="container-combinacion">
+                    <img src="/imgs/sandwich-bondiola-desmenuzada.jpg" alt="Foto del Sandwich de Bondiola Desmenuzada" id="sandwich-bondiola-desmenuzada">
+                    <p class="titulo-precio-producto">Sandwich de Bondiola Desmenuzada<br><br><strong>$2000</strong></p>                
+                </li>
+            </ul>
+        </section>  
+    </main>
+    <footer>
+        <div class="notas-del-producto">
+            <h3>Notas para este producto</h3>
+            <p>El restaurante intentará seguirlas cuando lo prepare</p>
+        </div>
+        <textarea name="notas-producto" id="notas-producto" placeholder="Escribe las instrucciones que necesites..."></textarea>
+        <div class="agregar-producto">
+            <button type="button" class="agregar-button">AGREGAR $1900</button>
+        </div>
+        
+    </footer>
+</body>
+</html>
