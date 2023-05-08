@@ -9,7 +9,6 @@ body {
 
 p, h1, h2, h3, h4, h5, h6 {
     color: white;
-    padding: 2px;
 }
 
 img {
@@ -39,7 +38,7 @@ img {
     border-top: 2px solid orange;
     border-bottom: 2px solid orange;
     margin: 20px 0px;
-    padding: 10px;
+    padding: 10px 0px;
 }
 
 .mas-vendido {
@@ -52,7 +51,7 @@ img {
 
 .container-combinacion {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     padding: 5px 0px;
 }
@@ -60,10 +59,22 @@ img {
 .container-combinacion p {
     width: 50%;
     text-align: left;
+    margin-left: 10px;
 }
 
 .container-combinacion img {
     width: 20vw;
+}
+
+.agregar-quitar-button {
+    display: flex;
+    border: 1px solid white;
+    border-radius: 40px;
+    padding: 1.5px 10px;
+    width: 80px;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: content-box;
 }
 
 #notas-producto {
