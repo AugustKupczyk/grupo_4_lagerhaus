@@ -32,3 +32,5 @@ app.get("/detalle-producto", function(req,res){
 app.get("/confirmacion-producto", function(req,res){
     res.sendFile(path.join(__dirname,"/views/confirmacion-producto.html"));
 });
+
+
