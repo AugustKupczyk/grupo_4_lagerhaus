@@ -1,13 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.seccion{
+    margin:10px 10px 0px 10px;
+}
 
 .contenedor-banner{
     display: flex;
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    width: 100%;
-    height: 65px;
-    padding-left: 30px;
-    margin-top: 5px;
+    width: 100;
+    height: 50px;
+    padding-left: 20px;
+    margin-bottom: 10px;
 }
 
 .image-banner{
@@ -20,7 +32,7 @@
     opacity: 40%;
   }
 
-.image-title {
+.title-banner {
     position: absolute;
     color: white;
     font-weight: initial;
@@ -28,3 +40,41 @@
     z-index: 1;
     font-size: 20px;
   }
+
+.listado-productos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.producto{
+    width: 100%;
+    margin: 0px 5px 5px 5px;
+    align-self: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.foto-nombre-detalle{
+    display: flex;
+    flex-direction: row;
+}
+
+.foto-producto{
+    margin-right: 8px;
+}
+
+.titulo-producto{
+    font-size: 12px;
+}
+.detalle-producto{
+    font-size: 10px;
+    
+}
+.precio{
+    font-size: 10px;
+}
