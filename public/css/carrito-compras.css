@@ -8,7 +8,7 @@ main{
     flex-direction: column;
     margin: 20px;
 }
-
+ 
 h1{
     font-size: 18px;
     font-weight: normal;
@@ -95,6 +95,22 @@ ul{
 
 }
 
+.pagar {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: orange;
+    color: black;
+    font-weight: bolder;
+    padding: 5px;
+    width: 100%;
+    height: 42px;
+    border: 1px solid orange;
+    text-align: center;
+    font-size: 16px;
+}
+
 /*navbar*/
 .navbar {
     display: flex;
@@ -114,56 +130,14 @@ height: 25px;
     margin-right: 8px;
 }
 
-@media(min-width:0px) and (max-width:576px){
-    nav{
-        display: flex;
-        justify-content: flex-end;
-    }
-    nav ul{
-        display: none;
-    }
-}
-
-@media(min-width:576px){
-    nav{
-        display: flex;
-        justify-content: flex-end;
-    }
-    nav ul{
-        display: none;
-    }
-}
-
 @media(min-width:768px){
-    nav{
-        display: flex;
-        justify-content: flex-end;
-    }
-    nav ul{
-        display: none;
+    main {
+        padding: 10px 20%;
     }
 }
 
-@media(min-width:992px){
-    .burger-menu{
-        display: none;
-    }
-    nav{
-        display: flex;
-    }
-    nav ul{
-        display: flex;
-    }
-}
-
-@media(min-width:1200px){
-    .burger-menu{
-        display: none;
-    }
-    nav{
-        display: flex;
-    }
-    nav ul{
-        display: flex;
+@media(min-width:920px){
+    main {
+        padding: 20px 20%;
     }
 }
