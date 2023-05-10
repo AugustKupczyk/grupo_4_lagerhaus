@@ -1,3 +1,11 @@
+main{
+    padding: 20px;
+}
+
+footer{
+    padding:20px;
+}
+
 .logo-container {
     display: flex;
     flex-direction: column;
@@ -12,6 +20,12 @@
     max-height: 100%;
 }
 
+#texto-logo{
+font-weight: bold;
+color: orange;
+font-size:x-large;
+}
+
 .fotos{
     display: flex;
     flex-wrap: wrap;
@@ -20,10 +34,14 @@
     flex-direction: column;
     align-items: center;
 }
-  
-.fotos img {
-    max-width: 100%; /* ensure that the images don't exceed their container */
- }
+
+#foto-hamburguesa{
+max-width: 100%;
+}
+
+#foto-social{
+max-width: 100%;
+}
 
 .sponsors-container{
     display: flex;
@@ -58,3 +76,4 @@ p{
     color: white;
     text-align: center;
 }
+
