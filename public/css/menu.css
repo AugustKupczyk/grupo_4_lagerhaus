@@ -62,6 +62,7 @@
 .foto-nombre-detalle{
     display: flex;
     flex-direction: row;
+    width: 70%;
 }
 
 .foto-producto{
@@ -71,10 +72,25 @@
 .titulo-producto{
     font-size: 12px;
 }
+
 .detalle-producto{
     font-size: 10px;
     
 }
 .precio{
     font-size: 10px;
+}
+
+@media(min-width:768px){
+
+    .producto {
+        width: 40%;
+    }
+}
+
+@media(min-width:920px){
+
+    .producto {
+        width: 30%;
+    }
 }
