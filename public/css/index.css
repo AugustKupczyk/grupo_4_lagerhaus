@@ -6,18 +6,45 @@ footer{
     padding:20px;
 }
 
-.logo-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    margin-bottom: 50px;
+h2{
+    color: orange;
+    text-align: center;
+    padding: 0px 0px 10px 0px;
 }
 
-#logo-main{
-    max-width: 100%; 
-    max-height: 100%;
+.fotos{
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+}
+
+.foto-top-container{
+    height: 50%;
+    padding-bottom: 10px;
+}
+
+.foto-top{
+    width: 100%;
+    height: 100%;
+}
+
+.fotos-container{
+    height: 50%;
+    display: flex;
+    gap: 10px;
+}
+
+.foto-bottom-container{
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-bottom{
+    width: 125%;
+    height: 110%;
 }
 
 #texto-logo{
@@ -26,30 +53,24 @@ color: orange;
 font-size:x-large;
 }
 
-.fotos{
+.sponsors{
+    margin-top: 10px;
     display: flex;
-    flex-wrap: wrap;
+    height: 15vh;
+    flex-direction: row;
+    gap: 10px;
+}
+.sponsor-container{
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    width: 20vw;
     justify-content: center;
-    gap: 20px; /* add 20 pixels of space between the images */
-    flex-direction: column;
-    align-items: center;
 }
 
-#foto-hamburguesa{
-max-width: 100%;
-}
-
-#foto-social{
-max-width: 100%;
-}
-
-.sponsors-container{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.fotos-sponsors{
-    max-width: 20%;
+.foto-sponsors{
+    width: 110%;
+    height: 80%;
 }
 
 .fa-brands{
@@ -66,14 +87,69 @@ max-width: 100%;
 }
 
 #redes-paragraph{
-    color: white;
+    color: orange;
     font-weight: bold;
     font-size: medium;
     text-align: center;
 }
 
+
 p{
-    color: white;
+    color: orange;
     text-align: center;
+    font-weight: bold;
+    font-size: medium;
 }
 
+@media (min-width:768px){
+.sponsors{
+    gap: 25px;
+    padding-left: 20px;
+}
+
+}
+
+@media (min-width:920px) {
+    .sponsors{
+        gap: 40px;
+        padding-left: 10px;
+    }
+}
+
+@media (min-width:1200px){
+    .fotos{
+        height: 85vh;
+    }
+    .foto-top-container{
+        height: 50%;
+        margin-bottom: 10px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+    .foto-top{
+        height: 170%;
+    }
+    .foto-bottom{
+        width: 100%;
+        height: 110%;
+    }
+
+    .sponsors{
+        gap:40px;
+        margin-bottom: 75px;
+        padding-left: 0px;
+    }
+
+    .sponsor-container{
+        height: 130%;
+        display: flex;
+        width: 23vw;
+        justify-content: center;
+    }
+
+    .foto-sponsors{
+        width: 100%;
+        height: 100%;
+    }
+}
