@@ -12,22 +12,6 @@ h2{
     padding: 0px 0px 10px 0px;
 }
 
-.logo-container{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-#foto-hamburguesa{
-    position: absolute;
-    top: 25%;
-    left: 50%;
-}
-
-.logo-container img {
-    width: 50%;
-}
-
 .fotos{
     display: flex;
     flex-direction: column;
@@ -64,37 +48,24 @@ h2{
 }
 
 #texto-logo{
-    font-weight: bold;
-    color: orange;
-    font-size: 10px;
-    position: absolute;
-    top: 5%;
-    left: 50vw;
+font-weight: bold;
+color: orange;
+font-size:x-large;
 }
 
-/* .sponsors{
+.sponsors{
     margin-top: 10px;
     display: flex;
     height: 15vh;
     flex-direction: row;
     gap: 10px;
 }
-
 .sponsor-container{
     height: 100%;
     display: flex;
     overflow: hidden;
     width: 20vw;
     justify-content: center;
-} */
-
-.sponsors-container{
-    display: flex;
-    justify-content: space-around;
-}
-
-.sponsors-container img{
-    height: 10vh;
 }
 
 .foto-sponsors{
@@ -134,15 +105,6 @@ p{
 .sponsors{
     gap: 25px;
     padding-left: 20px;
-}
-
-.sponsors-container img{
-    height: 20vh;
-}
-
-#texto-logo {
-    font-size: 20px;
-    left: 55%;
 }
 
 }
