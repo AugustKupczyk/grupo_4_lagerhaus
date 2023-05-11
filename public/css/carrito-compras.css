@@ -111,7 +111,7 @@ ul{
     font-size: 16px;
 }
 
-/*navbar*/
+/* navbar
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -122,7 +122,7 @@ ul{
 #logo-navbar{
 width: 50px;
 height: 25px;
-}
+} */
 .fa-arrow-left{
     margin-left: 8px;
 }
