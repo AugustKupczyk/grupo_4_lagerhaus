@@ -44,7 +44,7 @@ h2{
 
 .foto-bottom{
     width: 125%;
-    height: 110%;
+    height: 100%;
 }
 
 #texto-logo{
@@ -105,6 +105,14 @@ p{
 .sponsors{
     gap: 25px;
     padding-left: 20px;
+}
+
+.foto-bottom{
+    object-fit: cover;
+}
+
+.foto-top{
+    object-fit: cover;
 }
 
 }
