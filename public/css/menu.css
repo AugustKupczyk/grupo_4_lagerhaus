@@ -64,9 +64,20 @@
     flex-direction: row;
     width: 70%;
 }
+.contenedor-foto-producto{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 100;
+}
 
 .foto-producto{
     margin-right: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
 }
 
 .titulo-producto{
