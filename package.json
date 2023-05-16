@@ -4,7 +4,8 @@
   "description": "git    1) Producto y/o servicios que brindara nuestro sitio:         Nuestra empresa brindara productos de comida y bebida para delivery: Tapeos, Hamburguesas, Sandwiches, Pizzas, Parrilla, Ensaladas, Bebidas con y sin alcohol.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon app.js"
   },
   "repository": {
     "type": "git",
