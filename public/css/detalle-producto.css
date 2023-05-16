@@ -81,7 +81,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .agregar-producto {
     display: flex;
-    justify-content: right;
+    justify-content: center;
 }
 
 .agregar-button {
