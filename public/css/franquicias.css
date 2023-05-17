@@ -1,0 +1,110 @@
+.franquicias-section-left {
+    background-image: url(../imgs/franquicias1.jpg);
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+#foto-section-left {
+    width: 100vw;
+    height: 100%;
+}
+
+.h3-franquicias {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    padding-top: 40px;
+    
+}
+
+.franquicias-section-right{
+    padding: 20px;
+}
+
+.titulo-que-brindamos {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.que-brindamos {
+    color: white;
+    text-align: justify;
+    font-size: 0.8rem;
+}
+
+.franquicias-contacto-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.franquicias-contacto-form p {
+    color: white;
+    border-bottom: 1px solid orange;
+    margin: 20px 0px;
+    padding-bottom: 5px;
+}
+
+.franquicias-contacto-form input {
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: black;
+    border: 0.1px solid orange;
+}
+
+.franquicias-contacto-form textarea {
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: black;
+    border: 0.1px solid orange;
+    color: gray;
+}
+
+.franquicias-contacto-form button {
+    width: 50%;
+    padding: 10px;
+    background-color: black;
+    color: grey;
+    border: 0.1px solid orange;
+}
+
+.main-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.main-footer p {
+    color: white;
+    font-size: 0.5rem;
+}
+
+.redes-container {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.redes-container i {
+    color: orange;
+}
+
+@media(min-width:920px){
+    .list-container {
+        position: fixed;
+    }
+
+    .franquicias-section-left {
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+}
