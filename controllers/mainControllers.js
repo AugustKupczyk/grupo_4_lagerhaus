@@ -6,6 +6,9 @@ const controllers={
     },
     getFranquicias:(req,res) =>{
         res.render("franquicias");
+    },
+    getLocales: (req,res) =>{
+        res.render("locales");
     }
 }
 

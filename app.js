@@ -14,4 +14,4 @@ app.use(express.static("public"));
 app.use(rutasMain);
 app.use("/products",rutasProducto);
 app.use("/users",rutasUser);
-app.listen(3030,() => console.log("Levantando un servidor con Express, puerto 3030"));
+app.listen(3030,() => console.log("Levantando un servidor con Express, http://localhost:3030/"));
