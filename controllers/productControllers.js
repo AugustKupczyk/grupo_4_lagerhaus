@@ -2,16 +2,16 @@ const path = require ("path");
 
 const controllers={
     getCarritoCompras:(req,res) =>{
-        res.sendFile(path.join(__dirname,"../views/products/carrito-compras.html"));
+        res.render("carrito-compras");
     },
     getConfirmacionProducto:(req,res) =>{
-        res.sendFile(path.join(__dirname,"../views/products/confirmacion-producto.html"));
+        res.render("confirmacion-producto");
     },
     getDetalleProducto:(req,res) =>{
-        res.sendFile(path.join(__dirname,"../views/products/detalle-producto.html"));
+        res.render("detalle-producto");
     },
     getMenu:(req,res) =>{
-        res.sendFile(path.join(__dirname,"../views/products/menu.html"));
+        res.render("menu");
     },
 
 }

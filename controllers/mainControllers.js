@@ -2,10 +2,10 @@ const path = require ("path");
 
 const controllers={
     getIndex:(req,res) =>{
-        res.sendFile(path.join(__dirname,"../views/index.html"));
+        res.render("index");
     },
     getFranquicias:(req,res) =>{
-        res.sendFile(path.join(__dirname,"../views/franquicias.html"));
+        res.render("franquicias");
     }
 }
 
