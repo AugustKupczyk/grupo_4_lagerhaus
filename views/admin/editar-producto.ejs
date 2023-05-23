@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head") %>
+    <title>Editar Producto</title>
+    <link href="/css/register.css" rel="stylesheet">
+    <link href="/css/editar-producto.css" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <%- include("./partials/header-main") %>
+    </header>
+
+    <main>
+        <form action="/" method="get">
+            <p>Agregar Producto</p>
+            <input type="text" name="titulo-producto" id="titulo-producto" placeholder="Titulo del producto">
+            <input type="text" name="categoria-producto" id="categoria-producto" placeholder="Categoria del producto">
+            <button id ="enviar" type="submit">Enviar</button>
+        </form>
+    </main>
+
+</body>
+</html>
