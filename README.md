@@ -22,3 +22,4 @@
     Fabric Sushi: Si bien el producto final no es el mismo, la funcionalidad que presenta la página web y app del restaurant, se asemeja a la deseada en LagerHaus.
 
     Link de tablero hecho en Trello:  https://trello.com/b/vX83WEzY/sprint-2
+    Link de tablero hecho en Trello del sprint 3: https://trello.com/b/HIVaKU21/sprint-3
