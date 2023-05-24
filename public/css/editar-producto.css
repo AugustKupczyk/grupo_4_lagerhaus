@@ -1,0 +1,56 @@
+p{
+    font-size: 22px;
+    align-self: center;
+}
+
+input[type="text"]{
+    margin-bottom: 20px;
+
+}
+input[type="file"]{
+    margin-bottom: 20px;
+    font-size: 12px;
+
+}
+
+h4{
+    font-weight: lighter;
+    font-size: 14px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+button{
+    margin-top: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 70vw;
+    align-self: center;
+    align-items: flex-start
+}
+
+@media (min-width:920px){
+    form{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        width: 50vw;
+        align-self: center;
+        align-items: flex-start
+    }
+}
+
+@media(min-width:1200px){
+    form{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        width: 35vw;
+        align-self: center;
+        align-items: flex-start
+    }
+}
