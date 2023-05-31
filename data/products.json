@@ -82,7 +82,83 @@
         "name": "Merle & Tonic",
         "description": "Merle con Tónica.",
         "price": 1200
+    },
+    {
+        "id": 13,
+        "category": "Burgers",
+        "name": "Cervecera",
+        "description": "Medallón de carne, huevo a la plancha, panceta ahumada, cebolla caramelizada, y queso cheddar.",
+        "price": 2000
+    },
+    {
+        "id": 14,
+        "category": "Burgers",
+        "name": "Clásica",
+        "description": "Medallón de carne, queso tybo, jamón, lechuga y tomate.",
+        "price": 1800
+    },
+    {
+        "id": 15,
+        "category": "Burgers",
+        "name": "Doble Smash",
+        "description": "Doble carne SMASH, cuádruple cheddar y panceta ahumada.",
+        "price": 2400
+    },
+    {
+        "id": 16,
+        "category": "Burgers",
+        "name": "Jack",
+        "description": "Medallón de carne, queso cheddar, panceta ahumada, aros de cebolla y salsa BBQ Jack Daniel's.",
+        "price": 1900
+    },
+    {
+        "id": 17,
+        "category": "Sandwiches",
+        "name": "Bondiola Desmenuzada",
+        "description": "Bondiola braseada, cebolla caramelizada y salsa barbacoa.",
+        "price": 2300
+    },
+    {
+        "id": 18,
+        "category": "Sandwiches",
+        "name": "Double Down",
+        "description": "Con dos piezas de pollo frito en lugar del pan, doble queso cheddar, panceta ahumada y salsa Big M.",
+        "price": 2900
+    },
+    {
+        "id": 19,
+        "category": "Sandwiches",
+        "name": "Philly Cheesesteak",
+        "description": "Tiras de ojo de bife, queso cheddar y cebolla.",
+        "price": 2900
+    },
+    {
+        "id": 20,
+        "category": "Sin TACC",
+        "name": "Empanadas x3",
+        "description": "Carne / Jamón y Queso",
+        "price": 1800
+    },
+    {
+        "id": 21,
+        "category": "Sin TACC",
+        "name": "Tarta Individual",
+        "description": "Verdura / Jamón y Queso",
+        "price": 1800
+    },
+    {
+        "id": 22,
+        "category": "Cerveza",
+        "name": "Pinta",
+        "description": "Elegí de nuestras selección de +25 canillas!",
+        "price": 800
+    },
+    {
+        "id": 23,
+        "category": "Cerveza",
+        "name": "Media Pinta",
+        "description": "Elegí de nuestras selección de +25 canillas!",
+        "price": 600
     }
-
 
 ]
