@@ -1,0 +1,88 @@
+[
+    {
+        "id": 1,
+        "category": "Tapeo",
+        "name": "Nachos",
+        "description": "Con bondiola a la BBQ.",
+        "price": 1900
+    },
+    {
+        "id": 2,
+        "category": "Tapeo",
+        "name": "Tequeños",
+        "description": "Con salsa tártara.",
+        "price": 2000
+    },
+    {
+        "id": 3,
+        "category": "Tapeo",
+        "name": "Mozzarellas empanizadas",
+        "description": "Con salsa fileto.",
+        "price": 1800
+    },
+    {
+        "id": 4,
+        "category": "Tapeo",
+        "name": "Papas completas",
+        "description": "Con queso cheddar, panceta y verdeo.",
+        "price": 1900
+    },
+    {
+        "id": 5,
+        "category": "Wraps",
+        "name": "Pollo",
+        "description": "Con pollo crunch, lechuga, tomate, queso crema, queso provoleta y alioli de zanahoria.",
+        "price": 1800
+    },
+    {
+        "id": 6,
+        "category": "Wraps",
+        "name": "Veggie",
+        "description": "Lechuga, tomate, queso crema, queso provoleta y alioli de zanahoria.",
+        "price": 1800
+    },
+    {
+        "id": 7,
+        "category": "Vegano",
+        "name": "Tabla Vegana",
+        "description": "Para compartir. 3 empanadas notCarne, bastones de zanahoria, hummus de garbanzo, morrones en aceite, tomates cherry, berenjenas al escabeche, aceitunas verdes acompañada de batatas y papas fritas.",
+        "price": 4200
+    },
+    {
+        "id": 8,
+        "category": "Vegano",
+        "name": "Burger notCo",
+        "description": "Medallón notCo simil carne, lechuga, tomate, queso cheddar vegano, pan vegano y notMayo.",
+        "price": 1900
+    },
+    {
+        "id": 9,
+        "category": "Tragos y gaseosas",
+        "name": "Fernet con Cola",
+        "description": "Fernet con Coca Cola.",
+        "price": 1100
+    },
+    {
+        "id": 10,
+        "category": "Tragos y gaseosas",
+        "name": "Aperol Spritz",
+        "description": "Aperol Spritz con jugo de naranja.",
+        "price": 1200
+    },
+    {
+        "id": 11,
+        "category": "Tragos y gaseosas",
+        "name": "Jagermeister & red bull",
+        "description": "Jagermeister con red bull.",
+        "price": 2400
+    },
+    {
+        "id": 12,
+        "category": "Tragos y gaseosas",
+        "name": "Merle & Tonic",
+        "description": "Merle con Tónica.",
+        "price": 1200
+    }
+
+
+]
