@@ -20,6 +20,7 @@
   "homepage": "https://github.com/AugustKupczyk/grupo_4_lagerhaus#readme",
   "dependencies": {
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1"
   }
 }

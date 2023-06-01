@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "firstName": "Milagros",
+        "lastName": "Ferrini",
+        "email": "miliferrini@gmail.com",
+        "password": "miluchi98",
+        "category": "admin",
+        "image":""
+    },
+    {
+        "id": 2,
+        "firstName": "August",
+        "lastName": "Kupp",
+        "email": "augustkupp@gmail.com",
+        "password": "august01",
+        "category": "admin",
+        "image": "null,"
+    },
+    {
+        "id": 2,
+        "firstName": "Gonza",
+        "lastName": "Esposito",
+        "email": "gonzalo@gmail.com",
+        "password": "gonza01",
+        "category": "admin",
+        "image":"" 
+    },
+    {
+        "id": 4,
+        "firstName": "Esteban",
+        "lastName": "Quito",
+        "email": "esteban@gmail.com",
+        "password": "esteban01",
+        "category": "user",
+        "image": ""
+    }
+
+]

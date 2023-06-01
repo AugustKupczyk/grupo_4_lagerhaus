@@ -4,7 +4,8 @@
         "category": "Tapeo",
         "name": "Nachos",
         "description": "Con bondiola a la BBQ.",
-        "price": 1900
+        "price": 1900,
+        "image": "/imgs/burger-cervecera.jpg" 
     },
     {
         "id": 2,

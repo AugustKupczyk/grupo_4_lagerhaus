@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <%- include("./partials/head") %>
     <title>Menú</title>
@@ -70,7 +70,29 @@
             </div>
             <div class="contenedor-listado-producto">
                 <ul class="listado-productos">
-                    <li class="producto">
+                    <% burgers.forEach(product => { %>
+                        <li class="producto">
+                            <div class="foto-nombre-detalle">
+                                <a href="/products/detalle-producto"><img class="foto-producto" src="<%=product.image%>" width=50px alt="Foto Producto"></a>
+                                <div class="nombre-detalle">    
+                                    <p class="titulo-producto"><%= product.name %></p>
+                                    <p class="detalle-producto"><%= product.description %></p>
+                                </div>
+                            </div>
+                            <p class="precio">$<%= product.price %></p>    
+                        </li>
+                    <% }) %>
+                    <!-- <li class="producto">
+                        <div class="foto-nombre-detalle">
+                            <a href="/products/detalle-producto"><img class="foto-producto" src="/imgs/burger-cervecera.jpg" width=50px alt="Foto Producto"></a>
+                            <div class="nombre-detalle">    
+                                <p class="titulo-producto">CERVECERA</p>
+                                <p class="detalle-producto">Medallón de carne, huevo a la plancha, panceta ahumada, cebolla caramelizada, y queso cheddar.</p>
+                            </div>
+                        </div>
+                        <p class="precio">$2.000</p>    
+                    </li>
+                    <!-- <li class="producto">
                         <div class="foto-nombre-detalle">
                             <a href="/products/detalle-producto"><img class="foto-producto" src="/imgs/burger-cervecera.jpg" width=50px alt="Foto Producto"></a>
                             <div class="nombre-detalle">    
@@ -109,7 +131,7 @@
                             </div>
                         </div>
                         <p class="precio">$1.900</p>    
-                    </li>
+                    </li> -->
                 </ul>
             </div>          
         </div>
