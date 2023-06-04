@@ -1,31 +1,35 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include("./partials/head") %>
-    <title>Agregar Producto</title>
-    <link href="/css/register.css" rel="stylesheet">
-    <link href="/css/agregar-producto.css" rel="stylesheet">
+        <title>Agregar Producto</title>
+        <link href="/css/register.css" rel="stylesheet">
+        <link href="/css/agregar-producto.css" rel="stylesheet">
 </head>
+
 <body>
-    
+
     <header>
         <%- include("./partials/header-main") %>
     </header>
 
     <main>
         <p>Agregar productos</p>
-        <form action="/" method="get">
+        <form action="/menu" method="post" enctype="multipart/form-data">
             <h4>Complete el detalls del nuevo producto:</h4>
             <input type="text" name="titulo-producto" id="titulo-producto" placeholder="Titulo del producto">
-            <input type="text" name="descripcion-producto" id="descripcion-producto" placeholder="Descripción del producto">
+            <input type="text" name="descripcion-producto" id="descripcion-producto"
+                placeholder="Descripción del producto">
             <input type="text" name="categoria-producto" id="categoria-producto" placeholder="Categoria del producto">
             <input type="text" name="precio-producto" id="precio-producto" placeholder="Precio del producto">
             <h4>Seleccione la foto del nuevo producto:</h4>
-            <input type="file" name="imagen-producto" id="imagen-producto">
-            <button id ="enviar" type="submit">Agregar</button>
+            <input type="file" multiple accept=".jpg, .jpeg, .png" name="imagen-producto" id="imagen-producto">
+            <button id="enviar" type="submit">Agregar</button>
         </form>
     </main>
 
 
 </body>
+
 </html>

@@ -1,7 +1,9 @@
-const express = require ("express");
+const express = require("express");
 const path = require('path');
 const multer = require('multer');
+
 const productControllers = require("../controllers/productControllers.js");
+
 const router = express.Router();
 
 const storage = multer.diskStorage({
@@ -11,7 +13,7 @@ const storage = multer.diskStorage({
     filename: (req, file, cb) => {
         console.log(path.extname(file.originalname))
         cb(null, Date.now() + '-' + file.originalname);
-    } 
+    }
 });
 
 const upload = multer({ storage });
@@ -31,8 +33,13 @@ router.get("/:id/detalle-producto", productControllers.getDetalleProducto);
 // @DELETE /products/:id/delete ---> /products/5/delete
 router.delete('/:id/delete', productControllers.deleteProduct);
 
-router.get("/editar-producto", productControllers.getEditar);
+// @GET /products/:id/update 
+router.get('/:id/update', productControllers.getUpdate);
 
+// @PUT /products/:id/update ---> /products/5/put
+router.put('/:id/update', productControllers.updateProduct);
+
+router.get("/editar-producto", productControllers.getEditar);
 
 // @GET /products/cart
 router.get("/carrito-compras", productControllers.getCarritoCompras);
