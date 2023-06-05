@@ -1,7 +1,8 @@
 <div class="list-container">
     <nav class="navbar">
         <div id="navbar-left">
-            <a href="/"> <img class="logo" src="/imgs/logo-lagerhaus - blanco.png" alt="Logo Largerhaus" id="logo-navbar"> </a>
+            <a href="/"> <img class="logo" src="/imgs/logo-lagerhaus - blanco.png" alt="Logo Largerhaus"
+                    id="logo-navbar"> </a>
         </div>
         <ul class="navbar-right">
             <li><a href="/products/menu">HACE TU PEDIDO</a></li>
@@ -9,10 +10,27 @@
             <li><a href="/franquicias">FRANQUICIAS</a></li>
             <li><a href="#contacto">CONTACTO</a></li>
             <li><a href="/users/login">LOGIN</a></li>
-            <li><a href="/products/carrito-compras"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffa500;"></i></a></li>
+            <li><a href="/products/carrito-compras"><i class="fa-solid fa-cart-shopping fa-lg"
+                        style="color: #ffa500;"></i></a></li>
         </ul>
         <div class="burger-menu">
             <i class="fas fa-bars"></i>
         </div>
     </nav>
 </div>
+
+<script>
+    // Espera a que se cargue el documento antes de ejecutar el código
+    document.addEventListener("DOMContentLoaded", function () {
+        // Obtén una referencia al elemento del burger menu
+        var burgerMenu = document.querySelector(".burger-menu");
+        // Obtén una referencia a la lista de navegación
+        var navbarRight = document.querySelector(".navbar-right");
+
+        // Agrega un event listener al burger menu para manejar el clic
+        burgerMenu.addEventListener("click", function () {
+            // Toggle la clase 'active' en la lista de navegación
+            navbarRight.classList.toggle("active");
+        });
+    });
+</script>

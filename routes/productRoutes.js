@@ -34,12 +34,10 @@ router.get("/:id/detalle-producto", productControllers.getDetalleProducto);
 router.delete('/:id/delete', productControllers.deleteProduct);
 
 // @GET /products/:id/update 
-router.get('/:id/update', productControllers.getUpdate);
+router.get('/:id/editar-producto', productControllers.getEditar);
 
 // @PUT /products/:id/update ---> /products/5/put
-router.put('/:id/update', productControllers.updateProduct);
-
-router.get("/editar-producto", productControllers.getEditar);
+router.put('/:id/editar-producto', productControllers.updateProduct);
 
 // @GET /products/cart
 router.get("/carrito-compras", productControllers.getCarritoCompras);

@@ -5,28 +5,31 @@
         "name": "Nachos",
         "description": "Con bondiola a la BBQ.",
         "price": 1900,
-        "image": "/imgs/burger-cervecera.jpg" 
+        "image": "/imgs/tapeo-nachos-bondiola.jpg" 
     },
     {
         "id": 2,
         "category": "Tapeo",
         "name": "Tequeños",
         "description": "Con salsa tártara.",
-        "price": 2000
+        "price": 2000,
+        "image": "/imgs/tapeo-tequeños.jpg"
     },
     {
         "id": 3,
         "category": "Tapeo",
         "name": "Mozzarellas empanizadas",
         "description": "Con salsa fileto.",
-        "price": 1800
+        "price": 1800,
+        "image": "/imgs/tapeo-muzzarellitas.jpg"
     },
     {
         "id": 4,
         "category": "Tapeo",
         "name": "Papas completas",
         "description": "Con queso cheddar, panceta y verdeo.",
-        "price": 1900
+        "price": 1900,
+        "image": "/imgs/tapeo-papas-completas.JPG"
     },
     {
         "id": 5,

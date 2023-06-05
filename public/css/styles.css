@@ -63,6 +63,16 @@ font-size: 25px;
 }
 
 
+
+/* Agrega este estilo para mostrar la lista de navegación cuando se agrega la clase 'active' */
+.navbar-right.active {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 5px;
+    flex-direction: column;
+}
+
 @media(min-width:0px) and (max-width:576px){
     nav{
         display: flex;

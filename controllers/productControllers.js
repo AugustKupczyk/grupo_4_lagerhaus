@@ -4,6 +4,7 @@ const productModel = require('../models/products');
 
 const controllers = {
 
+    //@GET /menu
     getMenu: (req, res) => {
         const products = productModel.findAll();
         const tapeo = products.filter(product => product.category === "tapeo");
@@ -16,7 +17,7 @@ const controllers = {
         const tragos = products.filter(product => product.category === "tragos");
         res.render("menu", { burgers, tapeo, sandwiches, wraps, vegano, cervezas, tragos, sinTACC });
     },
-
+    // @GET /menu/:id/detail
     getDetalleProducto: (req, res) => {
         // Agarramos el ID que nos pasaron por parámetro de ruta, y lo convertimos en number
         const id = Number(req.params.id);
@@ -32,13 +33,14 @@ const controllers = {
         }
 
         // Renderizamos la vista productDetail, y le pasamos los datos del producto solicitado
-        res.render('productDetail', { product: productoAMostrar });
+        res.render('detalle-producto', { product: productoAMostrar });
     },
 
     getAgregar: (req, res) => {
-        res.render('createProduct');
+        res.render('agregar-producto');
     },
 
+    // @GET /menu
     getEditar: (req, res) => {
         const id = Number(req.params.id);
         const productoAModificar = productModel.findById(id)
@@ -49,9 +51,8 @@ const controllers = {
             return res.send('error de id');
         }
 
-        res.render('updateProduct', { product: productoAModificar });
+        res.render('editar-producto', { product: productoAModificar });
     },
-
     deleteProduct: (req, res) => {
         const id = Number(req.params.id);
 
