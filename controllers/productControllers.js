@@ -1,5 +1,5 @@
 const path = require("path");
-
+ 
 const productModel = require('../models/products');
 
 const controllers = {
@@ -7,16 +7,37 @@ const controllers = {
     //@GET /menu
     getMenu: (req, res) => {
         const products = productModel.findAll();
-        const tapeo = products.filter(product => product.category === "tapeo");
-        const burgers = products.filter(product => product.category === "burgers");
-        const sandwiches = products.filter(product => product.category === "sandwiches");
-        const wraps = products.filter(product => product.category === "wraps");
-        const sinTACC = products.filter(product => product.category === "sinTACC");
-        const vegano = products.filter(product => product.category === "vegano");
-        const cervezas = products.filter(product => product.category === "cervezas");
-        const tragos = products.filter(product => product.category === "tragos");
+        const tapeo = products.filter(product => product.category === "Tapeo");
+        const burgers = products.filter(product => product.category === "Burgers");
+        const sandwiches = products.filter(product => product.category === "Sandwiches");
+        const wraps = products.filter(product => product.category === "Wraps");
+        const sinTACC = products.filter(product => product.category === "Sin TACC");
+        const vegano = products.filter(product => product.category === "Vegano");
+        const cervezas = products.filter(product => product.category === "Cerveza");
+        const tragos = products.filter(product => product.category === "Tragos y gaseosas");
         res.render("menu", { burgers, tapeo, sandwiches, wraps, vegano, cervezas, tragos, sinTACC });
     },
+
+    //@GET /menu/agregar-producto
+    getAgregar: (req, res) => {
+        res.render('agregar-producto');
+    },
+    
+    // @POST /menu/agregar-producto
+    postProduct: (req, res) => {
+        let datos = req.body;
+
+        console.log(req.files)
+
+        datos.price = Number(datos.price);
+        /* datos.img = '/imgs/products/' + req.file.filename; */
+        datos.imgs = req.files.map(file => '/imgs/products' + file.filename);
+
+        productModel.createOne(datos);
+
+        res.redirect('/menu');
+    },
+
     // @GET /menu/:id/detail
     getDetalleProducto: (req, res) => {
         // Agarramos el ID que nos pasaron por parámetro de ruta, y lo convertimos en number
@@ -36,31 +57,21 @@ const controllers = {
         res.render('detalle-producto', { product: productoAMostrar });
     },
 
-    getAgregar: (req, res) => {
-        res.render('agregar-producto');
-    },
-
-    // @GET /menu
+    // @GET / editar
     getEditar: (req, res) => {
         const id = Number(req.params.id);
         const productoAModificar = productModel.findById(id)
-
+        
         if (!productoAModificar) {
             // Con el return detenemos la ejecución del controller, y con el res.send enviamos un mensaje de error
             // *queremos detener la ejecución para que no se ejecute el otro res.render (la otra respuesta)
             return res.send('error de id');
         }
-
+        
         res.render('editar-producto', { product: productoAModificar });
     },
-    deleteProduct: (req, res) => {
-        const id = Number(req.params.id);
-
-        productModel.deleteById(id);
-
-        res.redirect('/menu');
-
-    },
+    
+    // @GET / editar
     updateProduct: (req, res) => {
         const id = Number(req.params.id);
         const nuevosDatos = req.body;
@@ -69,18 +80,15 @@ const controllers = {
 
         res.redirect('/menu');
     },
-    postProduct: (req, res) => {
-        let datos = req.body;
 
-        console.log(req.files)
+    // @DELETE /products/:id/delete
+    deleteProduct: (req, res) => {
+        const id = Number(req.params.id);
 
-        datos.price = Number(datos.price);
-        /* datos.img = '/imgs/products/' + req.file.filename; */
-        datos.imgs = req.files.map(file => '/imgs/products' + file.filename);
-
-        productModel.createOne(datos);
+        productModel.deleteById(id);
 
         res.redirect('/menu');
+
     },
 
     getCarritoCompras: (req, res) => {

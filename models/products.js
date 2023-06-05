@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
+  
 const model = {
     // Ruta del archivo JSON
     route: '../data/products.json',

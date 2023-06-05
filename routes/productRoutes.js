@@ -15,7 +15,7 @@ const storage = multer.diskStorage({
         cb(null, Date.now() + '-' + file.originalname);
     }
 });
-
+ 
 const upload = multer({ storage });
 
 // @GET /products 
@@ -42,6 +42,7 @@ router.put('/:id/editar-producto', productControllers.updateProduct);
 // @GET /products/cart
 router.get("/carrito-compras", productControllers.getCarritoCompras);
 
+// @GET /products/confirmacion-producto
 router.get("/confirmacion-producto", productControllers.getConfirmacionProducto);
 
 module.exports = router;
