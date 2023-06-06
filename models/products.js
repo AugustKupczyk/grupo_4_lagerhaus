@@ -47,6 +47,7 @@ const model = {
 
         // Con el findIndex, buscamos en qué indice del array de productos, está guardado el elemento buscado
         const indice = products.findIndex(productoActual => productoActual.id === id);
+        
 
         // Actualizamos los datos del producto que corresponda, con los datos que nos pasaron por parámetros
         products[indice].category = newData.category;

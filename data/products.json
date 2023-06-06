@@ -2,10 +2,10 @@
     {
         "id": 1,
         "category": "Tapeo",
-        "name": "Nachos",
+        "name": "NACHOOOOOOOOOOS",
         "description": "Con bondiola a la BBQ.",
-        "price": 1900,
-        "image": "/imgs/tapeo-nachos-bondiola.jpg" 
+        "price": "2000",
+        "image": "/imgs/tapeo-nachos-bondiola.jpg"
     },
     {
         "id": 2,
@@ -183,5 +183,5 @@
         "price": 600,
         "image": "/imgs/cerveza.JPG"
     }
-
+   
 ]

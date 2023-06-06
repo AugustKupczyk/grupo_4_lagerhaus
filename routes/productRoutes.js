@@ -2,7 +2,7 @@ const express = require("express");
 const path = require('path');
 const multer = require('multer');
 
-const productControllers = require("../controllers/productControllers.js");
+const productControllers = require("../controllers/productControllers");
 
 const router = express.Router();
 

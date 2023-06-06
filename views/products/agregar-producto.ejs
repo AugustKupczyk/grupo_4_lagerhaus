@@ -16,15 +16,15 @@
 
     <main>
         <p>Agregar productos</p>
-        <form action="/menu" method="post" enctype="multipart/form-data">
-            <h4>Complete el detalls del nuevo producto:</h4>
-            <input type="text" name="titulo-producto" id="titulo-producto" placeholder="Titulo del producto">
-            <input type="text" name="descripcion-producto" id="descripcion-producto"
+        <form action="/products/menu" method="post" enctype="multipart/form-data">
+            <h4>Complete el detalle del nuevo producto:</h4>
+            <input type="text" name="category" id="" placeholder="Categoria del producto">
+            <input type="text" name="name" id="" placeholder="Titulo del producto">
+            <input type="text" name="description" id=""
                 placeholder="Descripción del producto">
-            <input type="text" name="categoria-producto" id="categoria-producto" placeholder="Categoria del producto">
-            <input type="text" name="precio-producto" id="precio-producto" placeholder="Precio del producto">
+            <input type="text" name="price" id="" placeholder="Precio del producto">
             <h4>Seleccione la foto del nuevo producto:</h4>
-            <input type="file" multiple accept=".jpg, .jpeg, .png" name="imagen-producto" id="imagen-producto">
+            <input type="file" multiple accept=".jpg, .jpeg, .png" name="image" id="img">
             <button id="enviar" type="submit">Agregar</button>
         </form>
     </main>

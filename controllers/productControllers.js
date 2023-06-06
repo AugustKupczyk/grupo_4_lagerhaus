@@ -15,7 +15,7 @@ const controllers = {
         const vegano = products.filter(product => product.category === "Vegano");
         const cervezas = products.filter(product => product.category === "Cerveza");
         const tragos = products.filter(product => product.category === "Tragos y gaseosas");
-        res.render("menu", { burgers, tapeo, sandwiches, wraps, vegano, cervezas, tragos, sinTACC });
+        res.render("menu", { tapeo,burgers, sandwiches, wraps, vegano, cervezas, tragos, sinTACC });
     },
 
     //@GET /menu/agregar-producto
@@ -35,7 +35,7 @@ const controllers = {
 
         productModel.createOne(datos);
 
-        res.redirect('/menu');
+        res.redirect('/products/menu');
     },
 
     // @GET /menu/:id/detail
@@ -75,10 +75,11 @@ const controllers = {
     updateProduct: (req, res) => {
         const id = Number(req.params.id);
         const nuevosDatos = req.body;
+        console.log(nuevosDatos);
 
         productModel.updateById(id, nuevosDatos);
 
-        res.redirect('/menu');
+        res.redirect('/products/menu');
     },
 
     // @DELETE /products/:id/delete
@@ -87,7 +88,7 @@ const controllers = {
 
         productModel.deleteById(id);
 
-        res.redirect('/menu');
+        res.redirect('/products/menu');
 
     },
 
