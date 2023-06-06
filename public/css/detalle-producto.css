@@ -24,6 +24,19 @@ p, h1, h2, h3, h4, h5, h6 {
     left: 5px;
 }
 
+.container-producto{
+    display: flex;
+    width: 70vw;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.foto-producto{
+    width: auto;
+    height: 100%;
+}
+
+
 /* .close-button {
     top: 5px;
     left: 5px;

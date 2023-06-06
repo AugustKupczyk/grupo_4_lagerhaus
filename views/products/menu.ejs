@@ -21,10 +21,11 @@
                     <% tapeo.forEach(product => { %>
                         <li class="producto">
                             <div class="foto-nombre-detalle">
-                                <a href="/products/detalle-producto"><img class="foto-producto" src="<%=product.image%>" width=50px alt="Foto Producto"></a>
+                                <img class="foto-producto" src="<%=product.image%>" width=50px alt="Foto Producto">
                                 <div class="nombre-detalle">    
                                     <p class="titulo-producto"><%= product.name %></p>
                                     <p class="detalle-producto"><%= product.description %></p>
+                                    <a href="/products/<%= product.id %>/detalle-producto"><button>Ver detalles del producto</button></a>
                                 </div>
                             </div>
                             <p class="precio">$<%= product.price %></p>    

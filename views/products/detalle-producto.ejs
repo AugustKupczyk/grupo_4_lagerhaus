@@ -9,23 +9,41 @@
     <header class="detalle-main-header">
         <a href="/products/menu" class="back-button"><i class="fa-solid fa-circle-arrow-left fa-lg" style="color: #ffffff;"></i></a>
         <!-- <a href="#" class="close-button"></a><i class="fa-solid fa-circle-xmark fa-lg" style="color: #ffffff;"></i></a> -->
-        <img src="/imgs/burger-jack.jpg" alt="Foto de Burger Jack" id="burger-jack">
+        <!-- <img src="/imgs/burger-jack.jpg" alt="Foto de Burger Jack" id="burger-jack"> -->
+        <div class="container-producto">
+            <img class="foto-producto" src="<%=product.image%>" width=50px alt="Foto Producto">
+
+        </div>
+        
     </header>
     
     <main>
         <section class="detalle-descripcion-producto">
             <p class="mas-vendido">Más vendido</p>
 
-            <h2 class="titulo-producto">Burger Jack</h2>
+            <h1>Detalles del producto <%= product.id %></h1>
 
-            <p class="descripcion-producto">Medallon de carne, queso cheddar, panceta ahumada, aros de cebolla y salsa BBQ Jack Daniel's</p>
+            <h2 class="titulo-producto">Nombre: <%= product.name %></h2>
 
-            <h3 class="precio">$1900</h3>
+            <p class="descripcion-producto"> <%= product.description %> </p>
+
+            <h3 class="precio">Precio: <%= product.price %></h3>
+
+
+            <form action="/products/<%= product.id %>/delete?_method=delete" method="post">
+                <input type="submit" value="Eliminar producto"></input>
+              </form>
+              <br>
+              <a href="/products/<%= product.id %>/editar-producto">
+                <button>Editar producto</button>
+              </a>
         </section>
+
+
 
         
 
-        <section class="detalle-section-combinacion">
+        <!-- <section class="detalle-section-combinacion">
             
             <h3>Otras personas los combinaron con:</h3>
             
@@ -73,7 +91,7 @@
                     </div>                
                 </li>
             </ul>
-        </section>  
+        </section>   -->
     </main>
     <footer>
         <%- include("./partials/footer-detalle")  %>

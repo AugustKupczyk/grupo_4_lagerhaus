@@ -54,7 +54,7 @@ const controllers = {
         }
 
         // Renderizamos la vista productDetail, y le pasamos los datos del producto solicitado
-        res.render('detalle-producto', { product: productoAMostrar });
+        res.render("detalle-producto", { product: productoAMostrar });
     },
 
     // @GET / editar
