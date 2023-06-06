@@ -1,29 +1,24 @@
 const fs = require('fs');
 const path = require('path');
   
-const model = {
+const model = { 
     // Ruta del archivo JSON
     route: '../data/products.json',
 
     // Traer todos los productos
     findAll: function () {
         const productsJSON = fs.readFileSync(path.join(__dirname, this.route), 'utf-8');
-
         const products = JSON.parse(productsJSON);
-
         return products;
     },
 
     // Traer un producto según su ID
     findById: function (id) {
         const products = this.findAll();
-
         let searched = products.find(product => product.id === id);
-
         if (!searched) {
             searched = null;
         }
-
         return searched;
     },
 

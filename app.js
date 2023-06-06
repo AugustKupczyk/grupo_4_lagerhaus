@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const methodOverride=require("method-override");
+const methodOverride = require("method-override");
 
 const rutasMain = require("./routes/mainRoutes.js");
 const rutasProducto = require("./routes/productRoutes.js");
@@ -22,7 +22,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(methodOverride("_method"));
 
-/* --- Routers --- */
+// --- Routers ---
 app.use(rutasMain);
 app.use("/products", rutasProducto);
 app.use("/users", rutasUser);

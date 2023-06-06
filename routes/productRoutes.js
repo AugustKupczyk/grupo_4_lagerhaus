@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
     filename: (req, file, cb) => {
         console.log(path.extname(file.originalname))
         cb(null, Date.now() + '-' + file.originalname);
-    }
+    } 
 });
  
 const upload = multer({ storage });
@@ -21,10 +21,10 @@ const upload = multer({ storage });
 // @GET /products 
 router.get("/menu", productControllers.getMenu);
 
-// @POST /products
+// @POST /products (Aca se recibe la informacion del nuevo producto para despues almacenarla en algun lado)
 router.post('/menu', upload.any('img'), productControllers.postProduct);
 
-// @GET /products/agregar-producto
+// @GET /products/agregar-producto (Vista de formulario de creacion de producto)
 router.get("/agregar-producto", productControllers.getAgregar);
 
 // @GET /products/:id/detail ---> /products/5/detail

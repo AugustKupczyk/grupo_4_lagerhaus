@@ -1,5 +1,5 @@
-const path = require("path");
- 
+const path = require("path"); 
+
 const productModel = require('../models/products');
 
 const controllers = {
@@ -15,21 +15,22 @@ const controllers = {
         const vegano = products.filter(product => product.category === "Vegano");
         const cervezas = products.filter(product => product.category === "Cerveza");
         const tragos = products.filter(product => product.category === "Tragos y gaseosas");
-        res.render("menu", { tapeo,burgers, sandwiches, wraps, vegano, cervezas, tragos, sinTACC });
+        res.render("menu", { tapeo, burgers, sandwiches, wraps, vegano, cervezas, tragos, sinTACC });
     },
 
-    //@GET /menu/agregar-producto
+    //@GET /menu/agregar-producto - Solo manda la vista del forulario de creacion :)
     getAgregar: (req, res) => {
         res.render('agregar-producto');
     },
     
     // @POST /menu/agregar-producto
     postProduct: (req, res) => {
-        let datos = req.body;
+        let datos = req.body; //Agarro datos que el usuario ingresó en el formulario
 
         console.log(req.files)
 
-        datos.price = Number(datos.price);
+        datos.price = Number(datos.price); //Paso el precio a Numero
+
         /* datos.img = '/imgs/products/' + req.file.filename; */
         datos.imgs = req.files.map(file => '/imgs/products' + file.filename);
 
