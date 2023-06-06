@@ -2,10 +2,10 @@
     {
         "id": 1,
         "category": "Tapeo",
-        "name": "NACHOOOOOOOOOOS",
+        "name": "Nachos",
         "description": "Con bondiola a la BBQ.",
-        "price": "2000",
-        "imgs": "/imgs/tapeo-nachos-bondiola.jpg"
+        "price": "3000",
+        "imgs": "/imgs/products/tapeo-nachos-bondiola.jpg"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "name": "Tequeños",
         "description": "Con salsa tártara.",
         "price": 2000,
-        "imgs": "/imgs/tapeo-tequeños.jpg"
+        "imgs": "/imgs/products/tapeo-tequeños.jpg"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "name": "Mozzarellas empanizadas",
         "description": "Con salsa fileto.",
         "price": 1800,
-        "imgs": "/imgs/tapeo-muzzarellitas.jpg"
+        "imgs": "/imgs/products/tapeo-muzzarellitas.jpg"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "name": "Papas completas",
         "description": "Con queso cheddar, panceta y verdeo.",
         "price": 1900,
-        "imgs": "/imgs/tapeo-papas-completas.JPG"
+        "imgs": "/imgs/products/tapeo-papas-completas.JPG"
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "name": "Pollo",
         "description": "Con pollo crunch, lechuga, tomate, queso crema, queso provoleta y alioli de zanahoria.",
         "price": 1800,
-        "imgs": "/imgs/wrap-pollo.JPG"
+        "imgs": "/imgs/products/wrap-pollo.JPG"
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "name": "Veggie",
         "description": "Lechuga, tomate, queso crema, queso provoleta y alioli de zanahoria.",
         "price": 1800,
-        "imgs": "/imgs/wrap-veggie.JPG"
+        "imgs": "/imgs/products/wrap-veggie.JPG"
     },
     {
         "id": 7,
@@ -53,7 +53,7 @@
         "name": "Tabla Vegana",
         "description": "Para compartir. 3 empanadas notCarne, bastones de zanahoria, hummus de garbanzo, morrones en aceite, tomates cherry, berenjenas al escabeche, aceitunas verdes acompañada de batatas y papas fritas.",
         "price": 4200,
-        "imgs": "/imgs/tapeo-papas-completas.JPG"
+        "imgs": "/imgs/products/tapeo-papas-completas.JPG"
     },
     {
         "id": 8,
@@ -61,7 +61,7 @@
         "name": "Burger notCo",
         "description": "Medallón notCo simil carne, lechuga, tomate, queso cheddar vegano, pan vegano y notMayo.",
         "price": 1900,
-        "imgs": "/imgs/tapeo-papas-completas.JPG"
+        "imgs": "/imgs/products/tapeo-papas-completas.JPG"
     },
     {
         "id": 9,
@@ -69,7 +69,7 @@
         "name": "Fernet con Cola",
         "description": "Fernet con Coca Cola.",
         "price": 1100,
-        "imgs": "/imgs/tragos-fernet.JPG"
+        "imgs": "/imgs/products/tragos-fernet.JPG"
     },
     {
         "id": 10,
@@ -77,7 +77,7 @@
         "name": "Aperol Spritz",
         "description": "Aperol Spritz con jugo de naranja.",
         "price": 1200,
-        "imgs": "/imgs/tragos-aperol.JPG"
+        "imgs": "/imgs/products/tragos-aperol.JPG"
     },
     {
         "id": 11,
@@ -85,7 +85,7 @@
         "name": "Jagermeister & red bull",
         "description": "Jagermeister con red bull.",
         "price": 2400,
-        "imgs": "/imgs/tragos-jager-redbull.JPG"
+        "imgs": "/imgs/products/tragos-jager-redbull.JPG"
     },
     {
         "id": 12,
@@ -93,7 +93,7 @@
         "name": "Merle & Tonic",
         "description": "Merle con Tónica.",
         "price": 1200,
-        "imgs": "/imgs/tragos-merle-tonic.JPG"
+        "imgs": "/imgs/products/tragos-merle-tonic.JPG"
     },
     {
         "id": 13,
@@ -101,7 +101,7 @@
         "name": "Cervecera",
         "description": "Medallón de carne, huevo a la plancha, panceta ahumada, cebolla caramelizada, y queso cheddar.",
         "price": 2000,
-        "imgs": "/imgs/burger-cervecera.JPG"
+        "imgs": "/imgs/products/burger-cervecera.JPG"
     },
     {
         "id": 14,
@@ -109,7 +109,7 @@
         "name": "Clásica",
         "description": "Medallón de carne, queso tybo, jamón, lechuga y tomate.",
         "price": 1800,
-        "imgs": "/imgs/burger-clasica.JPG"
+        "imgs": "/imgs/products/burger-clasica.JPG"
     },
     {
         "id": 15,
@@ -117,7 +117,7 @@
         "name": "Doble Smash",
         "description": "Doble carne SMASH, cuádruple cheddar y panceta ahumada.",
         "price": 2400,
-        "imgs": "/imgs/burger-doble-smash.JPG"
+        "imgs": "/imgs/products/burger-doble-smash.JPG"
     },
     {
         "id": 16,
@@ -125,7 +125,7 @@
         "name": "Jack",
         "description": "Medallón de carne, queso cheddar, panceta ahumada, aros de cebolla y salsa BBQ Jack Daniel's.",
         "price": 1900,
-        "imgs": "/imgs/burger-jack.JPG"
+        "imgs": "/imgs/products/burger-jack.JPG"
     },
     {
         "id": 17,
@@ -133,7 +133,7 @@
         "name": "Bondiola Desmenuzada",
         "description": "Bondiola braseada, cebolla caramelizada y salsa barbacoa.",
         "price": 2300,
-        "imgs": "/imgs/sandwich-bondiola-desmenuzada.JPG"
+        "imgs": "/imgs/products/sandwich-bondiola-desmenuzada.JPG"
     },
     {
         "id": 18,
@@ -141,7 +141,7 @@
         "name": "Double Down",
         "description": "Con dos piezas de pollo frito en lugar del pan, doble queso cheddar, panceta ahumada y salsa Big M.",
         "price": 2900,
-        "imgs": "/imgs/sandwich-double-down.JPG"
+        "imgs": "/imgs/products/sandwich-double-down.JPG"
     },
     {
         "id": 19,
@@ -149,7 +149,7 @@
         "name": "Philly Cheesesteak",
         "description": "Tiras de ojo de bife, queso cheddar y cebolla.",
         "price": 2900,
-        "imgs": "/imgs/sandwich-phillycheesesteak.JPG"
+        "imgs": "/imgs/products/sandwich-phillycheesesteak.JPG"
     },
     {
         "id": 20,
@@ -157,7 +157,7 @@
         "name": "Empanadas x3",
         "description": "Carne / Jamón y Queso",
         "price": 1800,
-        "imgs": "/imgs/sintacc-empanadas.JPG"
+        "imgs": "/imgs/products/sintacc-empanadas.JPG"
     },
     {
         "id": 21,
@@ -165,7 +165,7 @@
         "name": "Tarta Individual",
         "description": "Verdura / Jamón y Queso",
         "price": 1800,
-        "imgs": "/imgs/sintacc-tartas.JPG"
+        "imgs": "/imgs/products/sintacc-tartas.JPG"
     },
     {
         "id": 22,
@@ -173,7 +173,7 @@
         "name": "Pinta",
         "description": "Elegí de nuestras selección de +25 canillas!",
         "price": 800,
-        "imgs": "/imgs/cerveza.JPG"
+        "imgs": "/imgs/products/cerveza.JPG"
     },
     {
         "id": 23,

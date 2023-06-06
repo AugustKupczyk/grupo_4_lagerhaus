@@ -1,0 +1,22 @@
+
+html {
+
+    background-color: black;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 36px;
+    margin-top: 50px;
+    color: orange;
+
+}
+
+p {
+    font-size: 18px;
+    margin-top: 20px;
+}

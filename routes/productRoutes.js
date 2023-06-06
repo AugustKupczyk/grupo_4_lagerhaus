@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require('path');
 const multer = require('multer');
+const validationMiddlewares = require('../middlewares/validations');
 
 const productControllers = require("../controllers/productControllers");
 
@@ -16,13 +17,18 @@ const storage = multer.diskStorage({
     } 
 });
  
-const upload = multer({ storage });
+const upload = multer({ storage }); 
+
+const pepitoware = (req, res, next) => {
+    console.log('Se usó la ruta!!!');
+    next();
+}
 
 // @GET /products 
 router.get("/menu", productControllers.getMenu);
 
 // @POST /products (Aca se recibe la informacion del nuevo producto para despues almacenarla en algun lado)
-router.post('/menu', upload.any('img'), productControllers.postProduct);
+router.post('/menu', [upload.any('img'), validationMiddlewares.validateCreateProduct], productControllers.postProduct);
 
 // @GET /products/agregar-producto (Vista de formulario de creacion de producto)
 router.get("/agregar-producto", productControllers.getAgregar);

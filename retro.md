@@ -4,4 +4,4 @@ Sprint 2: El trabajo en grupo fue exitoso, ya que pudimos realizar todas las con
 
 Sprint 3: Si bien 2/5 del grupo de trabajo decidieron no continuar con el proyecto integrador, nos hemos podido distribuir de manera exitosa las tareas a realizar. Con reuniones bisemanales y un ida y vuelta constante, el trabajo asincronico entre los 3 integrantes del equipo ha sido fructífero. 
 
-
+Sprint 4:

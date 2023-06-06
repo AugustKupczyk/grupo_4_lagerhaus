@@ -8,11 +8,8 @@
 <body>
     <header class="detalle-main-header">
         <a href="/products/menu" class="back-button"><i class="fa-solid fa-circle-arrow-left fa-lg" style="color: #ffffff;"></i></a>
-        <!-- <a href="#" class="close-button"></a><i class="fa-solid fa-circle-xmark fa-lg" style="color: #ffffff;"></i></a> -->
-        <!-- <img src="/imgs/burger-jack.jpg" alt="Foto de Burger Jack" id="burger-jack"> -->
         <div class="container-producto">
-            <img class="foto-producto" src="<%=product.image%>" width=50px alt="Foto Producto">
-
+            <img class="foto-producto" src="<%=product.imgs%>" width=50px alt="Foto Producto">
         </div>
         
     </header>
@@ -29,7 +26,6 @@
 
             <h3 class="precio">Precio: <%= product.price %></h3>
 
-
             <form action="/products/<%= product.id %>/delete?_method=delete" method="post">
                 <input type="submit" value="Eliminar producto"></input>
               </form>
@@ -39,59 +35,6 @@
               </a>
         </section>
 
-
-
-        
-
-        <!-- <section class="detalle-section-combinacion">
-            
-            <h3>Otras personas los combinaron con:</h3>
-            
-            <ul class="detalle-ul-combinacion">
-                <li class="container-combinacion">
-                    <img src="/imgs/burger-cervecera.jpg" alt="Foto de Burger Cervecera" id="burger-cervecera">
-                    <p class="titulo-precio-producto">Burger Cervecera <br><br><strong>$2000</strong></p>
-                    <div class="agregar-quitar-button">
-                        <span>
-                            <i class="fa-solid fa-plus" style="color: #ffffff;"></i>
-                        </span>
-                        <span><h4>1</h4></span>
-                        <span>
-                            <i class="fa-solid fa-minus" style="color: #ffffff;"></i>
-                        </span>
-                    </div>
-                </li>
-
-                <li class="container-combinacion">
-                    <img src="/imgs/tapeo-tequeños.jpg" alt="Foto de Tequeños" id="tapeo-tequeños">                    
-                    <p class="titulo-precio-producto">Tequeños <br><br><strong>$2000</strong></p>
-                    <div class="agregar-quitar-button">
-                        <span>
-                            <i class="fa-solid fa-plus" style="color: #ffffff;"></i>
-                        </span>
-                        <span><h4>1</h4></span>
-                        <span>
-                            <i class="fa-solid fa-minus" style="color: #ffffff;"></i>
-                        </span>
-                    </div>
-                </li>
-                
-
-                <li class="container-combinacion">
-                    <img src="/imgs/sandwich-bondiola-desmenuzada.jpg" alt="Foto del Sandwich de Bondiola Desmenuzada" id="sandwich-bondiola-desmenuzada">
-                    <p class="titulo-precio-producto">Sandwich de Bondiola Desmenuzada<br><br><strong>$2000</strong></p>
-                    <div class="agregar-quitar-button">
-                        <span>
-                            <i class="fa-solid fa-plus" style="color: #ffffff;"></i>
-                        </span>
-                        <span><h4>1</h4></span>
-                        <span>
-                            <i class="fa-solid fa-minus" style="color: #ffffff;"></i>
-                        </span>
-                    </div>                
-                </li>
-            </ul>
-        </section>   -->
     </main>
     <footer>
         <%- include("./partials/footer-detalle")  %>

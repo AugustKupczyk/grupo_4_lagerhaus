@@ -8,18 +8,23 @@
         <link href="/css/agregar-producto.css" rel="stylesheet">
 </head>
 
-<body>
+<body> 
 
     <header>
         <%- include("./partials/header-main") %>
     </header>
 
     <main> 
+        <ul>
+            <% errors.forEach(errorActual => { %>
+            <li><%= errorActual.msg %></li>
+            <% }) %>
+          </ul>
         <p>Agregar productos</p>
         <form action="/products/menu" method="post" enctype="multipart/form-data">
             <h4>Complete el detalle del nuevo producto:</h4>
             <input type="text" name="category" id="" placeholder="Categoria del producto">
-            <input type="text" name="name" id="" placeholder="Titulo del producto">
+            <input type="text" name="name" id="" placeholder="Nombre del producto">
             <input type="text" name="description" id="" placeholder="Descripción del producto">
             <input type="text" name="price" id="" placeholder="Precio del producto">
             <h4>Seleccione la foto del nuevo producto:</h4>

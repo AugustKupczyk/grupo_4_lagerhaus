@@ -1,4 +1,5 @@
 const path = require("path"); 
+const expressValidator = require('express-validator');
 
 const productModel = require('../models/products');
 
@@ -20,25 +21,29 @@ const controllers = {
 
     //@GET /menu/agregar-producto - Solo manda la vista del forulario de creacion :)
     getAgregar: (req, res) => {
-        res.render('agregar-producto');
+        res.render('agregar-producto', { errors: [], values: {} });
     },
     
     // @POST /menu/agregar-producto
     postProduct: (req, res) => {
-        let datos = req.body; //Agarro datos que el usuario ingresó en el formulario
+        const validation = expressValidator.validationResult(req);
 
-        console.log(req.files)
+        if(validation.errors.length > 0){
+            return res.render('agregar-producto', { errors: validation.errors, values: req.body });
+        }
+
+        let datos = req.body; //Agarro datos que el usuario ingresó en el formulario
 
         datos.price = Number(datos.price); //Paso el precio a Numero
 
         /* datos.img = '/imgs/products/' + req.file.filename; */
-        datos.imgs = req.files.map(file => '/imgs/products' + file.filename);
+        datos.imgs = req.files.map(file => '/imgs/products/' + file.filename);
 
         productModel.createOne(datos);
 
         res.redirect('/products/menu');
     },
-
+ 
     // @GET /menu/:id/detail
     getDetalleProducto: (req, res) => {
         // Agarramos el ID que nos pasaron por parámetro de ruta, y lo convertimos en number
