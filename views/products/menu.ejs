@@ -6,9 +6,9 @@
     <link href="/css/menu.css" rel="stylesheet">
 </head> 
 <body>
-    <header>
+    <header> 
         <%- include("./partials/header-main") %>
-    </header>
+    </header> 
     
     <main> 
         <div class="seccion" id="tapeo">
@@ -21,11 +21,13 @@
                     <% tapeo.forEach(product => { %>
                         <li class="producto">
                             <div class="foto-nombre-detalle">
-                                <img class="foto-producto" src="<%=product.imgs%>" width=50px alt="Foto Producto">
+                                <div class="contenedor-foto-producto">
+                                    <img class="foto-producto" src="<%=product.imgs%>" width=50px alt="Foto Producto">
+                                </div>
                                 <div class="nombre-detalle">    
                                     <p class="titulo-producto"><%= product.name %></p>
                                     <p class="detalle-producto"><%= product.description %></p>
-                                    <a href="/products/<%= product.id %>/detalle-producto"><button>Ver detalles del producto</button></a>
+                                    <a href="/products/<%= product.id %>/detalle-producto"><button class = "boton-detalle-producto">Haz click para ver el detalle</button></a>
                                 </div>
                             </div>
                             <p class="precio">$<%= product.price %></p>    
@@ -46,11 +48,13 @@
                     <% burgers.forEach(product => { %>
                         <li class="producto">
                             <div class="foto-nombre-detalle">
-                                <a href="/products/detalle-producto"><img class="foto-producto" src="<%=product.imgs%>" width=50px alt="Foto Producto"></a>
+                                <div class = "contenedor-foto-producto">
+                                    <img class="foto-producto" src="<%=product.imgs%>" width=50px alt="Foto Producto">
+                                </div>
                                 <div class="nombre-detalle">    
                                     <p class="titulo-producto"><%= product.name %></p>
                                     <p class="detalle-producto"><%= product.description %></p>
-                                    <a href="/products/<%= product.id %>/detalle-producto"><button>Ver detalles del producto</button></a>
+                                    <a href="/products/<%= product.id %>/detalle-producto"><button class = "boton-detalle-producto">Haz click para ver el detalle</button></a>
                                 </div>
                             </div>
                             <p class="precio">$<%= product.price %></p>    
@@ -70,11 +74,13 @@
                     <% sandwiches.forEach(product => { %>
                         <li class="producto">
                             <div class="foto-nombre-detalle">
-                                <a href="/products/detalle-producto"><img class="foto-producto" src="<%=product.imgs%>" width=50px alt="Foto Producto"></a>
+                                <div class = "contenedor-foto-producto">
+                                    <img class="foto-producto" src="<%=product.imgs%>" width=50px alt="Foto Producto">
+                                </div>
                                 <div class="nombre-detalle">    
                                     <p class="titulo-producto"><%= product.name %></p>
                                     <p class="detalle-producto"><%= product.description %></p>
-                                    <a href="/products/<%= product.id %>/detalle-producto"><button>Ver detalles del producto</button></a>
+                                    <a href="/products/<%= product.id %>/detalle-producto"><button class = "boton-detalle-producto">Haz click para ver el detalle</button></a>
                                 </div>
                             </div>
                             <p class="precio">$<%= product.price %></p>    
@@ -95,11 +101,13 @@
                     <% wraps.forEach(product => { %>
                         <li class="producto">
                             <div class="foto-nombre-detalle">
-                                <a href="/products/detalle-producto"><img class="foto-producto" src="<%=product.imgs%>" width=50px alt="Foto Producto"></a>
+                                <div class = "contenedor-foto-producto">
+                                    <img class="foto-producto" src="<%=product.imgs%>" width=50px alt="Foto Producto">
+                                </div>
                                 <div class="nombre-detalle">    
                                     <p class="titulo-producto"><%= product.name %></p>
                                     <p class="detalle-producto"><%= product.description %></p>
-                                    <a href="/products/<%= product.id %>/detalle-producto"><button>Ver detalles del producto</button></a>
+                                    <a href="/products/<%= product.id %>/detalle-producto"><button class = "boton-detalle-producto">Haz click para ver el detalle</button></a>
                                 </div>
                             </div>
                             <p class="precio">$<%= product.price %></p>    
@@ -120,11 +128,13 @@
                     <% sinTACC.forEach(product => { %>
                         <li class="producto">
                             <div class="foto-nombre-detalle">
-                                <a href="/products/detalle-producto"><img class="foto-producto" src="<%=product.imgs%>" width=50px alt="Foto Producto"></a>
+                                <div class = "contenedor-foto-producto">
+                                    <img class="foto-producto" src="<%=product.imgs%>" width=50px alt="Foto Producto">
+                                </div>
                                 <div class="nombre-detalle">    
                                     <p class="titulo-producto"><%= product.name %></p>
                                     <p class="detalle-producto"><%= product.description %></p>
-                                    <a href="/products/<%= product.id %>/detalle-producto"><button>Ver detalles del producto</button></a>
+                                    <a href="/products/<%= product.id %>/detalle-producto"><button class = "boton-detalle-producto">Haz click para ver el detalle</button></a>
                                 </div>
                             </div>
                             <p class="precio">$<%= product.price %></p>    
@@ -145,11 +155,13 @@
                     <% vegano.forEach(product => { %>
                         <li class="producto">
                             <div class="foto-nombre-detalle">
-                                <a href="/products/detalle-producto"><img class="foto-producto" src="<%=product.imgs%>" width=50px alt="Foto Producto"></a>
+                                <div class = "contenedor-foto-producto">
+                                    <img class="foto-producto" src="<%=product.imgs%>" width=50px alt="Foto Producto">
+                                </div>
                                 <div class="nombre-detalle">    
                                     <p class="titulo-producto"><%= product.name %></p>
                                     <p class="detalle-producto"><%= product.description %></p>
-                                    <a href="/products/<%= product.id %>/detalle-producto"><button>Ver detalles del producto</button></a>
+                                    <a href="/products/<%= product.id %>/detalle-producto"><button class = "boton-detalle-producto">Haz click para ver el detalle</button></a>
                                 </div>
                             </div>
                             <p class="precio">$<%= product.price %></p>    
@@ -170,11 +182,13 @@
                     <% cervezas.forEach(product => { %>
                         <li class="producto">
                             <div class="foto-nombre-detalle">
-                                <a href="/products/detalle-producto"><img class="foto-producto" src="<%=product.imgs%>" width=50px alt="Foto Producto"></a>
+                                <div class = "contenedor-foto-producto">
+                                    <img class="foto-producto" src="<%=product.imgs%>" width=50px alt="Foto Producto">
+                                </div>
                                 <div class="nombre-detalle">    
                                     <p class="titulo-producto"><%= product.name %></p>
                                     <p class="detalle-producto"><%= product.description %></p>
-                                    <a href="/products/<%= product.id %>/detalle-producto"><button>Ver detalles del producto</button></a>
+                                    <a href="/products/<%= product.id %>/detalle-producto"><button class = "boton-detalle-producto">Haz click para ver el detalle</button></a>
                                 </div>
                             </div>
                             <p class="precio">$<%= product.price %></p>    
@@ -195,11 +209,13 @@
                     <% tragos.forEach(product => { %>
                         <li class="producto">
                             <div class="foto-nombre-detalle">
-                                <a href="/products/detalle-producto"><img class="foto-producto" src="<%=product.imgs%>" width=50px alt="Foto Producto"></a>
+                                <div class = "contenedor-foto-producto">
+                                    <img class="foto-producto" src="<%=product.imgs%>" width=50px alt="Foto Producto">
+                                </div>
                                 <div class="nombre-detalle">    
                                     <p class="titulo-producto"><%= product.name %></p>
                                     <p class="detalle-producto"><%= product.description %></p>
-                                    <a href="/products/<%= product.id %>/detalle-producto"><button>Ver detalles del producto</button></a>
+                                    <a href="/products/<%= product.id %>/detalle-producto"><button class = "boton-detalle-producto">Haz click para ver el detalle</button></a>
                                 </div>
                             </div>
                             <p class="precio">$<%= product.price %></p>    
