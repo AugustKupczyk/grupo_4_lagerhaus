@@ -6,7 +6,7 @@
         "email": "miliferrini@gmail.com",
         "password": "miluchi98",
         "category": "admin",
-        "image":""
+        "image": ""
     },
     {
         "id": 2,
@@ -24,7 +24,7 @@
         "email": "gonzalo@gmail.com",
         "password": "gonza01",
         "category": "admin",
-        "image":"" 
+        "image": ""
     },
     {
         "id": 4,
@@ -34,6 +34,12 @@
         "password": "esteban01",
         "category": "user",
         "image": ""
+    },
+    {
+        "email": "pr0bando@gmail.com",
+        "usuario": "pr0bando",
+        "password": "$2b$12$PyXExm3dEX9gYkQrnESKguKFLtEpzUaYEKG9fLMll0KXSTT0WAY1q",
+        "confirm-password": "pr0bando",
+        "id": "bfb9f0b3-8aa7-47db-820a-6271c6628e14"
     }
-
 ]

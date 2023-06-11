@@ -3,6 +3,8 @@ const path = require("path");
 const fs = require('fs');
 const methodOverride = require("method-override");
 const morgan = require('morgan');
+const cookieParser = require('cookie-parser');
+const expressSession = require('express-session');
 
 const rutasMain = require("./routes/mainRoutes.js");
 const rutasProducto = require("./routes/productRoutes.js");
@@ -25,10 +27,27 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(methodOverride("_method"));
 app.use(morgan('tiny'));
+app.use(cookieParser());
+app.use(expressSession({ secret: 'este es mi secreto monito123' }));
 
 app.use((req, res, next) => {
     const ruta = req.originalUrl + '\n';
     fs.appendFileSync(path.join(__dirname, './data/rutas.txt'), ruta);
+    next();
+});
+
+app.use((req, res, next) => {
+    if(req.cookies.email){
+        const userModel = require('./models/user');
+
+        const user = userModel.findByEmail(req.cookies.email);
+
+        delete user.id;
+        delete user.password;
+
+        req.session.user = user;
+    }
+
     next();
 });
 
