@@ -59,6 +59,31 @@
     align-items: flex-start;
 }
 
+.producto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #ffa500;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+
+.producto:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ffa500;
+  }
+
+  .producto:hover {
+    color: #ffa500;
+    box-shadow: 0 0 5px #ffa500;
+    text-shadow: 0 0 5px #ffa500;
+  }
+
 .foto-nombre-detalle{
     display: flex;
     flex-direction: row;

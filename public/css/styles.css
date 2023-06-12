@@ -47,10 +47,50 @@ nav li {
 margin: 0 10px;
 }
 
-nav a {
-color: #fff;
-text-decoration: none;
+.navbar-right a {
+    padding: .5em .8em;
+    color: #fff;
+    position: relative;
+    text-decoration: none;
 }
+
+a::before,
+a::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+a::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid #ffa500;
+    border-right: 3px solid #ffa500;
+    transform: translate(-100%, 50%);
+  }
+
+a:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid #ffa500;
+    border-left: 3px solid #ffa500;
+    transform: translate(100%, -50%)
+  }
+
+a:hover:before,
+a:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+a:hover {
+    color: #ffa500;
+  }
 
 .fa-bars{
 color: orange;
