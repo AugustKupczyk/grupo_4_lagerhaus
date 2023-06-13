@@ -11,7 +11,17 @@
             <li><a href="#contacto">CONTACTO</a></li>
             <li><a href="/users/login">LOGIN</a></li>
             <li><a href="/products/carrito-compras"><i class="fa-solid fa-cart-shopping fa-lg"
-                        style="color: #ffa500;"></i></a></li>
+                style="color: #ffa500;"></i></a></li>
+            <li>
+                <a href="/users/profile" style="color: white;">
+                    <%= userData.usuario %>
+                </a>
+            </li>
+            <% if (userData.usuario) { %>
+                <form action="/users/sign-out" method="get">
+                    <input type="submit" value="cerrar sesión">
+                </form>
+                <% } %>
         </ul>
         <div class="burger-menu">
             <i class="fas fa-bars"></i>

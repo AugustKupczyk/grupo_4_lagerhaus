@@ -2,7 +2,12 @@ const path = require ("path");
 
 const controllers={
     getIndex:(req,res) =>{
-        res.render("index");
+        let userData = req.session.user;
+        if(!userData){
+            userData = {}
+        }
+
+        res.render("index",{userData});
     },
     getFranquicias:(req,res) =>{
         res.render("franquicias");

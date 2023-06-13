@@ -2,9 +2,16 @@ const fs = require('fs');
 const path = require('path');
 const uuid = require('uuid');
 
-const model = { 
+const model = {
     // Ruta del archivo JSON
     route: '../data/users.json',
+
+    // getUserData: function (req) {
+    //     let userData = req.session.user;
+    //     if (!userData) {
+    //         userData = {}
+    //     }
+    // },
 
     // Traer todos los usuarios
     findAll: function () {

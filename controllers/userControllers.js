@@ -1,11 +1,12 @@
 const userModel = require('../models/user.js');
-const path = require ("path");
 const bcrypt = require("bcrypt");
 
 const controllers={
     signOut: (req, res) => {
         res.clearCookie('email');
+
         req.session.user = {};
+
         res.redirect('/users/login');
     },
 
@@ -19,13 +20,17 @@ const controllers={
         };
 
         const newPassword = bcrypt.hashSync(user.password, 12);
+
         user.password = newPassword;
+
         userModel.createOne(user);
-        res.send('Se registró el usuario');
+
+        res.redirect("/")
     },
 
     getLogin: (req, res) => {
         const error = req.query.error || '';
+        
         res.render('login', {error});
     },
     

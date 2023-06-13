@@ -7,6 +7,10 @@ const controllers = {
 
     //@GET /menu
     getMenu: (req, res) => {
+        let userData = req.session.user;
+        if(!userData){
+            userData = {}
+        }
         const products = productModel.findAll();
         const tapeo = products.filter(product => product.category === "Tapeo");
         const burgers = products.filter(product => product.category === "Burgers");
@@ -16,7 +20,7 @@ const controllers = {
         const vegano = products.filter(product => product.category === "Vegano");
         const cervezas = products.filter(product => product.category === "Cerveza");
         const tragos = products.filter(product => product.category === "Tragos y gaseosas");
-        res.render("menu", { tapeo, burgers, sandwiches, wraps, vegano, cervezas, tragos, sinTACC });
+        res.render("menu", { tapeo, burgers, sandwiches, wraps, vegano, cervezas, tragos, sinTACC, userData });
     },
 
     //@GET /menu/agregar-producto - Solo manda la vista del forulario de creacion :)
@@ -65,6 +69,12 @@ const controllers = {
 
     // @GET / editar
     getEditar: (req, res) => {
+        
+        let userData = req.session.user;
+        if(!userData){
+            userData = {}
+        }
+
         const id = Number(req.params.id);
         const productoAModificar = productModel.findById(id)
         
@@ -74,7 +84,7 @@ const controllers = {
             return res.send('error de id');
         }
         
-        res.render('editar-producto', { product: productoAModificar });
+        res.render('editar-producto', { product: productoAModificar,userData });
     },
     
     // @GET / editar

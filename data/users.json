@@ -36,10 +36,24 @@
         "image": ""
     },
     {
-        "email": "pr0bando@gmail.com",
-        "usuario": "pr0bando",
-        "password": "$2b$12$PyXExm3dEX9gYkQrnESKguKFLtEpzUaYEKG9fLMll0KXSTT0WAY1q",
-        "confirm-password": "pr0bando",
-        "id": "bfb9f0b3-8aa7-47db-820a-6271c6628e14"
+        "email": "augustkup@gmail.com",
+        "usuario": "August1234",
+        "password": "$2b$12$k.TBatK1rqU0dZF2Z2hA8u/D6FNLnfUoZueAukRU3k8WmwnTf088O",
+        "confirm-password": "1234",
+        "id": "b731f9d8-90e7-4649-ab6e-4027ff8c35f6"
+    },
+    {
+        "email": "augustkup@gmail.com",
+        "usuario": "August1234",
+        "password": "$2b$12$ERjnZPqtdmss/StRQ5420e30uRj9Ffp9FbRBn/8UIaF0fc5asVDm6",
+        "confirm-password": "1234",
+        "id": "0efb8acf-e8b1-4cd5-8dcb-2318f6bbdec0"
+    },
+    {
+        "email": "augustkup@gmail.com",
+        "usuario": "August1234",
+        "password": "$2b$12$n80xUmmMpQdx4wvCqOfNTuEbHed0rGu6bABdbLXwPa518RIbm2p1i",
+        "confirm-password": "1234",
+        "id": "2c0c021b-f33a-44bd-8106-c42f016a6b70"
     }
 ]

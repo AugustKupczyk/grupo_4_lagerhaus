@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include("./partials/head") %>
-    <title>Login</title>
-    <link href="/css/login.css" rel="stylesheet">
+        <title>Login</title>
+        <link href="/css/login.css" rel="stylesheet">
 </head>
 
 <body>
@@ -13,28 +14,31 @@
     </header>
 
     <br>
-    
+
     <main>
 
-        <form action="/" method="get">
+        <form action="/users/login" method="post">
             <p>Ingresar</p>
-            <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+            <h1 style="color: red"><%= error %></h1>
+            <input type="email" name="email" id="email" placeholder="Email de usuario">
             <input type="password" name="password" id="password" placeholder="Contraseña">
             <div class="recordar-ft-olvidar">
                 <div class="recordar-check">
                     <input type="checkbox" name="Recordarme" id="Recordarme" value="Recordarme">
                     <label for="Recordarme">Recordarme</label>
                 </div>
-                    <a id="olvide" href="#">Olvidé mi contraseña</a>
+                <a id="olvide" href="#">Olvidé mi contraseña</a>
             </div>
-            <button id ="ingresar" type="submit">Ingresar</button>
+            <button id="ingresar" type="submit">Ingresar</button>
         </form>
         <br>
         <form action="/Google" method="get">
-            <button class="botones-app" type="submit"><i class="fa-brands fa-google" style="color: #000000;"></i>Ingresa con Google</button>
+            <button class="botones-app" type="submit"><i class="fa-brands fa-google" style="color: #000000;"></i>Ingresa
+                con Google</button>
         </form>
         <form action="/Facebook" method="get">
-            <button class="botones-app" type="submit"><i class="fa-brands fa-facebook-f" style="color: #000000;"></i>Ingresa con Facebook</button>
+            <button class="botones-app" type="submit"><i class="fa-brands fa-facebook-f"
+                    style="color: #000000;"></i>Ingresa con Facebook</button>
         </form>
         <a class="register" href="/users/register">Crea tu cuenta</a>
 
