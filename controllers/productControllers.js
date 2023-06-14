@@ -25,7 +25,11 @@ const controllers = {
 
     //@GET /menu/agregar-producto - Solo manda la vista del forulario de creacion :)
     getAgregar: (req, res) => {
-        res.render('agregar-producto', { errors: [], values: {} });
+        let userData = req.session.user;
+        if(!userData){
+            userData = {}
+        }
+        res.render('agregar-producto', {userData, errors: [], values: {} });
     },
     
     // @POST /menu/agregar-producto
@@ -64,7 +68,7 @@ const controllers = {
         }
 
         // Renderizamos la vista productDetail, y le pasamos los datos del producto solicitado
-        res.render("detalle-producto", { product: productoAMostrar });
+        res.render("detalle-producto", { product: productoAMostrar, user:req.session.user});
     },
 
     // @GET / editar

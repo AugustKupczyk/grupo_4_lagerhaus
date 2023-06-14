@@ -26,6 +26,7 @@
 
             <h3 class="precio">Precio: <%= product.price %></h3>
 
+            <% if (user.email === "augustkup@gmail.com") { %>
             <form action="/products/<%= product.id %>/delete?_method=delete" method="post">
                 <input type="submit" value="Eliminar producto"></input>
               </form>
@@ -33,6 +34,7 @@
               <a href="/products/<%= product.id %>/editar-producto">
                 <button>Editar producto</button>
               </a>
+            <% } %>
         </section>
 
     </main>

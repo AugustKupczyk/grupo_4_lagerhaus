@@ -5,7 +5,7 @@ const controllers={
     signOut: (req, res) => {
         res.clearCookie('email');
 
-        req.session.user = {};
+        delete req.session.user;
 
         res.redirect('/users/login');
     },

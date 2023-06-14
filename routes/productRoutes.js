@@ -2,6 +2,7 @@ const express = require("express");
 const path = require('path');
 const multer = require('multer');
 const validationMiddlewares = require('../middlewares/validations');
+const authMiddlewares = require ("../middlewares/authMiddlewares");
 
 const productControllers = require("../controllers/productControllers");
 
@@ -19,31 +20,26 @@ const storage = multer.diskStorage({
  
 const upload = multer({ storage }); 
 
-const pepitoware = (req, res, next) => {
-    console.log('Se usó la ruta!!!');
-    next();
-}
-
 // @GET /products 
-router.get("/menu", productControllers.getMenu);
+router.get("/menu", authMiddlewares.allowSignedIn, productControllers.getMenu);
 
 // @POST /products (Aca se recibe la informacion del nuevo producto para despues almacenarla en algun lado)
-router.post('/menu', [upload.any('img'), validationMiddlewares.validateCreateProduct], productControllers.postProduct);
+router.post('/menu', [authMiddlewares.allowAdmin,validationMiddlewares.validateCreateProduct,upload.any('img')], productControllers.postProduct);
 
 // @GET /products/agregar-producto (Vista de formulario de creacion de producto)
-router.get("/agregar-producto", productControllers.getAgregar);
+router.get("/agregar-producto", authMiddlewares.allowAdmin, productControllers.getAgregar);
 
 // @GET /products/:id/detail ---> /products/5/detail
 router.get("/:id/detalle-producto", productControllers.getDetalleProducto);
 
 // @DELETE /products/:id/delete ---> /products/5/delete
-router.delete('/:id/delete', productControllers.deleteProduct);
+router.delete('/:id/delete', authMiddlewares.allowAdmin, productControllers.deleteProduct);
 
 // @GET /products/:id/update 
-router.get('/:id/editar-producto', productControllers.getEditar);
+router.get('/:id/editar-producto',authMiddlewares.allowAdmin, productControllers.getEditar);
 
 // @PUT /products/:id/update ---> /products/5/put
-router.put('/:id/editar-producto', productControllers.updateProduct);
+router.put('/:id/editar-producto',authMiddlewares.allowAdmin, productControllers.updateProduct);
 
 // @GET /products/cart
 router.get("/carrito-compras", productControllers.getCarritoCompras);

@@ -23,21 +23,25 @@ app.set("views", [
 
 // --- Middlewares ---
 app.use(express.static("public"));
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(methodOverride("_method"));
 app.use(morgan('tiny'));
 app.use(cookieParser());
-app.use(expressSession({ secret: 'este es mi secreto monito123' }));
+app.use(expressSession({
+    secret: 'este es mi secreto monito123',
+    resave: false,
+    saveUninitialized: true
+}));
+
+// app.use((req, res, next) => {
+//     const ruta = req.originalUrl + '\n';
+//     fs.appendFileSync(path.join(__dirname, './data/rutas.txt'), ruta);
+//     next();
+// });
 
 app.use((req, res, next) => {
-    const ruta = req.originalUrl + '\n';
-    fs.appendFileSync(path.join(__dirname, './data/rutas.txt'), ruta);
-    next();
-});
-
-app.use((req, res, next) => {
-    if(req.cookies.email){
+    if (req.cookies.email) {
         const userModel = require('./models/user');
 
         const user = userModel.findByEmail(req.cookies.email);
