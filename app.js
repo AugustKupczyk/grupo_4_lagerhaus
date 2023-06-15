@@ -34,12 +34,6 @@ app.use(expressSession({
     saveUninitialized: true
 }));
 
-// app.use((req, res, next) => {
-//     const ruta = req.originalUrl + '\n';
-//     fs.appendFileSync(path.join(__dirname, './data/rutas.txt'), ruta);
-//     next();
-// });
-
 app.use((req, res, next) => {
     if (req.cookies.email) {
         const userModel = require('./models/user');

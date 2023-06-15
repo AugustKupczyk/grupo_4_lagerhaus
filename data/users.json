@@ -1,40 +1,4 @@
-[
-    {
-        "id": 1,
-        "firstName": "Milagros",
-        "lastName": "Ferrini",
-        "email": "miliferrini@gmail.com",
-        "password": "miluchi98",
-        "category": "admin",
-        "image": ""
-    },
-    {
-        "id": 2,
-        "firstName": "August",
-        "lastName": "Kupp",
-        "email": "augustkupp@gmail.com",
-        "password": "august01",
-        "category": "admin",
-        "image": ""
-    },
-    {
-        "id": 2,
-        "firstName": "Gonza",
-        "lastName": "Esposito",
-        "email": "gonzalo@gmail.com",
-        "password": "gonza01",
-        "category": "admin",
-        "image": ""
-    },
-    {
-        "id": 4,
-        "firstName": "Esteban",
-        "lastName": "Quito",
-        "email": "esteban@gmail.com",
-        "password": "esteban01",
-        "category": "user",
-        "image": ""
-    },
+[   
     {
         "email": "augustkup@gmail.com",
         "usuario": "August1234",
@@ -43,10 +7,10 @@
         "id": "b731f9d8-90e7-4649-ab6e-4027ff8c35f6"
     },
     {
-        "email": "august-kup@hotmail.com",
-        "usuario": "August",
-        "password": "$2b$12$pI4JOCOv.ZcPkd3uAbOoGuhGp2e1JBxwAq.lUc7CVrGPYexh0KWTq",
+        "email": "gonza.2@hotmail.com",
+        "usuario": "Gonzalo",
+        "password": "$2b$12$ODVa2wthXsr7z5nj.DcSRO9uvnx5yIAWVklieI85Yg5efhfHDbpNy",
         "confirm-password": "12345",
-        "id": "bee61cef-764a-4b52-a1e0-c1fea673ee04"
+        "id": "5f0a8969-c48d-4b57-b25c-804e68cbb775"
     }
 ]
