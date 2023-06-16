@@ -59,6 +59,14 @@ input[type="checkbox"] {
     height: 12px;
 }
 
+.error{
+    font-size: 15px;
+    font-weight: lighter;
+    align-self: flex-start;
+    margin-bottom: 5px;
+    margin-top: -5px;
+}
+
 #olvide{
     color: rgb(129, 129, 129)
 }
