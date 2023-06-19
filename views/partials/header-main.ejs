@@ -9,19 +9,28 @@
             <li><a href="/locales">LOCALES</a></li>
             <li><a href="/franquicias">FRANQUICIAS</a></li>
             <li><a href="#contacto">CONTACTO</a></li>
+            
+            <% if (!userData.usuario) { %>
             <li><a href="/users/login">LOGIN</a></li>
+            <% } %>
+            
             <li><a href="/products/carrito-compras"><i class="fa-solid fa-cart-shopping fa-lg"
-                style="color: #ffa500;"></i></a></li>
+                style="color: #ffffff;"></i></a></li>
+            
             <li>
-                <a href="/users/profile" style="color: white;">
-                    <%= userData.usuario %>
-                </a>
-            </li>
             <% if (userData.usuario) { %>
-                <form action="/users/sign-out" method="get">
-                    <input type="submit" value="cerrar sesión">
-                </form>
-                <% } %>
+            <a href="/users/profile"></a><i class="fa-solid fa-user" style="color: #ffa500;"></i></a>
+            <% } %>
+            </li>
+
+            <li>
+            <% if (userData.usuario) { %>
+            <form action="/users/sign-out" method="get">
+                <input type="submit" id="cerrar-sesion">
+                <i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i>
+            </form>
+            <% } %>
+            </li>
         </ul>
         <div class="burger-menu">
             <i class="fas fa-bars"></i>

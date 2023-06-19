@@ -32,6 +32,15 @@ input[type="text"]{
     border: 2px solid white;
 }
 
+input[type="email"]{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 35px;
+    box-sizing:border-box;
+    padding: 12px;
+    border: 2px solid white;
+}
+
 input[type="password"]{
     width: 100%;
     margin-bottom: 13px;
