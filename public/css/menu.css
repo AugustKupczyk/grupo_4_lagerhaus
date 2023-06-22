@@ -59,7 +59,7 @@
     align-items: flex-start;
 }
 
-.producto::before {
+/* .producto::before {
     content: '';
     position: absolute;
     top: 0;
@@ -71,7 +71,7 @@
     transition: .5s;
     transform: scale(.9);
     z-index: -1;
-}
+} */
 
 .producto:hover::before {
     transform: scale(1.1);
