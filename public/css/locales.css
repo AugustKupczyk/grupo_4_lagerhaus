@@ -5,7 +5,7 @@
 }
 
 .title{
-    color: white;
+    color: #ffa500;
     text-align: center;
     font-size: 18px;
 }
@@ -14,11 +14,12 @@
     width: 90vw;
     margin:20px 20px 10px 20px;
     padding: 20px 20px 20px 20px;
-    background-color:rgba(255, 255, 255, 0.7);
+    border: 1px solid #ffa500;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
+    color: white;
 }
 
 .foto-local{
