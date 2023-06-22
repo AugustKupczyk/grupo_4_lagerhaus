@@ -7,13 +7,23 @@ const controllers={
             userData = {}
         }
 
-        res.render("index",{userData});
-    },
+        res.render("index", {userData} );
+    }, 
     getFranquicias:(req,res) =>{
-        res.render("franquicias");
+        let userData = req.session.user;
+        if(!userData){
+            userData = {}
+        }
+
+        res.render("franquicias", {userData} );
     },
     getLocales: (req,res) =>{
-        res.render("locales");
+        let userData = req.session.user;
+        if(!userData){
+            userData = {}
+        }
+
+        res.render("locales", {userData} );
     }
 }
 
