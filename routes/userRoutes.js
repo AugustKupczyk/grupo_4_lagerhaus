@@ -32,4 +32,7 @@ router.get('/login', middlewares.allowUnsignedIn, userControllers.getLogin);
 // @POST - /users/login
 router.post('/login', userControllers.loginUser);
 
+// @GET - /users/profile
+router.get('/profile', middlewares.allowUnsignedIn, userControllers.getProfile);
+
 module.exports = router; 

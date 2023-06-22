@@ -71,7 +71,7 @@ a::before {
     border-top: 3px solid #ffa500;
     border-right: 3px solid #ffa500;
     transform: translate(-100%, 50%);
-  }
+}
 
 a:after {
     content: '';
@@ -80,7 +80,7 @@ a:after {
     border-bottom: 3px solid #ffa500;
     border-left: 3px solid #ffa500;
     transform: translate(100%, -50%)
-  }
+}
 
 a:hover:before,
 a:hover:after{
@@ -90,12 +90,12 @@ a:hover:after{
 
 a:hover {
     color: #ffa500;
-  }
+}
 
-.fa-bars{
+/* .fa-bars{
 color: orange;
 font-size: 25px;
-}
+} */
 
 .burger-menu{
     display: flex;

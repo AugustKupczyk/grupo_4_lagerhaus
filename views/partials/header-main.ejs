@@ -14,12 +14,11 @@
             <li><a href="/users/login">LOGIN</a></li>
             <% } %>
             
-            <li><a href="/products/carrito-compras"><i class="fa-solid fa-cart-shopping fa-lg"
-                style="color: #ffffff;"></i></a></li>
+            <li><a href="/products/carrito-compras"><i class="fa-solid fa-cart-shopping fa-lg"></i></a></li>
             
             <li>
             <% if (userData.usuario) { %>
-            <a href="/users/profile"></a><i class="fa-solid fa-user" style="color: #ffa500;"></i></a>
+            <a href="/users/profile"><i class="fa-solid fa-user"></i></a>
             <% } %>
             </li>
 
@@ -27,7 +26,7 @@
             <% if (userData.usuario) { %>
             <form action="/users/sign-out" method="get">
                 <input type="submit" id="cerrar-sesion">
-                <i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i>
+                <a href="#"></a><i class="fa-solid fa-right-from-bracket"></i></a>
             </form>
             <% } %>
             </li>

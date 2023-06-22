@@ -60,6 +60,11 @@ const controllers={
         } else {
             return res.redirect('/users/login?error=El mail o la contraseña son incorrectos');
         }
+    },
+
+    getProfile: (req, res) => {
+
+        res.render('profile');
     }
 }
  
