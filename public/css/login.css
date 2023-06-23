@@ -30,6 +30,7 @@ input[type="text"]{
     box-sizing:border-box;
     padding: 12px;
     border: 2px solid white;
+    border-radius: 12px;
 }
 
 input[type="email"]{
@@ -39,6 +40,7 @@ input[type="email"]{
     box-sizing:border-box;
     padding: 12px;
     border: 2px solid white;
+    border-radius: 12px;
 }
 
 input[type="password"]{
@@ -48,6 +50,7 @@ input[type="password"]{
     box-sizing:border-box;
     padding: 10px;
     border: 2px solid white;
+    border-radius: 12px;
 }
 
 .recordar-ft-olvidar{
@@ -94,6 +97,7 @@ main button{
     height: 30px;
     border: 2px solid #ff6a0098;
     background-color: #FF6900;
+    border-radius: 12px;
 }
 
 

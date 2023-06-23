@@ -54,8 +54,8 @@ margin: 0 10px;
     text-decoration: none;
 }
 
-a::before,
-a::after {
+.navbar-right a::before,
+.navbar-right a::after {
   content: '';
   height: 14px;
   width: 14px;
@@ -64,7 +64,7 @@ a::after {
   opacity: 0;
 }
 
-a::before {
+.navbar-right a::before {
     content: '';
     right: 0;
     top: 0;
@@ -73,7 +73,7 @@ a::before {
     transform: translate(-100%, 50%);
 }
 
-a:after {
+.navbar-right a:after {
     content: '';
     left: 0;
     bottom: 0;
@@ -82,13 +82,13 @@ a:after {
     transform: translate(100%, -50%)
 }
 
-a:hover:before,
-a:hover:after{
+.navbar-right a:hover:before,
+.navbar-right a:hover:after{
   transform: translate(0,0);
   opacity: 1;
 }
 
-a:hover {
+.navbar-right a:hover {
     color: #ffa500;
 }
 

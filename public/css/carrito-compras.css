@@ -1,12 +1,12 @@
 *{
 background-color:black;
-color: #fff;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     margin: 20px;
+    color: #fff;
 }
  
 h1{
@@ -49,14 +49,6 @@ h6{
     display: flex;
     flex-direction: column;
 
-}
-
-ul{
-    width: 100%;
-    align-self: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
 }
 
 .item-carrito{
@@ -111,21 +103,10 @@ ul{
     font-size: 16px;
 }
 
-/* navbar
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 2px solid orange;
-}
-#logo-navbar{
-width: 50px;
-height: 25px;
-} */
 .fa-arrow-left{
     margin-left: 8px;
 }
+
 .fa-cart-shopping{
     margin-right: 8px;
 }

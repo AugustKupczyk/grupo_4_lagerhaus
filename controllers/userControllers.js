@@ -30,8 +30,13 @@ const controllers={
 
     getLogin: (req, res) => {
         const error = req.query.error || '';
+
+        let userData = req.session.user;
+        if(!userData){
+            userData = {}
+        }
         
-        res.render('login', {error});
+        res.render('login', {error, userData});
     },
     
     loginUser: (req, res) => {

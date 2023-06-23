@@ -113,7 +113,13 @@ const controllers = {
     },
 
     getCarritoCompras: (req, res) => {
-        res.render("carrito-compras");
+
+        let userData = req.session.user;
+        if(!userData){
+            userData = {}
+        }
+
+        res.render("carrito-compras", {userData} );
     },
 
     getConfirmacionProducto: (req, res) => {
