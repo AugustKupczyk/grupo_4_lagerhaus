@@ -11,7 +11,12 @@ const controllers={
     },
 
     getRegister: (req, res) => {
-        res.render('register');
+        const error = req.query.error || '';
+        let userData = req.session.user;
+        if(!userData){
+            userData = {}
+        }
+        res.render('register',{error,userData});
     },
 
     registerUser: (req, res) => {
@@ -68,8 +73,12 @@ const controllers={
     },
 
     getProfile: (req, res) => {
+        let userData = req.session.user;
+        if(!userData){
+            userData = {}
+        }
 
-        res.render('profile');
+        res.render('profile',userData);
     }
 }
  

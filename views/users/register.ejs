@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include("./partials/head") %>
-    <title>Register</title>
-    <link href="/css/register.css" rel="stylesheet">
+        <title>Register</title>
+        <link href="/css/register.css" rel="stylesheet">
 </head>
+
 <body>
-    
+
     <header>
         <%- include("./partials/header-main") %>
     </header>
@@ -14,18 +16,22 @@
     <main>
         <form action="/users" method="post">
             <p>Registro</p>
-            <input type="email" name="email" id="email" placeholder="Email">
             <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="text" name="celular" id="celular" placeholder="Número de celular">
+            <input type="date" name="nacimiento" id="nacimiento" placeholder="Fecha de nacimiento">
             <input type="password" name="password" id="password" placeholder="Contraseña">
             <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirmar contraseña">
-            <button id ="enviar" type="submit">Enviar</button>
+            <button id="enviar" type="submit">Enviar</button>
         </form>
         <br>
         <form action="/Google" method="get">
-            <button class="botones-app" type="submit"><i class="fa-brands fa-google" style="color: #000000;"></i>Regístrate con Google</button>
+            <button class="botones-app" type="submit"><i class="fa-brands fa-google"
+                    style="color: #000000;"></i>Regístrate con Google</button>
         </form>
         <form action="/Facebook" method="get">
-            <button class="botones-app" type="submit"><i class="fa-brands fa-facebook-f" style="color: #000000;"></i>Regístrate con Facebook</button>
+            <button class="botones-app" type="submit"><i class="fa-brands fa-facebook-f"
+                    style="color: #000000;"></i>Regístrate con Facebook</button>
         </form>
         <a class="login" href="/users/login">¿Ya tienes una cuenta?</a>
 
@@ -33,4 +39,5 @@
 
 
 </body>
+
 </html>

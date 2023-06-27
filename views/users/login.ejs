@@ -13,7 +13,7 @@
         <%- include("./partials/header-main") %>
     </header>
 
-    <br> 
+    <br>
 
     <main>
 
@@ -21,7 +21,9 @@
             <p>Ingresar</p>
             <input type="email" name="email" id="email" placeholder="Email de usuario">
             <input type="password" name="password" id="password" placeholder="Contraseña">
-            <h6 class= "error" style="color: red"><%= error %></h6>
+            <h6 class="error" style="color: red">
+                <%= error %>
+            </h6>
             <div class="recordar-ft-olvidar">
                 <div class="recordar-check">
                     <input type="checkbox" name="Recordarme" id="Recordarme" value="Recordarme">
