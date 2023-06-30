@@ -73,13 +73,20 @@ const controllers={
     },
 
     getProfile: (req, res) => {
+        const email = req.params.email;
+
+        const perfilAMostrar = userModel.findByEmail(email);
+
+        if(!perfilAMostrar) {
+            return res.send("error de email");
+        }
         let userData = req.session.user;
         if(!userData){
             userData = {}
         }
 
-        res.render('profile',userData);
+        res.render('profile',{perfil:perfilAMostrar,user:req.session.user,userData});
     }
 }
- 
+
 module.exports = controllers; 

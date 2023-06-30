@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <%- include("./partials/head") %>
-            <title>Mi Perfil</title>
-            <link href="/css/login.css" rel="stylesheet">
+    <%- include("./partials/head") %>
+        <title>Mi Perfil</title>
+        <link href="/css/profile.css" rel="stylesheet">
+        
 </head>
+
 <body>
 
     <header>
@@ -13,15 +16,37 @@
 
     <main>
 
-        <section class="section-left-menu">
-            
-        </section>
+        <section class="section-profile">
 
-        <section class="section-right-principal">
-            
+            <h1 class="detalles-usuario">Detalles del usuario <%= user.id %>
+            </h1>
+
+            <h4> FOTO DE PERFIL </h4>
+
+            <div class="foto-usuario"></div>
+            <br>
+            <h4> TU EMAIL </h4>
+
+
+            <h2 class="email-usuario">
+                <%= user.email %>
+            </h2>
+            <br>
+
+            <h4> TU NOMBRE DE USUARIO </h4>
+
+
+            <h2 class="nombre-usuario">
+                <%= user.usuario %>
+            </h2>
         </section>
 
     </main>
-    
+
+    <footer>
+        <%- include("./partials/footer-franquicias") %>
+    </footer>
+
 </body>
+
 </html>

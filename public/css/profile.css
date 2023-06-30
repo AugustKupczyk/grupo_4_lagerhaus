@@ -1,0 +1,63 @@
+* {
+    background-color: black;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.section-profile {
+    width: 100vw;
+    height: 80vh;
+}
+
+.detalles-usuario {
+    display: flex;
+    justify-content: center;
+    border: 1px solid orange;
+    margin-bottom: 20px;
+}
+
+.foto-usuario {
+    width: 100%;
+    background-color: red;
+    height: 25%;
+}
+
+
+
+.email-usuario {
+
+    border: 1px solid orange;
+}
+
+.nombre-usuario {
+    background-color: blue;
+}
+
+.main-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.main-footer p {
+    color: white;
+    font-size: 0.5rem;
+}
+
+.redes-container {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.redes-container i {
+    color: orange;
+}

@@ -33,6 +33,7 @@ router.get('/login', middlewares.allowUnsignedIn, userControllers.getLogin);
 router.post('/login', userControllers.loginUser);
 
 // @GET - /users/profile
-router.get('/profile', middlewares.allowSignedIn, userControllers.getProfile);
+router.get('/:email/profile', middlewares.allowSignedIn, userControllers.getProfile);
+
 
 module.exports = router; 
