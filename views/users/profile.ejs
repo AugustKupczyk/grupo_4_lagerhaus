@@ -16,29 +16,63 @@
 
     <main>
 
-        <section class="section-profile">
+        <section class="section-profile-left">
 
-            <h1 class="detalles-usuario">Detalles del usuario <%= user.id %>
-            </h1>
+            <div class="container-img-name">
+                <img src="" alt="Foto de perfil">
+                <h3>Gonzalo Esposito</h3>
+                <p>gonza.2@hotmail.com</p>
+            </div>
 
-            <h4> FOTO DE PERFIL </h4>
+            <div class="container-list-profile">
+                <ul class="list-profile">
+                    
+                    <li class="list">
+                        <i class="fa-solid fa-house fa-lg" style="color: black;"></i>
+                        <p>Inicio</p>
+                    </li>
 
-            <div class="foto-usuario"></div>
-            <br>
-            <h4> TU EMAIL </h4>
+                    <li class="list">
+                        <i class="fa-solid fa-user fa-lg" style="color: black;"></i>
+                        <p>Mi perfil</p>
+                    </li>
 
+                    <li class="list">
+                        <i class="fa-solid fa-location-dot fa-lg" style="color: black;"></i>
+                        <p>Mis direcciones</p>
+                    </li>
 
-            <h2 class="email-usuario">
-                <%= user.email %>
-            </h2>
-            <br>
+                    <li class="list">
+                        <i class="fa-solid fa-receipt fa-lg" style="color: black;"></i>
+                        <p>Mis pedidos</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-            <h4> TU NOMBRE DE USUARIO </h4>
+        <section class="section-profile-right">
 
+            <ul class="container-my-acount">
 
-            <h2 class="nombre-usuario">
-                <%= user.usuario %>
-            </h2>
+                <h1>Mi Cuenta</h1>
+                    
+                <li class="my-acount-list">
+                    <p>Email</p>
+                </li>
+
+                <li class="my-acount-list">
+                    <p>Numero de celular</p>
+                </li>
+
+                <li class="my-acount-list">
+                    <p>Fecha de nacimiento</p>
+                </li>
+
+                <li class="my-acount-list">
+                    <p>Cerrar sesion</p>
+                </li>
+            </ul>
+
         </section>
 
     </main>

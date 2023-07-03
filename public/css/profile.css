@@ -5,37 +5,54 @@
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin-top: 0px;
+}
+
+.section-profile-left {
+    width: 20%;
+    height: 450px;
+    background-color: orange;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.section-profile-left * {
+    background-color: transparent;
+    color: black;
+}
+
+.section-profile-right {
+    width: 50%;
+    height: 360px;
+    position: absolute;
+    left: 30%;
     margin-top: 50px;
 }
 
-.section-profile {
-    width: 100vw;
-    height: 80vh;
+.my-acount-list {
+    display: flex;
+    align-items: center;
+    margin: 15px 0px;
 }
 
-.detalles-usuario {
+.container-img-name {
     display: flex;
     justify-content: center;
-    border: 1px solid orange;
-    margin-bottom: 20px;
+    text-align: center;
+    flex-direction: column;
 }
 
-.foto-usuario {
-    width: 100%;
-    background-color: red;
-    height: 25%;
+.container-img-name p {
+    font-size: 12px;
 }
 
+.list {
+    margin: 50px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 
-
-.email-usuario {
-
-    border: 1px solid orange;
-}
-
-.nombre-usuario {
-    background-color: blue;
 }
 
 .main-footer {
