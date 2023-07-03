@@ -1,12 +1,12 @@
 * {
     background-color: black;
-    color: white;
 }
 
 main {
     display: flex;
     flex-direction: row;
     margin-top: 0px;
+    color: white;
 }
 
 .section-profile-left {
@@ -47,16 +47,25 @@ main {
     font-size: 12px;
 }
 
+.list .fa-solid {
+    width: 5%;
+}
+
 .list {
     margin: 50px 0px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
 
 }
 
 .list p {
     margin-left: 10px;
+    position: relative;
+    left: 15px;
+}
+
+footer {
+    color: white;
 }
 
 .main-footer {
@@ -64,6 +73,7 @@ main {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    color: white;
 }
 
 .main-footer p {
