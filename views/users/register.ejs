@@ -14,7 +14,7 @@
     </header>
 
     <main>
-        <form action="/users" method="post">
+        <form action="/users" method="POST" enctype="multipart/form-data">
             <p>Registro</p>
             <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
             <input type="email" name="email" id="email" placeholder="Email">
@@ -22,7 +22,8 @@
             <input type="date" name="nacimiento" id="nacimiento" placeholder="Fecha de nacimiento">
             <input type="password" name="password" id="password" placeholder="Contraseña">
             <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirmar contraseña">
-            <button id="enviar" type="submit">Enviar</button>
+            <input type="file" class="imgButton" name="image" id="img">
+            <button id="enviar" type="submit">Registrar</button>
         </form>
         <br>
         <form action="/Google" method="get">

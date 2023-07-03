@@ -12,5 +12,24 @@
         "password": "$2b$12$ODVa2wthXsr7z5nj.DcSRO9uvnx5yIAWVklieI85Yg5efhfHDbpNy",
         "confirm-password": "12345",
         "id": "5f0a8969-c48d-4b57-b25c-804e68cbb775"
+    },
+    {
+        "usuario": "August",
+        "email": "august-kup@hotmail.com",
+        "celular": "1163719380",
+        "nacimiento": "2001-07-30",
+        "password": "$2b$12$6AfVVSXYqCIQo9IXXyMMke3OS4SIuaGy9oHSdwldF4ie7PQKpfZga",
+        "confirm-password": "1111",
+        "id": "06a63575-042f-4fe0-831c-b3cbbe09b052"
+    },
+    {
+        "usuario": "August",
+        "email": "aaaa@hotmail.com",
+        "celular": "1234123123",
+        "nacimiento": "2000-07-30",
+        "password": "$2b$12$ixsShiWSNixMNHZo75nske917BXAZNHQ0kSl8Qezf8wfsyvdZR2cG",
+        "confirm-password": "1234",
+        "image": "1688420241204-photo4954191471553128977.jpg",
+        "id": "44f9fc24-5e0f-4936-849c-a256e09b2f69"
     }
 ]
