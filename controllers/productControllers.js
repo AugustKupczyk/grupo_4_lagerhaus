@@ -36,8 +36,13 @@ const controllers = {
     postProduct: (req, res) => {
         const validation = expressValidator.validationResult(req);
 
+        let userData = req.session.user;
+        if(!userData){
+            userData = {}
+        }
+
         if(validation.errors.length > 0){
-            return res.render('agregar-producto', { errors: validation.errors, values: req.body });
+            return res.render('agregar-producto', {userData, errors: validation.errors, values: req.body });
         }
 
         let datos = req.body; //Agarro datos que el usuario ingresó en el formulario
@@ -49,7 +54,7 @@ const controllers = {
 
         productModel.createOne(datos);
 
-        res.redirect('/products/menu');
+        res.redirect('/products/menu',);
     },
  
     // @GET /menu/:id/detail

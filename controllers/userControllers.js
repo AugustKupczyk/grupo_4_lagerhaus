@@ -28,6 +28,7 @@ const controllers={
 
         user.password = newPassword;
 
+        user.image = req.file ? req.file.filename : "sin foto",
         userModel.createOne(user);
 
         res.redirect("/")
