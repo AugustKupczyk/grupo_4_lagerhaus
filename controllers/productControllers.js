@@ -34,7 +34,7 @@ const controllers = {
     
     // @POST /menu/agregar-producto
     postProduct: (req, res) => {
-        const validation = expressValidator.validationResult(req);
+        const validation = expressValidator.validationResult(req.body);
 
         let userData = req.session.user;
         if(!userData){
