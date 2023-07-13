@@ -40,7 +40,7 @@ CREATE TABLE `carritos` (
 
 CREATE TABLE `categorias_products` (
   `id` int(4) NOT NULL,
-  `nombre` varchar(50) NOT NULL
+  `nombre` STRING(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -64,7 +64,7 @@ INSERT INTO `categorias_products` (`id`, `nombre`) VALUES
 
 CREATE TABLE `categorias_users` (
   `id` int(4) NOT NULL,
-  `rol` varchar(50) NOT NULL
+  `rol` STRING(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -83,11 +83,11 @@ INSERT INTO `categorias_users` (`id`, `rol`) VALUES
 
 CREATE TABLE `products` (
   `id` int(4) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
+  `nombre` STRING(50) NOT NULL,
   `categoria_id` int(4) NOT NULL,
   `descripcion` text NOT NULL,
   `precio` int(5) NOT NULL,
-  `img` varchar(100) DEFAULT NULL
+  `img` STRING(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -98,15 +98,15 @@ CREATE TABLE `products` (
 
 CREATE TABLE `users` (
   `id` int(100) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `apellido` varchar(50) NOT NULL,
+  `email` STRING(50) NOT NULL,
+  `nombre` STRING(50) NOT NULL,
+  `apellido` STRING(50) NOT NULL,
   `numero_celular` int(50) NOT NULL,
   `nacimiento` int(8) NOT NULL,
-  `direccion` varchar(50) NOT NULL,
-  `img` varchar(100) DEFAULT NULL,
-  `contraseña` varchar(100) NOT NULL,
-  `rol_id` varchar(10) NOT NULL
+  `direccion` STRING(50) NOT NULL,
+  `img` STRING(100) DEFAULT NULL,
+  `contraseña` STRING(100) NOT NULL,
+  `rol_id` STRING(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --

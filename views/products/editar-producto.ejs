@@ -14,12 +14,12 @@
 
     <main>
         <p>Editar productos</p>
-        <form action="/products/<%= product.id %>/editar-producto?_method=put" method="post">
+        <form action="/products/<%= producto.id %>/editar-producto?_method=put" method="post">
             <h4>Edite los campos necesarios del producto seleccionado:</h4>
-            <input type="text" name="category" value="<%= product.category %>" id="categoria-producto" placeholder="Nueva categoria del producto">
-            <input type="text" name="name" value="<%= product.name %>" id="titulo-producto" placeholder="Nuevo titulo del producto">
-            <input type="text" name="description" value="<%= product.description %>" id="descripcion-producto" placeholder="Nueva descripción del producto">
-            <input type="text" name="price" value="<%= product.price %>" id="precio-producto" placeholder="Nuevo precio del producto">
+            <input type="text" name="category" value="<%= producto.category_id %>" id="categoria-producto" placeholder="Nueva categoria del producto">
+            <input type="text" name="name" value="<%= producto.nombre %>" id="titulo-producto" placeholder="Nuevo titulo del producto">
+            <input type="text" name="description" value="<%= producto.descripcion %>" id="descripcion-producto" placeholder="Nueva descripción del producto">
+            <input type="text" name="price" value="<%= producto.precio %>" id="precio-producto" placeholder="Nuevo precio del producto">
             <button id ="enviar" type="submit">Editar</button>
         </form>
     </main>

@@ -15,11 +15,11 @@
     </header>
 
     <main> 
-        <ul>
-            <% errors.forEach(errorActual => { %>
-            <li><%= errorActual.msg %></li>
-            <% }) %>
-          </ul>
+        <!-- <ul>
+            <%# errors.forEach(errorActual => { %>
+            <li><%#= errorActual.msg %></li>
+            <%# }) %>
+          </ul> -->
         <p>Agregar productos</p>
         <form action="/products/menu" method="post" enctype="multipart/form-data">
             <h4>Complete el detalle del nuevo producto:</h4>

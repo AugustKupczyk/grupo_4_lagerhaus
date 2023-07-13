@@ -9,15 +9,15 @@ module.exports = function(sequelize, dataTypes) {
             allowNull: false
         },
         email: {
-            type: dataTypes.VARCHAR(50),
+            type: dataTypes.STRING(50),
             allowNull: false
         },
         nombre: {
-            type: dataTypes.VARCHAR(50),
+            type: dataTypes.STRING(50),
             allowNull: false
         },
         apellido: {
-            type: dataTypes.VARCHAR(50),
+            type: dataTypes.STRING(50),
             allowNull: false
         },
         numero_celular: {
@@ -29,19 +29,19 @@ module.exports = function(sequelize, dataTypes) {
             allowNull: false
         },
         direccion: {
-            type: dataTypes.VARCHAR(50),
+            type: dataTypes.STRING(50),
             allowNull: false
         },
         img: {
-            type: dataTypes.VARCHAR(100),
+            type: dataTypes.STRING(100),
             allowNull: true
         },
         contraseña: {
-            type: dataTypes.VARCHAR(100),
+            type: dataTypes.STRING(100),
             allowNull: false
         },
         rol_id: {
-            type: dataTypes.VARCHAR(10),
+            type: dataTypes.STRING(10),
             allowNull: false,
             references: {
                 model: "categorias_users",

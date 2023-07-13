@@ -9,7 +9,7 @@ module.exports = function(sequelize, dataTypes) {
             allowNull: false
         },
         nombre: {
-            type: dataTypes.VARCHAR(50),
+            type: dataTypes.STRING(50),
             allowNull: false
         },
         categoria_id: {
@@ -20,12 +20,16 @@ module.exports = function(sequelize, dataTypes) {
                 key: "id"
             }
         },
+        descripcion:{
+            type:dataTypes.TEXT(),
+            allowNull:false
+        },
         precio: {
             type: dataTypes.INTEGER(5),
             allowNull: false 
         },
         img: {
-            type: dataTypes.VARCHAR(100),
+            type: dataTypes.STRING(100),
             allowNull: true
         }
     }

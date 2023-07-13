@@ -9,7 +9,7 @@ module.exports = function(sequelize, dataTypes) {
             allowNull: false
         },
         rol: {
-            type: dataTypes.VARCHAR(50),
+            type: dataTypes.STRING(50),
             allowNull: false
         }
     }
@@ -23,7 +23,7 @@ module.exports = function(sequelize, dataTypes) {
 
     CategoriaUsuario.associate = models => {
         CategoriaUsuario.hasMany(models.Usuario, {
-            as: "rol",
+            as: "rol_category",
             foreignKey: "rol_id"
         })
     }
