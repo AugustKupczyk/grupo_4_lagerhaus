@@ -29,11 +29,11 @@ router.post('/menu', [authMiddlewares.allowAdmin,upload.any('img')], productCont
 // @GET /products/agregar-producto (Vista de formulario de creacion de producto)
 router.get("/agregar-producto", authMiddlewares.allowAdmin, productControllers.create);
 
-// // @GET /products/:id/detail ---> /products/5/detail
-// router.get("/:id/detalle-producto", productControllers.getDetalleProducto);
+// @GET /products/:id/detail ---> /products/5/detail
+router.get("/:id/detalle-producto", productControllers.getDetalleProducto);
 
-// // @DELETE /products/:id/delete ---> /products/5/delete
-// router.delete('/:id/delete', authMiddlewares.allowAdmin, productControllers.deleteProduct);
+// @DELETE /products/:id/delete ---> /products/5/delete
+router.delete('/:id/delete', authMiddlewares.allowAdmin, productControllers.deleteProduct);
 
 // @GET /products/:id/update 
 router.get('/:id/editar-producto',authMiddlewares.allowAdmin, productControllers.getUpdate);
