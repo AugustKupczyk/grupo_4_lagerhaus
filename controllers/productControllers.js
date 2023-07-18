@@ -1,4 +1,5 @@
 const { Producto } = require('../database/models');
+const { CategoriaProducto } = require("../database/models");
 
 
 const controllers = {
@@ -26,7 +27,7 @@ const controllers = {
         }
         const nuevoProducto = {
             nombre: req.body.name,
-            categoria_id: req.body.category,
+            categoria_id: req.body.categoria,
             descripcion: req.body.description,
             precio: req.body.price,
             img: " ",
@@ -54,20 +55,17 @@ const controllers = {
     },
 
     listForm: async (req, res) => {
-        let userData = req.session.user;
-        if (!userData) {
-            userData = {}
-        }
+
+        let userData = req.session.user || {};
 
         try {
-            const productos = await Producto.findAll({
-                raw: true
+            const categorias = await CategoriaProducto.findAll({
+                include: [{ model: Producto, as: 'productos' }]
             });
 
-
-            res.render('menu', { productos, userData });
+            res.render('menu', { categorias, userData });
         } catch (error) {
-            res.render('menu', { productos: [], userData });
+            res.render('menu', { categorias: [], userData });
             console.log(error);
         }
     },

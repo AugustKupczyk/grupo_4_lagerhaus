@@ -1,48 +1,64 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
     <%- include("./partials/head") %>
-    <title>Menú</title>
-    <link href="/css/menu.css" rel="stylesheet">
-</head> 
-<body>
-    <header> 
-        <%- include("./partials/header-main") %>
-    </header> 
-    
-    <main> 
-        <div class="seccion" id="tapeo">
-            <div class="contenedor-banner"> 
-                <img class= image-banner src="\imgs\tapeo-papas-completas-banner.jpg" alt="Foto Tapeo"> 
-                <h2 class="title-banner">Tapeo</h2>
-            </div>
-            <div class="contenedor-listado-producto">
-                <ul class="listado-productos">
-                    <% productos.forEach(product => { %>
-                        <li class="producto">
-                            <div class="foto-nombre-detalle">
-                                <div class="contenedor-foto-producto">
-                                    <img class="foto-producto" src="<%=product.img%>" width=50px alt="Foto Producto">
-                                </div>
-                                <div class="nombre-detalle">    
-                                    <p class="titulo-producto"><%= product.nombre %></p>
-                                    <p class="detalle-producto"><%= product.descripcion %></p>
-                                    <p class="detalle-producto"><%= product.categoria_id %></p>
-                                    <a class = "boton-detalle-producto" href="/products/<%= product.id %>/detalle-producto">Haz click para ver el detalle</a>
-                                </div>
-                            </div>
-                            <p class="precio">$<%= product.precio %></p>    
-                        </li>
-                    <% }) %>
-                </ul>
-            </div>
-            
-        </div>
+        <title>Menú</title>
+        <link href="/css/menu.css" rel="stylesheet">
+</head>
 
+<body>
+    <header>
+        <%- include("./partials/header-main") %>
+    </header>
+
+    <main>
+        <% categorias.forEach(categoria=> { %>
+            <div class="seccion" id="<%= categoria.nombre %>">
+                <div class="contenedor-banner">
+                    <img class="image-banner" src="/imgs/<%= categoria.nombre.toLowerCase() %>-banner.jpg"
+                        alt="Foto <%= categoria.nombre %>">
+                    <h2 class="title-banner"><%= categoria.nombre %>
+                    </h2>
+                </div>
+                <div class="contenedor-listado-producto">
+                    <ul class="listado-productos">
+                        <% if (categoria.productos && categoria.productos.length> 0) { %>
+                            <% categoria.productos.forEach(producto=> { %>
+                                <li class="producto">
+                                    <div class="foto-nombre-detalle">
+                                        <div class="contenedor-foto-producto">
+                                            <img class="foto-producto" src="<%= producto.img %>" width="50"
+                                                alt="Foto Producto">
+                                        </div>
+                                        <div class="nombre-detalle">
+                                            <p class="titulo-producto">
+                                                <%= producto.nombre %>
+                                            </p>
+                                            <p class="detalle-producto">
+                                                <%= producto.descripcion %>
+                                            </p>
+                                            <a class="boton-detalle-producto"
+                                                href="/products/<%= producto.id %>/detalle-producto">Haz click para ver
+                                                el detalle</a>
+                                        </div>
+                                    </div>
+                                    <p class="precio">$<%= producto.precio %>
+                                    </p>
+                                </li>
+                                <% }); %>
+                                    <% } else { %>
+                                        <li>No hay productos en esta categoría</li>
+                                        <% } %>
+                    </ul>
+                </div>
+            </div>
+            <% }); %>
     </main>
 
     <footer>
     </footer>
-    
+
 </body>
+
 </html>
