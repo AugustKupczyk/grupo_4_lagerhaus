@@ -9,31 +9,18 @@ const controllers = {
             userData = {}
         }
 
-        try {
-            const productos = await Producto.findAll({
-                raw: true
-            });
-
-            res.render('agregar-producto', { productos, userData });
-        } catch (error) {
-            res.render('agregar-producto', { productos: [], userData });
-            console.log(error);
-        }
+        res.render('products/agregar-producto', { userData });
     },
     saved: async (req, res) => {
-        let userData = req.session.user;
-        if (!userData) {
-            userData = {}
-        }
         const nuevoProducto = {
             nombre: req.body.name,
-            categoria_id: req.body.categoria,
+            categoria_id: req.body.category,
             descripcion: req.body.description,
             precio: req.body.price,
             img: " ",
         };
-
-        nuevoProducto.img = req.files.map(file => '/imgs/products/' + file.filename);
+        console.log(nuevoProducto);
+        nuevoProducto.img = req.file ? req.file.filename : "sin foto"
         try {
             const datos = await Producto.create(nuevoProducto);
             console.log(datos);
@@ -41,7 +28,7 @@ const controllers = {
             console.log(error);
         }
 
-        res.send('Producto creado con exito', { userData });
+        res.redirect('/products/menu');
     },
 
     getDetalleProducto: async (req, res) => {
@@ -70,28 +57,6 @@ const controllers = {
         }
     },
 
-    updateProducto: async (req, res) => {
-        let userData = req.session.user;
-        if (!userData) {
-            userData = {}
-        }
-
-        const newValues = req.body;
-
-        try {
-            await Producto.update(newValues, {
-                where: {
-                    id: req.body.id
-                }
-            });
-
-            res.redirect('/productsList', { userData });
-        } catch (error) {
-            res.send('No se pudo actualizar!', { userData })
-            console.log(error);
-        }
-    },
-
     getUpdate: async (req, res) => {
         let userData = req.session.user;
         if (!userData) {
@@ -105,6 +70,28 @@ const controllers = {
             console.log(error);
         }
     },
+    updateProducto: async (req, res) => {
+        let productId = req.params.id;
+
+        try {
+            await Producto.update(
+                {
+                    nombre: req.body.name,
+                    categoria_id: req.body.category,
+                    descripcion: req.body.description,
+                    precio: req.body.price,
+                },
+                {
+                    where: { id: [productId] },
+                });
+
+            res.redirect('/products/menu');
+        } catch (error) {
+            res.send('No se pudo actualizar!')
+            console.log(error);
+        }
+    },
+
     deleteProduct: async (req, res) => {
         try {
             await Producto.destroy({
@@ -113,7 +100,7 @@ const controllers = {
                 }
             });
 
-            res.redirect('/productsList');
+            res.redirect('/products/menu');
         } catch (error) {
             res.send('No se pudo borrar!')
             console.log(error);
