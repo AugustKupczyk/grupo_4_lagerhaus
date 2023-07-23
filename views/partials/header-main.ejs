@@ -13,7 +13,7 @@
             <% if (userData && userData.email) { %> <!-- Verificar si el usuario está logeado -->
                 <!-- Mostrar el nombre del usuario y enlace a su perfil -->
                 <li>
-                    <a href="/users/<%= userData.email %>/profile">
+                    <a href="/users/profile/<%= userData.email %>">
                         <i class="fa-solid fa-user"></i>
                     </a>
                 </li>

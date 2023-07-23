@@ -128,6 +128,63 @@ const controllers = {
             console.error(error);
             res.redirect("/");
         }
+    },
+    getEditProfile: async (req, res) => {
+        try {
+            const email = req.params.email;
+
+            // Verificar si el correo electrónico de la URL coincide con el usuario que ha iniciado sesión
+            if (req.session.user.email !== email) {
+                return res.send("Acceso no autorizado");
+            }
+
+            const perfilAMostrar = await Usuario.findOne({ where: { email } });
+
+            if (!perfilAMostrar) {
+                return res.send("Usuario no encontrado");
+            }
+
+            let userData = req.session.user || {};
+            res.render('editProfile', { perfil: perfilAMostrar, user: req.session.user, userData });
+        } catch (error) {
+            console.error(error);
+            res.redirect("/");
+        }
+    },
+    editProfile: async (req, res) => {
+        try {
+            const email = req.params.email;
+
+            // Verificar si el correo electrónico de la URL coincide con el usuario que ha iniciado sesión
+            if (req.session.user.email !== email) {
+                return res.send("Acceso no autorizado");
+            }
+
+            // Obtener los datos actualizados del formulario
+            const { nombre, apellido, direccion, numero_celular } = req.body;
+
+            // Actualizar los campos del perfil en la base de datos
+            await Usuario.update(
+                { nombre, apellido, direccion, numero_celular },
+                { where: { email } }
+            );
+
+            // Procesar la imagen si se ha seleccionado una nueva
+            if (req.file) {
+                // Aquí puedes guardar el nombre del archivo de imagen en la base de datos
+                // Suponiendo que la tabla tiene un campo "imagen" para almacenar el nombre del archivo
+                await Usuario.update(
+                    { img: req.file.filename }, // Guardar el nombre del archivo en la base de datos
+                    { where: { email } }
+                );
+            }
+
+            // Redirigir a la página de perfil actualizado
+            res.redirect(`/users/profile/${email}`);
+        } catch (error) {
+            console.error(error);
+            res.redirect("/");
+        }
     }
 };
 

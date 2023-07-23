@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head") %>
+        <title>Editar Perfil</title>
+        <link href="/css/register.css" rel="stylesheet">
+        <link href="/css/editar-producto.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <%- include("./partials/header-main") %>
+    </header>
+
+    <main>
+        <p>Editar Perfil</p>
+        <form action="/users/profile/<%= perfil.email %>/editar-perfil?_method=put" method="post"
+            enctype="multipart/form-data">
+            <h4>Edite los campos necesarios de su perfil:</h4>
+            <input type="text" name="nombre" value="<%= perfil.nombre %>" id="nombre-usuario"
+                placeholder="Nuevo nombre">
+            <input type="text" name="apellido" value="<%= perfil.apellido %>" id="apellido-usuario"
+                placeholder="Nuevo apellido">
+            <input type="text" name="direccion" value="<%= perfil.direccion %>" id="direccion-usuario"
+                placeholder="Nueva dirección">
+            <input type="text" name="numero_celular" value="<%= perfil.numero_celular %>" id="celular-usuario"
+                placeholder="Nuevo número de celular">
+            <!-- Mostrar la imagen del usuario si está disponible -->
+            <div class="container-img-name">
+                <% if (perfil.img) { %>
+                    <!-- Si la imagen existe, mostrarla -->
+                    <img src="/imgs/users/<%= perfil.img %>" style="width: 300px;height: 300px;object-fit: cover;border-radius: 50%;"alt="Foto de perfil">
+                    <% } else { %>
+                        <!-- Si la imagen no existe, no mostrar nada -->
+                        <% } %>
+            </div>
+
+            <!-- Agregar un campo de carga de archivo para actualizar la imagen -->
+            <input type="file" name="image" id="imagen-usuario" accept="image/*">
+
+            <button id="enviar" type="submit">Editar</button>
+
+        </form>
+    </main>
+
+</body>
+
+</html>

@@ -36,6 +36,7 @@ app.use(expressSession({
 
 // --- Custom Middleware to Attach User Data ---
 app.use(userDataMiddleware);
+app.use('/imgs/users', express.static(path.join(__dirname, 'public/imgs/users')));
 
 
 // --- Routers ---

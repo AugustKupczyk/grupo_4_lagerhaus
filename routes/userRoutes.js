@@ -24,4 +24,10 @@ router.post('/login', userControllers.loginUser);
 // @GET - /users/profile/:email
 router.get('/profile/:email', middlewares.allowSignedIn, userControllers.getProfile);
 
+// @GET - /users/profile/:email/editar-perfil
+router.get('/profile/:email/editar-perfil', middlewares.allowSignedIn, userControllers.getEditProfile);
+
+// @PUT - /users/profile/:email/editar-perfil
+router.put('/profile/:email/editar-perfil', [uploadImg.single('image'), middlewares.allowSignedIn], userControllers.editProfile);
+
 module.exports = router;
