@@ -16,12 +16,13 @@
     <main>
         <form action="/users" method="POST" enctype="multipart/form-data">
             <p>Registro</p>
-            <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+            <input type="text" name="apellido" id="apellido" placeholder="Apellido">
             <input type="email" name="email" id="email" placeholder="Email">
-            <input type="text" name="celular" id="celular" placeholder="Número de celular">
-            <input type="date" name="nacimiento" id="nacimiento" placeholder="Fecha de nacimiento">
             <input type="password" name="password" id="password" placeholder="Contraseña">
-            <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirmar contraseña">
+            <input type="text" name="numero_celular" id="numero_celular" placeholder="Número de celular">
+            <input type="date" name="nacimiento" id="nacimiento" placeholder="Fecha de nacimiento">
+            <input type="text" name="direccion" id="direccion" placeholder="Direccion">
             <input type="file" class="imgButton" name="image" id="img">
             <button id="enviar" type="submit">Registrar</button>
         </form>

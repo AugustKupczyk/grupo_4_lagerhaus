@@ -9,29 +9,32 @@
             <li><a href="/locales">LOCALES</a></li>
             <li><a href="/franquicias">FRANQUICIAS</a></li>
             <li><a href="#contacto">CONTACTO</a></li>
-            
-            <% if (!userData.usuario) { %>
-            <li><a href="/users/login">LOGIN</a></li>
-            <% } %>
-            
-            <% if (userData.usuario) { %> 
-            <li><a href="/products/carrito-compras"><i class="fa-solid fa-cart-shopping fa-lg"></i></a></li>
-            <% } %>
 
-            <li>
-            <% if (userData.usuario) { %>
-            <a href="/users/:email/profile"><i class="fa-solid fa-user"></i></a>
-            <% } %>
-            </li>
+            <% if (userData && userData.email) { %> <!-- Verificar si el usuario está logeado -->
+                <!-- Mostrar el nombre del usuario y enlace a su perfil -->
+                <li>
+                    <a href="/users/<%= userData.email %>/profile">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </li>
 
-            <li>
-            <% if (userData.usuario) { %>
-            <form action="/users/sign-out" method="get">
-                <a href="/users/sign-out"><i class="fa-solid fa-right-from-bracket"></i></a>
-            </form>
-            <% } %>
-            </li>
+                <!-- Mostrar enlace para cerrar sesión -->
+                <li>
+                    <form action="/users/sign-out" method="get">
+                        <a href="/users/sign-out"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </form>
+                </li>
+
+                <!-- Mostrar enlace para el carrito de compras -->
+                <li>
+                    <a href="/products/carrito-compras"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
+                </li>
+                <% } else { %>
+                    <!-- Mostrar enlace para iniciar sesión -->
+                    <li><a href="/users/login">LOGIN</a></li>
+                    <% } %>
         </ul>
+
         <div class="burger-menu">
             <i class="fas fa-bars"></i>
         </div>

@@ -1,29 +1,16 @@
-const path = require ("path");
+const path = require("path");
 
-const controllers={
-    getIndex:(req,res) =>{
-        let userData = req.session.user;
-        if(!userData){
-            userData = {}
-        }
-
-        res.render("index", {userData} );
-    }, 
-    getFranquicias:(req,res) =>{
-        let userData = req.session.user;
-        if(!userData){
-            userData = {}
-        }
-
-        res.render("franquicias", {userData} );
+const controllers = {
+    getIndex: (req, res) => {
+        res.render("index",);
     },
-    getLocales: (req,res) =>{
-        let userData = req.session.user;
-        if(!userData){
-            userData = {}
-        }
+    getFranquicias: (req, res) => {
+        res.render("franquicias",);
+    },
+    getLocales: (req, res) => {
 
-        res.render("locales", {userData} );
+
+        res.render("locales",);
     }
 }
 

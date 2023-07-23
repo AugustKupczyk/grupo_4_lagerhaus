@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const fs = require('fs');
+const userDataMiddleware = require('./middlewares/userDataMiddleware');
 const methodOverride = require("method-override");
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
@@ -20,7 +21,6 @@ app.set("views", [
     path.join(__dirname, "./views/products"),
 ]);
 
-
 // --- Middlewares ---
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
@@ -34,20 +34,9 @@ app.use(expressSession({
     saveUninitialized: true
 }));
 
-app.use((req, res, next) => {
-    if (req.cookies.email) {
-        const userModel = require('./models/user');
+// --- Custom Middleware to Attach User Data ---
+app.use(userDataMiddleware);
 
-        const user = userModel.findByEmail(req.cookies.email);
-
-        delete user.id;
-        delete user.password;
-
-        req.session.user = user;
-    }
-
-    next();
-});
 
 // --- Routers ---
 app.use(rutasMain);
