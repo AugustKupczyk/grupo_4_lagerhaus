@@ -41,7 +41,7 @@ module.exports = function(sequelize, dataTypes) {
             allowNull: false
         },
         rol_id: {
-            type: dataTypes.STRING(10),
+            type: dataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: "categorias_users",
