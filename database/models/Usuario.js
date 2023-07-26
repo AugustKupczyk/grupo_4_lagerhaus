@@ -61,7 +61,12 @@ module.exports = function(sequelize, dataTypes) {
         Usuario.belongsTo(models.CategoriaUsuario, {
             as: "rol",
             foreignKey: "rol_id"
-        })
+        });
+
+        Usuario.hasOne(models.Carrito, {
+            as: "carrito",
+            foreignKey: "id_usuario"
+        });
     }
 
     return  Usuario;
