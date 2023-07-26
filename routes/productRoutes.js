@@ -30,7 +30,7 @@ router.post('/menu', [authMiddlewares.allowAdmin,upload.any('img')], productCont
 router.get("/agregar-producto", authMiddlewares.allowAdmin, productControllers.create);
 
 // @GET /products/:id/detail ---> /products/5/detail
-router.get("/:id/detalle-producto", productControllers.getDetalleProducto);
+router.get("/:id/detalle-producto",authMiddlewares.allowSignedIn, productControllers.getDetalleProducto);
 
 // @DELETE /products/:id/delete ---> /products/5/delete
 router.delete('/:id/delete', authMiddlewares.allowAdmin, productControllers.deleteProduct);

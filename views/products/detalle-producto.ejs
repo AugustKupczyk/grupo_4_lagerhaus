@@ -18,28 +18,41 @@
         <section class="detalle-descripcion-producto">
             <p class="mas-vendido">Más vendido</p>
 
-            <h1>Detalles del producto <%= producto.id %></h1>
-
             <h2 class="titulo-producto">Nombre: <%= producto.nombre %></h2>
 
             <p class="descripcion-producto"> <%= producto.descripcion %> </p>
 
             <h3 class="precio">Precio: <%= producto.precio%></h3>
 
-            <% if (user.email === "augustkup@gmail.com") { %>
-            <form action="/products/<%= producto.id %>/delete?_method=delete" method="post">
-                <input type="submit" value="Eliminar producto"></input>
-              </form>
-              <br>
-              <a href="/products/<%= producto.id %>/editar-producto">
-                <button>Editar producto</button>
-              </a>
-            <% } %>
+            <div class="notas-del-producto">
+                <h3>Notas para este producto</h3>
+                <p>El restaurante intentará seguirlas cuando lo prepare</p>
+            </div>
+            <textarea name="notas-producto" id="notas-producto" placeholder="Escribe las instrucciones que necesites..."></textarea>
+            
+                
+            <div class="agregar-eliminar-editar-button">
+                <% if (user.email === "augustkup@gmail.com") { %>
+                                   
+                        <form class="" action="/products/<%= producto.id %>/delete?_method=delete" method="post">
+                            <input class="agregar-quitar-button-detail" type="submit" value="ELIMINAR PRODUCTO"></input>
+                        </form>
+                        <br>
+                        <a href="/products/<%= producto.id %>/editar-producto">
+                            <button class="agregar-quitar-button-detail">EDITAR PRODUCTO</button>
+                        </a>
+
+                <% } %>
+                
+                <button type="button" class="agregar-quitar-button-detail">AGREGAR $1900</button>
+
+            </div>
+
         </section>
 
     </main>
     <footer>
-        <%- include("./partials/footer-detalle")  %>
+        
     </footer>
 </body>
 </html>

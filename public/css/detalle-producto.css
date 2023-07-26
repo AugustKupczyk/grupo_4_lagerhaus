@@ -97,16 +97,22 @@ p, h1, h2, h3, h4, h5, h6 {
     justify-content: center;
 }
 
-.agregar-button {
+.agregar-quitar-button-detail {
     background-color: orange;
     color: black;
     font-weight: bolder;
     padding: 5px;
-    width: 60%;
     border: 1px solid orange;
     border-radius: 50px;
     text-align: center;
+    height: 30px;
 }
+
+.agregar-eliminar-editar-button {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 @media(min-width:768px){
 
