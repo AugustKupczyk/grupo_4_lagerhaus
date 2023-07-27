@@ -112,15 +112,18 @@ const controllers = {
 
     getCarritoCompras: async (req, res) => {
         try {
-          const { email } = req.params;
-    
+            const { id } = req.params;
+            
+            console.log("ID del usuario en sesión:", req.session.user.id);
+            console.log("ID del usuario en la URL:", id);
+
           // Verificar si el correo electrónico de la URL coincide con el usuario que ha iniciado sesión
-          if (req.session.user.email !== email) {
+          if (req.session.user.id !== Number(id)) {
             return res.status(401).send("Acceso no autorizado");
           }
     
-          // Buscar el usuario actual por su correo electrónico
-          const usuarioActual = await Usuario.findOne({ where: { email } });
+          // Buscar el usuario actual por su correo ID
+          const usuarioActual = await Usuario.findOne({ where: { id } });
     
           if (!usuarioActual) {
             return res.status(404).send("Usuario no encontrado");
@@ -128,7 +131,7 @@ const controllers = {
     
           // Buscar el carrito de compras del usuario actual por su ID de usuario
           const carrito = await Carrito.findOne({
-            where: { id_usuario: usuarioActual.id },
+            where: { id: usuarioActual.id },
             include: {
               model: Producto,
               as: 'productos',

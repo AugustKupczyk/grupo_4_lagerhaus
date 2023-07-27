@@ -42,7 +42,7 @@ router.get('/:id/editar-producto',authMiddlewares.allowAdmin, productControllers
 router.put('/:id/editar-producto',authMiddlewares.allowAdmin, productControllers.updateProducto);
 
 // @GET /products/cart
-router.get("/carrito-compras/:email", productControllers.getCarritoCompras);
+router.get("/:id/carrito-compras",authMiddlewares.allowSignedIn, productControllers.getCarritoCompras);
 
 // // @GET /products/confirmacion-producto
 // router.get("/confirmacion-producto", productControllers.getConfirmacionProducto);
