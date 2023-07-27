@@ -41,9 +41,6 @@ router.get('/:id/editar-producto',authMiddlewares.allowAdmin, productControllers
 // @PUT /products/:id/update ---> /products/5/put
 router.put('/:id/editar-producto',authMiddlewares.allowAdmin, productControllers.updateProducto);
 
-// @GET /products/cart
-router.get("/:id/carrito-compras",authMiddlewares.allowSignedIn, productControllers.getCarritoCompras);
-
 // // @GET /products/confirmacion-producto
 // router.get("/confirmacion-producto", productControllers.getConfirmacionProducto);
 

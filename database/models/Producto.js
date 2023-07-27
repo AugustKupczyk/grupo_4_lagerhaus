@@ -1,4 +1,4 @@
-module.exports = function(sequelize, dataTypes) {
+module.exports = function (sequelize, dataTypes) {
     let alias = "Producto"
 
     let cols = {
@@ -20,13 +20,13 @@ module.exports = function(sequelize, dataTypes) {
                 key: "id"
             }
         },
-        descripcion:{
-            type:dataTypes.TEXT(),
-            allowNull:false
+        descripcion: {
+            type: dataTypes.TEXT(),
+            allowNull: false
         },
         precio: {
             type: dataTypes.INTEGER(5),
-            allowNull: false 
+            allowNull: false
         },
         img: {
             type: dataTypes.STRING(100),
@@ -45,8 +45,15 @@ module.exports = function(sequelize, dataTypes) {
         Producto.belongsTo(models.CategoriaProducto, {
             as: "categoria",
             foreignKey: "categoria_id"
-        })
+        });
+
+        Producto.belongsToMany(models.CarritoCompra, {
+            as: "carritosDeCompra",
+            through: models.ProductosCarrito,
+            foreignKey: "producto_id",
+            otherKey: "carrito_id",
+        });
     }
 
-    return  Producto;
+    return Producto;
 }

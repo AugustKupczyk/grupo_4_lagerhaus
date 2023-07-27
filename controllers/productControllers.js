@@ -108,52 +108,8 @@ const controllers = {
             console.log(error);
         }
 
-    },
-
-    getCarritoCompras: async (req, res) => {
-        try {
-            const { id } = req.params;
-            
-            console.log("ID del usuario en sesión:", req.session.user.id);
-            console.log("ID del usuario en la URL:", id);
-
-          // Verificar si el correo electrónico de la URL coincide con el usuario que ha iniciado sesión
-          if (req.session.user.id !== Number(id)) {
-            return res.status(401).send("Acceso no autorizado");
-          }
-    
-          // Buscar el usuario actual por su correo ID
-          const usuarioActual = await Usuario.findOne({ where: { id } });
-    
-          if (!usuarioActual) {
-            return res.status(404).send("Usuario no encontrado");
-          }
-    
-          // Buscar el carrito de compras del usuario actual por su ID de usuario
-          const carrito = await Carrito.findOne({
-            where: { id: usuarioActual.id },
-            include: {
-              model: Producto,
-              as: 'productos',
-              through: {
-                model: CarritoProducto,
-                attributes: [] // No mostrar los atributos de la tabla intermedia
-              }
-            }
-          });
-    
-          if (!carrito) {
-            return res.status(404).json({ error: 'El carrito de compras no fue encontrado.' });
-          }
-    
-          // Retornar el carrito y sus productos asociados
-          res.json(carrito);
-    
-        } catch (error) {
-          console.error('Error al obtener el carrito de compras:', error);
-          res.status(500).json({ error: 'Hubo un error al obtener el carrito de compras.' });
-        }
-      }
+    }
 }
 
+    
 module.exports = controllers;

@@ -1,4 +1,4 @@
-module.exports = function(sequelize, dataTypes) {
+module.exports = function (sequelize, dataTypes) {
     let alias = "Usuario"
 
     let cols = {
@@ -63,11 +63,11 @@ module.exports = function(sequelize, dataTypes) {
             foreignKey: "rol_id"
         });
 
-        Usuario.hasOne(models.Carrito, {
-            as: "carrito",
-            foreignKey: "id_usuario"
+        Usuario.hasMany(models.CarritoCompra, {
+            as: "carritosDeCompra",
+            foreignKey: "usuario_id",
         });
     }
 
-    return  Usuario;
+    return Usuario;
 }
