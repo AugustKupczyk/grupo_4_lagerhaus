@@ -5,6 +5,7 @@ const userDataMiddleware = (req, res, next) => {
     // Agregar el objeto userData a la respuesta para que esté disponible en todas las vistas
     res.locals.userData = userData;
     next();
+   
 };
 
 module.exports = userDataMiddleware;

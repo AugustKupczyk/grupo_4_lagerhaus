@@ -1,77 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include("./partials/head") %>
-    <title>Tu carrito</title>
-    <link href="/css/carrito-compras.css" rel="stylesheet">
+        <title>Tu carrito</title>
+        <link href="/css/carrito-compras.css" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <%- include("./partials/header-main") %>
     </header>
     <main>
 
-        <div class="titulo">
-            <h1>Tu pedido</h1>
-        </div>
-        
-        <div class="carrito">
-            <ul class="todos-los-items">
-                <li id="item-0" class="item-carrito">
-                    <div class="foto-nombre-cantidad">
-                        <a href="/products/detalle-producto"> <img src="/imgs/burger-cervecera.jpg" width=60px alt="Foto Producto"></a>
-                        <div class="nombre-cantidad">    
-                            <h2>Nombre Item 0</h2>
-                            <h4>Cantidad: 5</h4>
-                        </div>
-                    </div>
-                    <h3>$ Precio</h3>
-                </li>
-                <li id="item-1" class="item-carrito">
-                    <div class="foto-nombre-cantidad">
-                        <a href="/products/detalle-producto"> <img src="/imgs/burger-clasica.jpg" width=60px alt="Foto Producto"></a>
-                        <div class="nombre-cantidad">    
-                            <h2>Nombre Item 1</h2>
-                            <h4>Cantidad: 5</h4>
-                        </div>
-                    </div>
-                    <h3>$ Precio</h3>
-                </li>
-                </li>
-                <li id="item-2" class="item-carrito">
-                    <div class="foto-nombre-cantidad">
-                        <a href="/products/detalle-producto"> <img src="/imgs/burger-jack.jpg" width=60px alt="Foto Producto"></a>
-                        <div class="nombre-cantidad">    
-                            <h2>Nombre Item 2</h2>
-                            <h4>Cantidad: 5</h4>
-                        </div>
-                    </div>
-                    <h3>$ Precio</h3>
-                </li>
-            </ul>
-        </div>
+        <main>
+            <div class="titulo">
+                <h1>Tu pedido</h1>
+            </div>
 
-        <div class="total-carrito">
-            <ul>
-                <li id="subtotal" class="subtotales">
-                    <h5>SUBTOTAL</h5>
-                    <h5>$ Subtotal</h5>
-                </li>
-                <li id="envio"  class="subtotales">
-                    <h5>ENVÍO</h5>
-                    <h5>$ Envio</h5>
-                </li>
-                <li id="total"  class="subtotales">
-                    <h6>TOTAL</h6>
-                    <h6>$ Total</h6>
-                </li>
-            </ul>
-        </div>
+            <div class="carrito">
+                <ul class="todos-los-items">
+                    <% carrito.productosCarrito.forEach((productoCarrito, index)=> { %>
+                        <li id="item-<%= index %>" class="item-carrito">
+                            <div class="foto-nombre-cantidad">
+                                <a href="/products/detalle-producto/<%= productoCarrito.producto.id %>">
+                                    <img src="<%= productoCarrito.producto.imagen %>" width=60px alt="Foto Producto">
+                                </a>
+                                <div class="nombre-cantidad">
+                                    <h2>
+                                        <%= productoCarrito.producto.nombre %>
+                                    </h2>
+                                    <h4>Cantidad: <%= productoCarrito.cantidad %>
+                                    </h4>
+                                </div>
+                            </div>
+                            <h3>$ <%= productoCarrito.precio_unitario %>
+                            </h3>
+                        </li>
+                        <% }) %>
+                </ul>
+            </div>
 
-    </main>
+            <div class="total-carrito">
+                <ul>
+                    <li id="subtotal" class="subtotales">
+                        <h5>SUBTOTAL</h5>
+                        <h5>$ Subtotal</h5>
+                    </li>
+                    <li id="envio" class="subtotales">
+                        <h5>ENVÍO</h5>
+                        <h5>$ Envio</h5>
+                    </li>
+                    <li id="total" class="subtotales">
+                        <h6>TOTAL</h6>
+                        <h6>$ Total</h6>
+                    </li>
+                </ul>
+            </div>
 
-    <footer>
-        <%- include("./partials/footer-carrito") %>
-    </footer>
+        </main>
+
+        <footer>
+            <%- include("./partials/footer-carrito") %>
+        </footer>
 </body>
-</html> 
+
+</html>

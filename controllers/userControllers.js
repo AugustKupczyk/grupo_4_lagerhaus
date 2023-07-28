@@ -91,7 +91,7 @@ const controllers = {
                 }
 
                 // Eliminar la contraseña y el id del objeto del usuario buscado
-                const userWithoutPassword = { ...searchedUser.get(), contraseña: undefined, id: undefined };
+                const userWithoutPassword = { ...searchedUser.get(), contraseña: undefined};
 
                 // Asignar el usuario a la sesión
                 req.session.user = userWithoutPassword;

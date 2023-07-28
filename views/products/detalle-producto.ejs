@@ -1,50 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include("./partials/head") %>
-    <title>Detalle de producto</title>
-    <link href="/css/detalle-producto.css" rel="stylesheet">
+        <title>Detalle de producto</title>
+        <link href="/css/detalle-producto.css" rel="stylesheet">
 </head>
+
 <body>
     <header class="detalle-main-header">
-        <a href="/products/menu" class="back-button"><i class="fa-solid fa-circle-arrow-left fa-lg" style="color: #ffffff;"></i></a>
+        <a href="/products/menu" class="back-button"><i class="fa-solid fa-circle-arrow-left fa-lg"
+                style="color: #ffffff;"></i></a>
         <div class="container-producto">
             <img class="foto-producto" src="<%=producto.img%>" width=50px alt="Foto Producto">
         </div>
-        
+
     </header>
-    
+
     <main>
         <section class="detalle-descripcion-producto">
             <p class="mas-vendido">Más vendido</p>
 
-            <h2 class="titulo-producto">Nombre: <%= producto.nombre %></h2>
+            <h2 class="titulo-producto">Nombre: <%= producto.nombre %>
+            </h2>
 
-            <p class="descripcion-producto"> <%= producto.descripcion %> </p>
+            <p class="descripcion-producto">
+                <%= producto.descripcion %>
+            </p>
 
-            <h3 class="precio">Precio: <%= producto.precio%></h3>
+            <h3 class="precio">Precio: <%= producto.precio%>
+            </h3>
 
             <div class="notas-del-producto">
                 <h3>Notas para este producto</h3>
                 <p>El restaurante intentará seguirlas cuando lo prepare</p>
             </div>
-            <textarea name="notas-producto" id="notas-producto" placeholder="Escribe las instrucciones que necesites..."></textarea>
-            
-                
-            <div class="agregar-eliminar-editar-button">
-                <% if (user.email === "augustkup@gmail.com") { %>
-                                   
-                        <form class="" action="/products/<%= producto.id %>/delete?_method=delete" method="post">
-                            <input class="agregar-quitar-button-detail" type="submit" value="ELIMINAR PRODUCTO"></input>
-                        </form>
-                        <br>
-                        <a href="/products/<%= producto.id %>/editar-producto">
-                            <button class="agregar-quitar-button-detail">EDITAR PRODUCTO</button>
-                        </a>
+            <textarea name="notas-producto" id="notas-producto"
+                placeholder="Escribe las instrucciones que necesites..."></textarea>
 
-                <% } %>
-                
-                <button type="button" class="agregar-quitar-button-detail">AGREGAR $1900</button>
+
+            <div class="agregar-eliminar-editar-button">
+                <% if (user.email==="augustkup@gmail.com" ) { %>
+
+                    <form class="" action="/products/<%= producto.id %>/delete?_method=delete" method="post">
+                        <input class="agregar-quitar-button-detail" type="submit" value="ELIMINAR PRODUCTO"></input>
+                    </form>
+                    <br>
+                    <a href="/products/<%= producto.id %>/editar-producto">
+                        <button class="agregar-quitar-button-detail">EDITAR PRODUCTO</button>
+                    </a>
+
+                    <% } %>
+
+                        <form action="/products/agregar-al-carrito/<%= producto.id %>" method="POST">
+                            <input type="hidden" name="productoId" value="<%= producto.id %>">
+                            <button type="submit">Agregar al carrito</button>
+                        </form>
 
             </div>
 
@@ -52,7 +63,8 @@
 
     </main>
     <footer>
-        
+
     </footer>
 </body>
+
 </html>

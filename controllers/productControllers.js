@@ -1,7 +1,8 @@
 const { Producto } = require('../database/models');
 const { CategoriaProducto } = require("../database/models");
-const { Carrito } = require("../database/models");
-const { CarritoProducto } = require("../database/models");
+const { CarritoCompra } = require("../database/models");
+const { ProductosCarrito } = require("../database/models");
+const { Usuario } = require("../database/models")
 
 
 const controllers = {
@@ -108,8 +109,104 @@ const controllers = {
             console.log(error);
         }
 
+    },
+    getCarritoCompras: async (req, res) => {
+        try {
+            // Verificar si el usuario ha iniciado sesión
+            if (!req.session.user) {
+                return res.redirect('/users/login');
+            }
+
+            // Obtener el ID del usuario desde la sesión
+            const usuarioId = req.session.user.id;
+
+            // Buscar el carrito del usuario en la base de datos
+            const carrito = await CarritoCompra.findOne({
+                where: { usuario_id: usuarioId },
+                include: {
+                    model: ProductosCarrito,
+                    as: 'productosCarrito',
+                    include: 'producto', // Incluir el modelo Producto
+                },
+            });
+
+            // Si el carrito está vacío o no existe, mostrar el carrito vacío en la vista
+            if (!carrito || carrito.productosCarrito.length === 0) {
+                return res.render('carrito-vacio'); // Crea una vista EJS para mostrar el carrito vacío
+            }
+
+            // Calcular el precio total del carrito multiplicando precios unitarios por cantidad
+            const precioTotal = carrito.productosCarrito.reduce((total, item) => {
+                return total + item.precio_unitario * item.cantidad;
+            }, 0);
+
+            // Renderizar la vista del carrito con los productos del carrito y el precio total
+            res.render('carrito-compras', { carrito, precioTotal });
+        } catch (error) {
+            console.error('Error al obtener el carrito de compras:', error);
+            res.redirect('/');
+        }
+    },
+    agregarProductoAlCarrito: async (req, res) => {
+        try {
+            // Obtener el ID del usuario desde la sesión
+            const usuarioId = req.session.user.id;
+
+            // Buscar el carrito del usuario en la base de datos
+            let carrito = await CarritoCompra.findOne({ where: { usuario_id: usuarioId } });
+
+            // Si no existe un carrito para el usuario, crear uno nuevo
+            if (!carrito) {
+                carrito = await CarritoCompra.create({
+                    usuario_id: usuarioId,
+                    fecha_compra: new Date(),
+                    cantidad_items: 0,
+                    precio_total: 0
+                });
+            }
+
+            // Obtener el ID del producto que se va a agregar al carrito
+            const productoId = req.body.productoId; // Asegúrate de obtener el ID del producto de la solicitud
+
+            console.log('Usuario ID:', usuarioId);
+            console.log('Producto ID a agregar:', productoId);
+
+
+            // Buscar el producto en la base de datos
+            const producto = await Producto.findByPk(productoId);
+
+            // Verificar si el producto existe
+            if (!producto) {
+                return res.status(404).json({ error: 'El producto no fue encontrado.' });
+            }
+
+            // Verificar si el producto ya está en el carrito
+            const productoEnCarrito = await ProductosCarrito.findOne({
+                where: { carrito_id: carrito.id, producto_id: productoId }
+            });
+
+            if (productoEnCarrito) {
+                // Si el producto ya está en el carrito, aumentar la cantidad en 1
+                productoEnCarrito.cantidad += 1;
+                await productoEnCarrito.save();
+            } else {
+                // Si el producto no está en el carrito, crear un nuevo registro en la tabla ProductosCarrito
+                await ProductosCarrito.create({
+                    carrito_id: carrito.id,
+                    producto_id: productoId,
+                    cantidad: 1,
+                    precio_unitario: producto.precio
+                });
+            }
+
+            res.redirect("/products/menu");
+        } catch (error) {
+            console.error('Error al agregar producto al carrito:', error);
+            res.status(500).json({ error: 'Hubo un error al agregar el producto al carrito' });
+        }
     }
+
 }
 
-    
+
 module.exports = controllers;
