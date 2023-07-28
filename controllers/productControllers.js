@@ -149,12 +149,13 @@ const controllers = {
     },
     agregarProductoAlCarrito: async (req, res) => {
         try {
+            console.log(1);
             // Obtener el ID del usuario desde la sesión
             const usuarioId = req.session.user.id;
 
             // Buscar el carrito del usuario en la base de datos
             let carrito = await CarritoCompra.findOne({ where: { usuario_id: usuarioId } });
-
+            console.log(2);
             // Si no existe un carrito para el usuario, crear uno nuevo
             if (!carrito) {
                 carrito = await CarritoCompra.create({
@@ -164,6 +165,7 @@ const controllers = {
                     precio_total: 0
                 });
             }
+            console.log(3);
 
             // Obtener el ID del producto que se va a agregar al carrito
             const productoId = req.body.productoId; // Asegúrate de obtener el ID del producto de la solicitud
