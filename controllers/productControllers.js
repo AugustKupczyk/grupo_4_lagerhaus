@@ -168,7 +168,7 @@ const controllers = {
             console.log(3);
 
             // Obtener el ID del producto que se va a agregar al carrito
-            const productoId = req.body.productoId; // Asegúrate de obtener el ID del producto de la solicitud
+            const productoId = req.body.productoId;
 
             console.log('Usuario ID:', usuarioId);
             console.log('Producto ID a agregar:', productoId);
@@ -205,6 +205,48 @@ const controllers = {
         } catch (error) {
             console.error('Error al agregar producto al carrito:', error);
             res.status(500).json({ error: 'Hubo un error al agregar el producto al carrito' });
+        }
+    },
+
+    eliminarProductoDelCarrito: async (req, res) => {
+        try {
+            // Obtener el ID del usuario desde la sesión
+            const usuarioId = req.session.user.id;
+    
+            // Obtener el ID del producto que se va a eliminar del carrito
+            const productoId = req.params.id;
+
+            // Buscar el carrito del usuario en la base de datos
+            const carrito = await CarritoCompra.findOne({ where: { usuario_id: usuarioId } });
+    
+            // Verificar si el carrito existe
+            if (!carrito) {
+                return res.status(404).json({ error: 'El carrito no fue encontrado.' });
+            }
+    
+            // Buscar el producto en el carrito
+            const productoEnCarrito = await ProductosCarrito.findOne({
+                where: { carrito_id: carrito.id, producto_id: productoId }
+            });
+    
+            // Verificar si el producto está en el carrito
+            if (!productoEnCarrito) {
+                return res.status(404).json({ error: 'El producto no está en el carrito.' });
+            }
+    
+            // Si el producto está en el carrito y su cantidad es mayor a 1, reducir la cantidad en 1
+            if (productoEnCarrito.cantidad > 1) {
+                productoEnCarrito.cantidad -= 1;
+                await productoEnCarrito.save();
+            } else {
+                // Si la cantidad es igual a 1, eliminar el registro del producto en el carrito
+                await productoEnCarrito.destroy();
+            }
+    
+            res.redirect('/carrito-compras');
+        } catch (error) {
+            console.error('Error al eliminar producto del carrito:', error);
+            res.status(500).json({ error: 'Hubo un error al eliminar el producto del carrito' });
         }
     }
 

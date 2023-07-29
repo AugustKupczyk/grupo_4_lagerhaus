@@ -111,6 +111,10 @@ h6{
     margin-right: 8px;
 }
 
+.eliminar-producto-carrito-btn {
+    color: white;
+}
+
 @media(min-width:768px){
     main {
         padding: 10px 20%;

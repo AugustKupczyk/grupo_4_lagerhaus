@@ -34,8 +34,20 @@
                                     </h4>
                                 </div>
                             </div>
-                            <h3>$ <%= productoCarrito.precio_unitario %>
-                            </h3>
+                            <h3>$ <%= productoCarrito.precio_unitario %></h3>
+
+                            <!-- <div class="agregar-eliminar-producto">
+                                <form action="/products/agregar-producto/<!%= producto.id %>" method="POST">
+                                    <input type="hidden" name="productoId" value="<!%= producto.id %>">
+                                    <button type="submit">Agregar producto</button>
+                                </form> -->
+
+                                <form action="/eliminar-producto/<%= producto.id %>" method="POST">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <input class="eliminar-producto-carrito-btn" type="submit" value="Eliminar producto">
+                                </form>
+                            </div>
+
                         </li>
                         <% }) %>
                 </ul>
