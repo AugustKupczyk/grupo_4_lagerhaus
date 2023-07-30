@@ -35,9 +35,12 @@
                                             <p class="titulo-producto">
                                                 <%= producto.nombre %>
                                             </p>
-                                            <p class="detalle-producto">
-                                                <%= producto.descripcion %>
-                                            </p>
+                                            <div class="descripcion-producto"> <!-- Agrega un contenedor para la descripción -->
+                                                <p class="detalle-producto">
+                                                    <%= producto.descripcion %>
+                                                </p>
+                                            </div>
+                                            
                                             <a class="boton-detalle-producto"
                                                 href="/products/<%= producto.id %>/detalle-producto">Haz click para ver
                                                 el detalle</a>
