@@ -112,7 +112,7 @@ h6{
 }
 
 .eliminar-producto-carrito-btn {
-    color: white;
+    cursor: pointer;
 }
 
 @media(min-width:768px){

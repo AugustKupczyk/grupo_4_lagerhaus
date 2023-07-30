@@ -45,7 +45,7 @@
                     <form class="" action="/products/<%= producto.id %>/delete?_method=delete" method="post">
                         <input class="agregar-quitar-button-detail" type="submit" value="ELIMINAR PRODUCTO"></input>
                     </form>
-                    <br>
+                
                     <a href="/products/<%= producto.id %>/editar-producto">
                         <button class="agregar-quitar-button-detail">EDITAR PRODUCTO</button>
                     </a>
@@ -54,7 +54,7 @@
 
                         <form action="/products/agregar-al-carrito/<%= producto.id %>" method="POST">
                             <input type="hidden" name="productoId" value="<%= producto.id %>">
-                            <button type="submit">Agregar al carrito</button>
+                            <button class="agregar-quitar-button-detail" type="submit">AGREGAR AL CARRITO</button>
                         </form>
 
             </div>
