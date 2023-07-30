@@ -36,12 +36,6 @@
                             </div>
                             <h3>$ <%= productoCarrito.precio_unitario %></h3>
 
-                            <!-- <div class="agregar-eliminar-producto">
-                                <form action="/products/agregar-producto/<!%= producto.id %>" method="POST">
-                                    <input type="hidden" name="productoId" value="<!%= producto.id %>">
-                                    <button type="submit">Agregar producto</button>
-                                </form> -->
-
                                 <form class="" action="/products/eliminar-producto/<%= productoCarrito.producto.id %>?_method=delete" method="post">
                                     <input class="eliminar-producto-carrito-btn" type="submit" value="ELIMINAR PRODUCTO"></input>
                                 </form>
@@ -55,17 +49,9 @@
 
             <div class="total-carrito">
                 <ul>
-                    <li id="subtotal" class="subtotales">
-                        <h5>SUBTOTAL</h5>
-                        <h5>$ Subtotal</h5>
-                    </li>
-                    <li id="envio" class="subtotales">
-                        <h5>ENVÍO</h5>
-                        <h5>$ Envio</h5>
-                    </li>
                     <li id="total" class="subtotales">
                         <h6>TOTAL</h6>
-                        <h6>$ Total</h6>
+                        <h6>$ <span id="precioTotal"><%= precioTotal %></span></h6>
                     </li>
                 </ul>
             </div>
@@ -75,6 +61,7 @@
         <footer>
             <%- include("./partials/footer-carrito") %>
         </footer>
+        
 </body>
 
 </html>

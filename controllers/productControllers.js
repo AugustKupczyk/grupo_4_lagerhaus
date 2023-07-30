@@ -132,10 +132,10 @@ const controllers = {
 
             // Si el carrito está vacío o no existe, mostrar el carrito vacío en la vista
             if (!carrito || carrito.productosCarrito.length === 0) {
-                return res.render('carrito-vacio'); // Crea una vista EJS para mostrar el carrito vacío
+                return res.render('carrito-vacio');
             }
 
-            // Calcular el precio total del carrito multiplicando precios unitarios por cantidad
+            // Calcula el precio total del carrito
             const precioTotal = carrito.productosCarrito.reduce((total, item) => {
                 return total + item.precio_unitario * item.cantidad;
             }, 0);
