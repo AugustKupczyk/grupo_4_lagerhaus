@@ -43,7 +43,7 @@ router.put('/:id/editar-producto',authMiddlewares.allowAdmin, productControllers
 
 router.get("/carrito-compras",authMiddlewares.allowSignedIn,productControllers.getCarritoCompras);
 
-//@POST Agregarmos un producto al Carrito de Compras
+//@POST Agregamos un producto al Carrito de Compras
 router.post('/agregar-al-carrito/:id', productControllers.agregarProductoAlCarrito);
 
 //@DELETE Eliminamos un producto del Carrito de Compras

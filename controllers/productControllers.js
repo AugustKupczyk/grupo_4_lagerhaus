@@ -243,7 +243,7 @@ const controllers = {
                 await productoEnCarrito.destroy();
             }
     
-            res.redirect('/carrito-compras');
+            res.redirect('/products/carrito-compras');
         } catch (error) {
             console.error('Error al eliminar producto del carrito:', error);
             res.status(500).json({ error: 'Hubo un error al eliminar el producto del carrito' });
