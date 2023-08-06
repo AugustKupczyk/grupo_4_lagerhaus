@@ -59,6 +59,12 @@ h2 {
     /* Duración de la animación */
 }
 
+#paragraph-footer {
+    color: white;
+    font-size: 0.7rem;
+    text-align: initial;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -98,7 +104,7 @@ h2 {
 
 .fa-brands {
     color: orange;
-    font-size: 30px;
+    /* font-size: 30px; */
 }
 
 .redes-container {
