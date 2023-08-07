@@ -9,3 +9,5 @@ Sprint 4: Durante este sprint continuamos con una comunicacion fluida entre los 
 Sprint 5: Hemos logrado seguir avanzando con las consignas de este Sprint a la par de las clases, por lo que se volvio también una buena manera de terminar de comprender los conceptos y aprender a aplicarlos. 
 
 Sprint 6: Este Sprint fue el más desafiante hasta ahora. Realizamos reuniones periodicas para alinear objetivos semanales y poder darle seguimiento a las consignar por realizar. Tener objetivos a corto plazos y tareas sencillas diagramadas hizo que la incorporacion de SQL y ejecución del CRUD en el proyecto sea posible. 
+
+Sprint 7: 
