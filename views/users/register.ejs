@@ -24,6 +24,17 @@
             <input type="date" name="nacimiento" id="nacimiento" placeholder="Fecha de nacimiento">
             <input type="text" name="direccion" id="direccion" placeholder="Direccion">
             <input type="file" class="imgButton" name="image" id="img">
+
+            <% if (errors && errors.length > 0) { %>
+                <div class="error-messages">
+                    <ul>
+                        <% errors.forEach(error => { %>
+                            <li><%= error.msg %></li>
+                        <% }); %>
+                    </ul>
+                </div>
+            <% } %>
+            
             <button id="enviar" type="submit">Registrar</button>
         </form>
         <br>

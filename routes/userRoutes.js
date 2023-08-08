@@ -3,6 +3,7 @@ const path = require('path');
 const userControllers = require("../controllers/userControllers");
 const middlewares = require("../middlewares/authMiddlewares");
 const uploadImg = require('../middlewares/userImg');
+const userValidations = require('../middlewares/userValidations'); // Importa el archivo de validaciones
 
 const router = express.Router();
 
@@ -13,7 +14,7 @@ router.get('/sign-out', userControllers.signOut);
 router.get('/register', middlewares.allowUnsignedIn, userControllers.getRegister);
 
 // @POST - /users
-router.post('/', uploadImg.single('image'), userControllers.registerUser);
+router.post('/', [uploadImg.single('image'), userValidations.registerValidations, userValidations.validate], userControllers.registerUser);
 
 // @GET - /users/login
 router.get('/login', middlewares.allowUnsignedIn, userControllers.getLogin);

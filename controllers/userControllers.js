@@ -16,8 +16,7 @@ const controllers = {
     getRegister: async (req, res) => {
         try {
             const error = req.query.error || "";
-            let userData = req.session.user || {};
-            res.render("register", { error, userData });
+            res.render("register", { error,errors:[] });
         } catch (error) {
             console.error(error);
             res.redirect("/");
@@ -47,6 +46,8 @@ const controllers = {
                 // Agregar otros campos según sea necesario
             });
 
+            console.log('User Created:', createdUser); // Agrega este console log
+
             const userWithoutPassword = { ...createdUser.get(), contraseña: undefined, id: undefined };
 
             req.session.user = userWithoutPassword;
@@ -61,8 +62,7 @@ const controllers = {
     getLogin: async (req, res) => {
         try {
             const error = req.query.error || "";
-            let userData = req.session.user || {};
-            res.render("login", { error, userData });
+            res.render("login", { error,});
         } catch (error) {
             console.error(error);
             res.redirect("/");
