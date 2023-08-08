@@ -7,7 +7,7 @@
         <link href="/css/register.css" rel="stylesheet">
 </head>
 
-<body>
+<body> 
 
     <header>
         <%- include("./partials/header-main") %>
@@ -17,13 +17,18 @@
         <form action="/users" method="POST" enctype="multipart/form-data">
             <p>Registro</p>
             <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+            <p class="error" style="color: red;"></p>
             <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+            <p class="error" style="color: red;"></p>
             <input type="email" name="email" id="email" placeholder="Email">
+            <p class="error" style="color: red;"></p>
             <input type="password" name="password" id="password" placeholder="Contraseña">
+            <p class="error" style="color: red;"></p>
             <input type="text" name="numero_celular" id="numero_celular" placeholder="Número de celular">
             <input type="date" name="nacimiento" id="nacimiento" placeholder="Fecha de nacimiento">
             <input type="text" name="direccion" id="direccion" placeholder="Direccion">
             <input type="file" class="imgButton" name="image" id="img">
+            <p class="error" style="color: red;"></p>
 
             <% if (errors && errors.length > 0) { %>
                 <div class="error-messages">
@@ -35,7 +40,7 @@
                 </div>
             <% } %>
             
-            <button id="enviar" type="submit">Registrar</button>
+            <button id="enviar" disabled type="submit">Registrar</button>
         </form>
         <br>
         <form action="/Google" method="get">
@@ -50,6 +55,7 @@
 
     </main>
 
+    <script src="/js/registerForm.js"></script>
 
 </body>
 
