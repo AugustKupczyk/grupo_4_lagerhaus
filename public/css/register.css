@@ -9,18 +9,32 @@ main{
     margin-top: 110px;
 }
 
+h2{
+    margin-bottom: 5px;
+    font-size: 22px;
+    align-self: center;
+    letter-spacing: 2px;
+    font-weight: 200;
+    color: white;
+}
+
+h3{
+    margin-bottom: 35px;
+    font-size: 14px;
+    align-self: center;
+    letter-spacing: 2px;
+    font-weight: 100;
+    color: white;
+    opacity: 70%;
+}
+
 form{
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     width: 75vw;
     align-self: center;
-    align-items: center;
-}
-
-p{
-    margin-bottom: 35px;
-    font-size: 20px;
+    align-items: left;
 }
 
 input[type="email"]{
@@ -29,7 +43,7 @@ input[type="email"]{
     height: 35px;
     box-sizing:border-box;
     padding: 12px;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.7)    
 }
 
 input[type="text"]{
@@ -38,25 +52,29 @@ input[type="text"]{
     height: 35px;
     box-sizing:border-box;
     padding: 12px;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.7)    
 }
 
 input[type="password"]{
     width: 100%;
-    margin-bottom: 13px;
+    margin-bottom: 8px;
     height: 35px;
     box-sizing:border-box;
     padding: 10px;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.7)    
 }
 
 input[type="date"]{
     width: 100%;
-    margin-bottom: 13px;
+    margin-bottom: 19px;
     height: 35px;
     box-sizing:border-box;
     padding: 10px;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.7)    
+}
+
+input[type="file"]{
+    margin-top: 8px;
 }
 
 main button{
@@ -70,11 +88,11 @@ main button{
 
 #enviar{
     margin-bottom: 30px;
+    margin-top: 10px;
     height: 30px;
     border: 2px solid #ff6a0098;
     background-color: #FF6900;
 }
-
 
 .botones-app{
     border-radius: 12px;
@@ -103,4 +121,33 @@ main button{
     margin-top: 30px;
     align-self:center;
     font-size: 13px;
+}
+
+.error{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+@media(min-width:576px){
+form{
+    width: 55vw;
+}
+}
+
+@media(min-width:768px){
+    form{
+        width: 45vw;
+    }   
+}
+
+@media(min-width:992px){
+    form{
+        width: 35vw;
+    }    
+}
+
+@media(min-width:1200px){
+    form{
+        width: 30vw;
+    }    
 }
