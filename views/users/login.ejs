@@ -17,13 +17,13 @@
 
     <main>
 
+        <h2>INGRESÁ</h2>
+        <h3>al mundo LagerHaus :)</h3>
         <form action="/users/login" method="post">
-            <p>Ingresar</p>
             <input type="email" name="email" id="email" placeholder="Email de usuario">
+            <p class="error" style="color: red;"></p>
             <input type="password" name="password" id="password" placeholder="Contraseña">
-            <h6 class="error" style="color: red">
-                <%= error %>
-            </h6>
+            <p class="error" style="color: red;"></p> 
             <div class="recordar-ft-olvidar">
                 <div class="recordar-check">
                     <input type="checkbox" name="remember">
@@ -31,7 +31,7 @@
                 </div>
                 <a id="olvide" href="#">Olvidé mi contraseña</a>
             </div>
-            <button id="ingresar" type="submit">Ingresar</button>
+            <button id="ingresar" disabled type="submit">Ingresar</button>
         </form>
         <br>
         <form action="/Google" method="get">
@@ -45,6 +45,9 @@
         <a class="register" href="/users/register">Crea tu cuenta</a>
 
     </main>
+
+    <script src="/js/loginForm.js"></script>
+
 </body>
 
 <footer>
