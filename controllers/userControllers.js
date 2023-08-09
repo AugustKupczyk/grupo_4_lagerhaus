@@ -74,10 +74,6 @@ const controllers = {
             console.log(req.body);
             const searchedUser = await Usuario.findOne({ where: { email: req.body.email } });
 
-            if (!searchedUser) {
-                return res.redirect('/users/login?error=El mail o la contraseña son incorrectos');
-            }
-
             console.log(req.body.password);
             console.log(searchedUser.contraseña);
 

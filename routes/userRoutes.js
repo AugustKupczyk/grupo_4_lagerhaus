@@ -20,7 +20,7 @@ router.post('/', [uploadImg.single('image'), userValidations.registerValidations
 router.get('/login', middlewares.allowUnsignedIn, userControllers.getLogin);
 
 // @POST - /users/login
-router.post('/login', userControllers.loginUser);
+router.post('/login', [userValidations.loginValidations, userValidations.validateLogin], userControllers.loginUser);
 
 // @GET - /users/profile/:email
 router.get('/profile/:email', middlewares.allowSignedIn, userControllers.getProfile);

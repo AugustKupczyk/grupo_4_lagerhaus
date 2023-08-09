@@ -29,6 +29,24 @@ const userValidations = {
         // Agrega más validaciones aquí si es necesario
     ],
 
+    loginValidations: [
+        body('email')
+            .notEmpty().withMessage('El email es obligatorio')
+            .isEmail().withMessage('Ingresa un formato de email válido')
+            .custom(async (value) => {
+                console.log('Validando email para login...'); // Agrega este console log
+                const existingUser = await Usuario.findOne({ where: { email: value } });
+                if (!existingUser) {
+                    throw new Error('El mail o la contraseña son incorrectos');
+                }
+            }),
+
+        body('password')
+            .notEmpty().withMessage('La contraseña es obligatoria'),
+
+        // Agrega más validaciones aquí si es necesario
+    ],
+
     validate: (req, res, next) => {
         const errors = validationResult(req);
 
@@ -37,6 +55,16 @@ const userValidations = {
         }
 
         next(); // Si las validaciones pasan, continúa al siguiente middleware o controlador
+    },
+
+    validateLogin: (req, res, next) => {
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            return res.render('login', { error: errors.array()[0].msg });
+        }
+
+        next();
     }
 };
 
