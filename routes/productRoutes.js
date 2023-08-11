@@ -1,29 +1,16 @@
 const express = require("express");
 const path = require('path');
-const multer = require('multer');
 const authMiddlewares = require("../middlewares/authMiddlewares");
-
+const productValidations = require("../middlewares/productValidations");
 const productControllers = require("../controllers/productControllers");
-
+const productImg = require("../middlewares/productImg");
 const router = express.Router();
-
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, './public/imgs/products');
-    },
-    filename: (req, file, cb) => {
-        console.log(path.extname(file.originalname))
-        cb(null, Date.now() + '-' + file.originalname);
-    }
-});
-
-const upload = multer({ storage });
 
 // @GET /products 
 router.get("/menu", authMiddlewares.allowSignedIn, productControllers.listForm);
 
 // @POST /products (Aca se recibe la informacion del nuevo producto para despues almacenarla en algun lado)
-router.post('/menu', [authMiddlewares.allowAdmin, upload.any('img')], productControllers.saved);
+router.post('/menu', [productImg.single('image'),productValidations.createValidations,productValidations.validateCreate,authMiddlewares.allowAdmin], productControllers.saved);
 
 // @GET /products/agregar-producto (Vista de formulario de creacion de producto)
 router.get("/agregar-producto", authMiddlewares.allowAdmin, productControllers.create);

@@ -15,11 +15,6 @@
     </header>
 
     <main>
-        <!-- <ul>
-            <%# errors.forEach(errorActual => { %>
-            <li><%#= errorActual.msg %></li>
-            <%# }) %>
-          </ul> -->
         <p>Agregar productos</p>
         <form action="/products/menu" method="post" enctype="multipart/form-data">
             <h4>Complete el detalle del nuevo producto:</h4>
@@ -38,7 +33,19 @@
             <input type="text" name="price" id="" placeholder="Precio del producto">
             <h4>Seleccione la foto del nuevo producto:</h4>
             <input type="file" multiple accept=".jpg, .jpeg, .png" name="image" id="img">
-            <button id="enviar" type="submit">Agregar</button>
+
+            <% if (errors && errors.length> 0) { %>
+                <div class="error-messages">
+                    <ul>
+                        <% errors.forEach(error=> { %>
+                            <li>
+                                <%= error.msg %>
+                            </li>
+                            <% }); %>
+                    </ul>
+                </div>
+                <% } %>
+                    <button id="enviar" type="submit">Agregar</button>
         </form>
     </main>
 
