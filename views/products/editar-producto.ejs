@@ -20,9 +20,10 @@
             <input type="text" name="name" value="<%= producto.nombre %>" id="titulo-producto" placeholder="Nuevo titulo del producto">
             <input type="text" name="description" value="<%= producto.descripcion %>" id="descripcion-producto" placeholder="Nueva descripción del producto">
             <input type="text" name="price" value="<%= producto.precio %>" id="precio-producto" placeholder="Nuevo precio del producto">
-            <button id ="enviar" type="submit">Editar</button>
+            <button id ="enviar" disabled type="submit">Editar</button>
         </form>
     </main>
 
+<script src="/js/editProductValidation.js"></script>
 </body>
 </html>
