@@ -1,7 +1,7 @@
 const titleInp = document.querySelector("#nombre-producto");
 const descriptionInp = document.querySelector("#descripcion-producto");
 const imgInp = document.querySelector("#img");
-const enviarBtn = document.querySelector("#submit");
+const enviarBtn = document.querySelector("#enviar");
 
 const checkErrors = () => {
     let errorsHTML = Array.from(document.querySelectorAll(".error"))
@@ -38,13 +38,20 @@ titleInp.oninput = (e) => {
 }
 
 descriptionInp.oninput = (e) => {
+    console.log("Input event on descriptionInp");
+    
     const value = e.target.value;
     const length = e.target.value.length;
 
-    if (length < 10) {
+    if (length === 0) {
+        console.log("Description is empty");
+        e.target.nextElementSibling.innerHTML = "La descripción del producto es obligatoria.";
+    } else if (length < 10) {
+        console.log("Description is too short");
         e.target.nextElementSibling.innerHTML = "La descripción del producto debe tener al menos 10 caracteres.";
     } else {
-        e.target.nextElementSibling.innerHTML = ""    
+        console.log("Description is valid");
+        e.target.nextElementSibling.innerHTML = "";
     }
 
     checkErrors();

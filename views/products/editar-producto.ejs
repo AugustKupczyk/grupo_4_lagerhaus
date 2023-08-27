@@ -18,7 +18,9 @@
             <h4>Edite los campos necesarios del producto seleccionado:</h4>
             <input type="text" name="category" value="<%= producto.categoria_id %>" id="categoria-producto" placeholder="Nueva categoria del producto">
             <input type="text" name="name" value="<%= producto.nombre %>" id="titulo-producto" placeholder="Nuevo titulo del producto">
+            <p class="error" style="color: red;"></p>
             <input type="text" name="description" value="<%= producto.descripcion %>" id="descripcion-producto" placeholder="Nueva descripción del producto">
+            <p class="error" style="color: red;"></p>
             <input type="text" name="price" value="<%= producto.precio %>" id="precio-producto" placeholder="Nuevo precio del producto">
             <button id ="enviar" disabled type="submit">Editar</button>
         </form>

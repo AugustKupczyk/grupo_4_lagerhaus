@@ -19,6 +19,7 @@
         <form action="/products/menu" method="post" enctype="multipart/form-data">
             <h4>Complete el detalle del nuevo producto:</h4>
             <input type="text" name="name" id="nombre-producto" placeholder="Nombre del producto">
+            <p class="error" style="color: red;"></p>
             <label for="category" class="form-label">Categoría:</label>
             <select name="category" id="category" class="form-input">
                 <option value="1">Tapeo</option>
@@ -30,6 +31,7 @@
                 <option value="7">Tragos y Gaseosas</option>
             </select>
             <input type="text" name="description" id="descripcion-producto" placeholder="Descripción del producto">
+            <p class="error" style="color: red;"></p>
             <input type="text" name="price" id="" placeholder="Precio del producto">
             <h4>Seleccione la foto del nuevo producto:</h4>
             <input type="file" multiple accept=".jpg, .jpeg, .png" name="image" id="img">
