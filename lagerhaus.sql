@@ -126,7 +126,6 @@ CREATE TABLE `users` (
   `email` varchar(50) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `apellido` varchar(50) NOT NULL,
-  `numero_celular` int(50) NOT NULL,
   `nacimiento` date NOT NULL,
   `direccion` varchar(50) NOT NULL,
   `img` varchar(100) DEFAULT NULL,
@@ -138,7 +137,7 @@ CREATE TABLE `users` (
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `nombre`, `apellido`, `numero_celular`, `nacimiento`, `direccion`, `img`, `contraseña`, `rol_id`) VALUES
+INSERT INTO `users` (`id`, `email`, `nombre`, `apellido`, `nacimiento`, `direccion`, `img`, `contraseña`, `rol_id`) VALUES
 (1, 'augustkup@gmail.com', 'August', 'Kupczyk', 1163719380, '2001-07-30', 'Dorrego 968', '1690211125175-photo4954191471553128977.jpg', '$2a$12$PKoV9QrjK/6796iIXT2tEeXQeI2DIRGAZdptRb9B6GOIyZAVRsWcS', 1),
 (2, 'pepito@hotmail.com', 'aaa', 'bbb', 11202020, '2022-05-02', 'aaa 123', 'sin_foto.jpg', '$2b$12$.J2A1PtddPKPrUpIJdFJ1OYA.hNH7VClUQUMa8l95mfrXMbl4oa/S', 2);
 

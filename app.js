@@ -11,6 +11,9 @@ const rutasMain = require("./routes/mainRoutes.js");
 const rutasProducto = require("./routes/productRoutes.js");
 const rutasUser = require("./routes/userRoutes.js");
 
+const rutasUserApi = require('./routes/api/users');
+const rutasProductsApi = require("./routes/api/products");
+
 const app = express();
 
 app.set("view engine", "ejs");
@@ -43,6 +46,8 @@ app.use('/imgs/users', express.static(path.join(__dirname, 'public/imgs/users'))
 app.use(rutasMain);
 app.use("/products", rutasProducto);
 app.use("/users", rutasUser);
+app.use('/api/users',rutasUserApi);
+app.use("/api/products",rutasProductsApi);
 
 app.use((req, res) => {
     res.render('404');

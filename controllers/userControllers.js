@@ -26,7 +26,7 @@ const controllers = {
     registerUser: async (req, res) => {
         try {
             console.log(req.body)
-            const { nombre, apellido, email, password, numero_celular, nacimiento, direccion } = req.body;
+            const { nombre, apellido, email, password,nacimiento, direccion } = req.body;
             const saltRounds = 12;
             const hashedPassword = await bcrypt.hash(password, saltRounds);
 
@@ -38,10 +38,9 @@ const controllers = {
                 apellido,
                 email,
                 contraseña: hashedPassword,
-                numero_celular,
                 nacimiento,
                 direccion,
-                img: req.file ? req.file.filename : "sin_foto.jpg",
+                img: req.file ? `/imgs/users/${req.file.filename}` : "sin_foto.jpg",
                 rol_id,
                 // Agregar otros campos según sea necesario
             });
@@ -157,11 +156,11 @@ const controllers = {
             }
 
             // Obtener los datos actualizados del formulario
-            const { nombre, apellido, direccion, numero_celular } = req.body;
+            const { nombre, apellido, direccion} = req.body;
 
             // Actualizar los campos del perfil en la base de datos
             await Usuario.update(
-                { nombre, apellido, direccion, numero_celular },
+                { nombre, apellido, direccion},
                 { where: { email } }
             );
 

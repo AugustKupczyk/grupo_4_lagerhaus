@@ -20,10 +20,6 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.STRING(50),
             allowNull: false
         },
-        numero_celular: {
-            type: dataTypes.INTEGER(50),
-            allowNull: false
-        },
         nacimiento: {
             type: dataTypes.INTEGER(8),
             allowNull: false
