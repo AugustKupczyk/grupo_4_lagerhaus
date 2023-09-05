@@ -1,3 +1,4 @@
+
 const { Usuario } = require('../../database/models');
 
 const userControllers = {
@@ -7,6 +8,12 @@ const userControllers = {
       const users = await Usuario.findAll({ attributes: ['id', 'nombre', 'email'] });
       const userCount = users.length;
 
+      // Obtener el último usuario creado
+      const lastUser = await Usuario.findOne({
+        attributes: ['id', 'nombre'], // Ajusta las columnas que deseas mostrar
+        order: [['id', 'DESC']], // Ordena por ID en orden descendente para obtener el último usuario
+      });
+
       // Construye la respuesta
       const response = {
         count: userCount,
@@ -15,7 +22,12 @@ const userControllers = {
           nombre: user.nombre,
           email: user.email,
           detail: `/api/users/${user.id}` // URL para obtener el detalle del usuario
-        }))
+        })),
+        ultimoUsuario: {
+          id: lastUser.id,
+          nombre: lastUser.nombre,
+          // Agrega otras propiedades del usuario aquí
+        },
       };
 
       res.json(response);
@@ -76,5 +88,6 @@ const userControllers = {
     }
   }
 };
+
 
 module.exports = userControllers;

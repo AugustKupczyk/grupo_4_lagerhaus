@@ -16,12 +16,22 @@ const productControllers = {
                 group: ['nombre'],
             });
 
+            // Obtener el total de categorías
+            const totalCategories = countByCategory.length;
+
             // Obtener la lista de productos
             const products = await Producto.findAll();
+
+            // Obtener el último producto creado
+            const lastProduct = await Producto.findOne({
+                attributes: ['id', 'nombre', 'descripcion'], // Ajusta las columnas que deseas mostrar
+                order: [['id', 'DESC']], // Ordena por ID en orden descendente para obtener el último producto
+            });
 
             // Formatear la respuesta
             const response = {
                 count: totalProducts,
+                totalCategories: totalCategories, // Total de categorías
                 countByCategory: countByCategory.map(category => {
                     return {
                         nombre: category.nombre,
@@ -37,6 +47,7 @@ const productControllers = {
                         detail: `/api/products/${product.id}`,
                     };
                 }),
+                ultimoProducto: lastProduct, // Agrega el último producto a la respuesta
             };
 
             res.json(response);
