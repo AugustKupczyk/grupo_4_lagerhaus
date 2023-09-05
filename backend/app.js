@@ -6,6 +6,7 @@ const methodOverride = require("method-override");
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const expressSession = require('express-session');
+const cors = require('cors');
 
 const rutasMain = require("./routes/mainRoutes.js");
 const rutasProducto = require("./routes/productRoutes.js");
@@ -36,6 +37,7 @@ app.use(expressSession({
     resave: false,
     saveUninitialized: true
 }));
+app.use(cors());
 
 // --- Custom Middleware to Attach User Data ---
 app.use(userDataMiddleware);
