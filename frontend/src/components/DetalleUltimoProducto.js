@@ -21,19 +21,22 @@ function DetalleUltimoProducto() {
             });
     }, []);
 
-    return (
-        <div>
-            <h2>Último Producto Creado</h2>
-            {ultimoProducto ? (
-                <div>
+    return ultimoProducto && (
+        <div className="col-lg-6 mb-4">
+            <div className="card shadow mb-4">
+                <div className="card-header py-3 d-flex justify-content-between">
+                    <h5 className="m-0 font-weight-bold text-gray-800">Último Producto Creado</h5>
                     <p>ID: {ultimoProducto.id}</p>
-                    <p>Nombre: {ultimoProducto.nombre}</p>
-                    <p>Descripción: {ultimoProducto.descripcion}</p>
-                    {/* Agrega más campos según sea necesario */}
                 </div>
-            ) : (
-                <p>No hay detalles disponibles.</p>
-            )}
+                <div className="card-body">
+                    <div className="text-center">
+                        <p>Nombre: {ultimoProducto.nombre}</p>
+                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: 40 + 'rem' }} src={`http://localhost:3030${ultimoProducto.img}`} alt={ultimoProducto.nombre} />
+                    </div>
+                    <p>Descripción: {ultimoProducto.descripcion}</p>
+                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver detalle del ultimo usuario creado</a>
+                </div>
+            </div>
         </div>
     );
 }

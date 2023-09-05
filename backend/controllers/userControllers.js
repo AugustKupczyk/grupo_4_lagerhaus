@@ -40,7 +40,7 @@ const controllers = {
                 contraseña: hashedPassword,
                 nacimiento,
                 direccion,
-                img: req.file ? `/imgs/users/${req.file.filename}` : "sin_foto.jpg",
+                img: req.file ? `/imgs/users/${req.file.filename}` : "user_placeholder.png",
                 rol_id,
                 // Agregar otros campos según sea necesario
             });

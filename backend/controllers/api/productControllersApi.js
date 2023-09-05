@@ -24,7 +24,7 @@ const productControllers = {
 
             // Obtener el último producto creado
             const lastProduct = await Producto.findOne({
-                attributes: ['id', 'nombre', 'descripcion'], // Ajusta las columnas que deseas mostrar
+                attributes: ['id', 'nombre', 'descripcion','img'], // Ajusta las columnas que deseas mostrar
                 order: [['id', 'DESC']], // Ordena por ID en orden descendente para obtener el último producto
             });
 

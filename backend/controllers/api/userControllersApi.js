@@ -9,8 +9,8 @@ const userControllers = {
       const userCount = users.length;
 
       // Obtener el último usuario creado
-      const lastUser = await Usuario.findOne({
-        attributes: ['id', 'nombre'], // Ajusta las columnas que deseas mostrar
+      const { id, nombre, img } = await Usuario.findOne({
+        attributes: ['id', 'nombre', 'img'], // Ajusta las columnas que deseas mostrar
         order: [['id', 'DESC']], // Ordena por ID en orden descendente para obtener el último usuario
       });
 
@@ -24,8 +24,7 @@ const userControllers = {
           detail: `/api/users/${user.id}` // URL para obtener el detalle del usuario
         })),
         ultimoUsuario: {
-          id: lastUser.id,
-          nombre: lastUser.nombre,
+          id, nombre, img
           // Agrega otras propiedades del usuario aquí
         },
       };

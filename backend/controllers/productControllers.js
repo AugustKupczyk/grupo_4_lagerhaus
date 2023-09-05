@@ -24,7 +24,7 @@ const controllers = {
             img: " ",
         };
         console.log(nuevoProducto);
-        nuevoProducto.img = req.file ? `/imgs/products/${req.file.filename}` : "sin foto"
+        nuevoProducto.img = req.file ? `/imgs/products/${req.file.filename}` : "product_placeholder.png"
         try {
             const datos = await Producto.create(nuevoProducto);
             console.log(datos);

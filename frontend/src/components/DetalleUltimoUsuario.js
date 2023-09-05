@@ -14,6 +14,7 @@ function DetalleUltimoUsuario() {
       })
       .then((data) => {
         // Actualiza el estado con los detalles del último usuario
+        console.log(data.ultimoUsuario);
         setUltimoUsuario(data.ultimoUsuario);
       })
       .catch((error) => {
@@ -21,19 +22,25 @@ function DetalleUltimoUsuario() {
       });
   }, []);
 
-  return (
-    <div>
-      <h2>Último Usuario Creado</h2>
-      {ultimoUsuario ? (
-        <div>
+  return ultimoUsuario && (
+    <div className="col-lg-6 mb-4">
+      <div className="card shadow mb-4">
+        <div className="card-header py-3 d-flex justify-content-between">
+          <h5 className="m-0 font-weight-bold text-gray-800">Ultimo usuario creado</h5>
           <p>ID: {ultimoUsuario.id}</p>
-          <p>Nombre: {ultimoUsuario.nombre}</p>
-          {/* Agrega más campos según sea necesario */}
         </div>
-      ) : (
-        <p>No hay detalles disponibles.</p>
-      )}
+        <div className="card-body">
+          <div className="text-center">
+            <p>Nombre: {ultimoUsuario.nombre}</p>
+            <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: 40 + 'rem' }} src={`http://localhost:3030${ultimoUsuario.img}`} alt={ultimoUsuario.nombre} />
+          </div>
+          <div className='flex'>
+          </div>
+          <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver detalle del ultimo usuario creado</a>
+        </div>
+      </div>
     </div>
+
   );
 }
 
