@@ -13,7 +13,7 @@ function SideBar(){
             {/*<!-- Sidebar -->*/}
             <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-                {/*<!-- Sidebar - Brand -->*/}
+                {/*<!-- Sidebar - Brand Logo de Digital House -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
                         <img className="w-100" src={image} alt="Digital House"/>
@@ -27,14 +27,14 @@ function SideBar(){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></Link>
+                        <span>Dashboard - LH Lagerhaus</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider"/>
 
                 {/*<!-- Heading -->*/}
-                <div className="sidebar-heading">Actions</div>
+                <div className="sidebar-heading">ACCIONES</div>
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">

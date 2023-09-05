@@ -1,5 +1,8 @@
 import React from 'react';
 import SmallCard from './SmallCard';
+import SmallCardTotalUsuarios from './SmallCardTotalUsuarios';
+import SmallCardTotalCategorias from './SmallCardTotalCategorias';
+
 
 /*  Cada set de datos es un objeto literal */
 
@@ -37,11 +40,9 @@ function ContentRowMovies(){
     
         <div className="row">
             
-            {cartProps.map( (movie, i) => {
-
-                return <SmallCard {...movie} key={i}/>
-            
-            })}
+            <SmallCard />
+            <SmallCardTotalUsuarios />
+            <SmallCardTotalCategorias />
 
         </div>
     )
