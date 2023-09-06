@@ -24,12 +24,21 @@ function Categorias() {
 
     return (
         <div>
-            <h2>Recuento de Productos por Categoría</h2>
             <ul>
                 {countByCategory.map((categoria) => (
-                    <li key={categoria.nombre}>
-                        {categoria.nombre}: {categoria.count} productos
-                    </li>
+                    <div key={categoria.nombre}>
+                        <div className="card-body">
+                            <div className="row">
+                                <div className="col-lg-6 mb-4">
+                                    <div className="card bg-dark text-white shadow">
+                                        <div className="card-body">
+                                            {categoria.nombre}: {categoria.count} productos
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 ))}
             </ul>
         </div>

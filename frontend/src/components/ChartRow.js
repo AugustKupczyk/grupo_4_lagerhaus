@@ -1,4 +1,5 @@
 import React from 'react';
+import ListadoProductos from './ListadoProductos';
 
 
 function ChartRow(props){
@@ -6,14 +7,7 @@ function ChartRow(props){
                 <tr>
                     <td>{props.Title}</td>
                     <td>{props.Length}</td>
-                    <td>{props.Rating}</td>
-                    <td>
-                        <ul>
-                            {props.Categories.map( (category,i) => 
-                                <li key={`category ${i}`}>{category}</li>
-                            )}
-                        </ul>
-                    </td>
+
                     <td>{props.Awards}</td>
                 </tr>
             )

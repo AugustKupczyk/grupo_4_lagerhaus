@@ -1,5 +1,4 @@
 import React from 'react';
-import LastMovieInDb from './LastMovieInDb';
 import GenresInDb from './GenresInDb';
 import DetalleUltimoUsuario from './DetalleUltimoUsuario';
 import DetalleUltimoProducto from './DetalleUltimoProducto';

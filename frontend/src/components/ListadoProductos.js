@@ -23,16 +23,14 @@ function ListadoProductos() {
   }, []);
 
   return (
-    <div>
-      <h2>Listado de Productos</h2>
-      <ul>
+      <tbody>
         {products.map((product) => (
-          <li key={product.id}>
-            {product.nombre} - {product.descripcion}
-          </li>
+          <tr key={product.id}>
+            <td>{product.nombre}</td>
+            <td>{product.descripcion}</td>
+          </tr>
         ))}
-      </ul>
-    </div>
+      </tbody>
   );
 }
 
