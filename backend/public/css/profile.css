@@ -1,39 +1,45 @@
 * {
     background-color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{
+font-weight: bold;
+}
+
+body {
+    font-family: Arial, sans-serif;
 }
 
 main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 0px;
     color: white;
 }
 
-.section-profile-left {
-    width: 20%;
-    height: 450px;
-    background-color: orange;
-    padding: 30px;
-    margin-bottom: 30px;
-}
-
-.section-profile-left * {
-    background-color: transparent;
-    color: black;
-}
-
-.section-profile-right {
-    width: 50%;
-    height: 360px;
+footer {
+    flex-direction: column;
     position: absolute;
-    left: 30%;
-    margin-top: 50px;
+    bottom: 25px;
+    width: 100%;
 }
 
-.my-acount-list {
-    display: flex;
-    align-items: center;
-    margin: 30px 0px;
+.section-profile {
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.section-profile * {
+    background-color: transparent;
+    color: orange;
+    list-style-type: none;
+    /* gap: 20px; */
+    padding: 2px;
 }
 
 .container-img-name {
@@ -41,6 +47,7 @@ main {
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .container-img-name p {
@@ -48,24 +55,16 @@ main {
 }
 
 .list .fa-solid {
-    width: 5%;
+    color: orange;
 }
 
 .list {
-    margin: 50px 0px;
-    display: flex;
-    align-items: center;
-
+    margin: 15px 0px;
 }
 
-.list p {
-    margin-left: 10px;
-    position: relative;
-    left: 15px;
-}
-
-footer {
+#redes-paragraph {
     color: white;
+    text-align: center;
 }
 
 .main-footer {
@@ -82,13 +81,76 @@ footer {
 }
 
 .redes-container {
-    width: 15%;
+    margin-top: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
+    margin-bottom: 20px;
+    justify-content: center;
+    gap: 20px;
 }
 
 .redes-container i {
     color: orange;
+}
+
+#paragraph-footer {
+    color: white;
+    font-size: 0.7rem;
+    text-align: center;
+    /* Centra el párrafo */
+    margin-top: 10px;
+    /* Agrega espacio superior */
+    position: absolute;
+}
+
+/* Media query para pantallas de 360px o más */
+@media (min-width: 360px) {
+    .container-img-name img {
+        max-width: 80%;
+        /* Ajusta el tamaño máximo de la imagen al 80% del contenedor */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        /* Centra horizontalmente la imagen */
+    }
+}
+
+/* Media queries adicionales para ajustar el diseño en pantallas más grandes si es necesario */
+@media (min-width: 768px) {
+    .container-img-name img {
+        max-width: 60%;
+    }
+
+    .section-profile {
+        padding: 30px;
+        /* Aumenta el espacio interno */
+    }
+
+    .list {
+        margin: 15px 0;
+        /* Espaciado entre elementos de lista */
+    }
+}
+
+@media (min-width: 920px) {
+    .container-img-name img {
+        max-width: 50%;
+    }
+
+    /* Estilos adicionales para pantallas de 992px o más */
+    .container-list-profile {
+        text-align: center;
+    }
+
+    @media (min-width:1200px) {
+        .container-img-name img {
+            max-width: 40%;
+        }
+    }
+
+    @media (min-width:1600px) {
+        .container-img-name img {
+            max-width: 20%;
+        }
+    }
 }

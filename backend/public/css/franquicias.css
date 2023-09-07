@@ -1,10 +1,10 @@
 .franquicias-section-left {
     display: flex;
     justify-content: center;
-    flex-direction: column;    
+    flex-direction: column;
 }
 
-.franquicias-section-left-img{
+.franquicias-section-left-img {
     background-image: url(../imgs/franquicias1.jpg);
     width: 100%;
     height: 90vh;
@@ -26,15 +26,17 @@
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
-    
+
 }
 
-.franquicias-section-right{
+.franquicias-section-right {
     padding: 0px 20px;
 }
 
 .container-que-brindamos {
     margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 .titulo-que-brindamos {
@@ -46,12 +48,18 @@
 .que-brindamos {
     color: white;
     text-align: justify;
-    font-size: 0.8rem;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    font-size: large;
+    margin-bottom: 20px;
 }
 
 .franquicias-contacto-form {
     display: flex;
+    margin-top: 20px;
     flex-direction: column;
+    gap: 5px;
 }
 
 .franquicias-contacto-form p {
@@ -77,7 +85,6 @@
 }
 
 .franquicias-contacto-form button {
-    width: 50%;
     padding: 10px;
     background-color: black;
     color: grey;
@@ -91,32 +98,58 @@
     padding: 20px;
 }
 
-#paragraph-footer{
+#paragraph-footer {
     color: white;
     font-size: 0.7rem;
     position: absolute;
 }
 
-.redes-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap:30px;
-}
-
-.redes-container i {
+.fa-brands {
     color: orange;
+    /* font-size: 30px; */
 }
 
-@media(min-width:768px){
+.redes-container {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#redes-paragraph {
+    margin-top: 15px;
+    color: orange;
+    font-weight: bold;
+    font-size: medium;
+    text-align: center;
+}
+
+#paragraph-footer {
+    color: white;
+    font-size: 0.7rem;
+    text-align: initial;
+}
+
+p {
+    color: orange;
+    text-align: center;
+    font-weight: bold;
+    font-size: medium;
+}
+
+footer {
+    padding: 20px;
+}
+
+@media(min-width:768px) {
     .h3-franquicias {
         top: 2px;
     }
 
 }
 
-@media(min-width:920px){
+@media(min-width:920px) {
 
     .main-franquicias {
         display: flex;
@@ -124,21 +157,41 @@
 
     .franquicias-section-left {
         width: 50%;
-        height: 90vh;
-        display: flex;
+        height: 78vh;
     }
 
     .franquicias-section-right {
         width: 50%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
     }
 
-    
+    .franquicias-contacto-form button {
+        padding: 10px;
+        background-color: black;
+        color: grey;
+        border: 0.1px solid orange;
+    }
+
+}
+
+@media (min-width:1600px) {
+    footer {
+        padding: 20px;
+        margin-top: 25px;
+    }
 
     .que-brindamos {
-        width: 50%;
+        font-size: x-large;
+    }
+
+    .franquicias-contacto {
+        margin-top: 50px;
+    }
+
+    .franquicias-section-left-img {
+        height: 78vh;
     }
 
 }
