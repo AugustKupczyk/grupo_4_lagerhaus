@@ -54,14 +54,10 @@ h6{
 .item-carrito{
     width: 100%;
     margin-bottom: 18px;
-    align-self: center;
-    align-items: center;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
     overflow: hidden;
+    align-items: center;
 }
 
 .foto-nombre-cantidad{
