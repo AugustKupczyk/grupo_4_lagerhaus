@@ -26,8 +26,10 @@ function ListadoProductos() {
       <tbody>
         {products.map((product) => (
           <tr key={product.id}>
+            <td>{product.id}</td>
             <td>{product.nombre}</td>
             <td>{product.descripcion}</td>
+            <td>{product.precio}</td>
           </tr>
         ))}
       </tbody>
