@@ -5640,7 +5640,7 @@ button.bg-light:hover {
     background-color: #d4daed!important
 }
 .bg-dark {
-    background-color: black!important
+    background-color: orange!important
 }
 a.bg-dark:focus,
 a.bg-dark:hover,
@@ -8482,7 +8482,7 @@ button.bg-dark:hover {
     font-style: italic!important
 }
 .text-white {
-    color: #fff!important
+    color: black!important
 }
 .text-primary {
     color: #4e73df!important
@@ -8845,7 +8845,7 @@ a:focus {
     color: #b7b9cc!important
 }
 .text-gray-600 {
-    color: #858796!important
+    color: white!important
 }
 .text-gray-700 {
     color: #6e707e!important
