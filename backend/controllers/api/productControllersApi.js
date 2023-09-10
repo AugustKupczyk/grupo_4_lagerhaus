@@ -24,7 +24,7 @@ const productControllers = {
 
             // Obtener el último producto creado
             const lastProduct = await Producto.findOne({
-                attributes: ['id', 'nombre', 'descripcion','img'], // Ajusta las columnas que deseas mostrar
+                attributes: ['id', 'nombre', 'descripcion', 'precio','img'], // Ajusta las columnas que deseas mostrar
                 order: [['id', 'DESC']], // Ordena por ID en orden descendente para obtener el último producto
             });
 
@@ -43,6 +43,7 @@ const productControllers = {
                         id: product.id,
                         nombre: product.nombre,
                         descripcion: product.descripcion,
+                        precio: product.precio,
                         // Agregar más campos según sea necesario
                         detail: `/api/products/${product.id}`,
                     };
@@ -72,6 +73,7 @@ const productControllers = {
                 id: product.id,
                 nombre: product.nombre,
                 descripcion: product.descripcion,
+                precio: product.precio,
                 // Agregar más campos según sea necesario
                 // ...
                 // URL para la imagen del producto
