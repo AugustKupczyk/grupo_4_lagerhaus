@@ -14,7 +14,7 @@
 
     <main>
         <p>Editar productos</p>
-        <form action="/products/<%= producto.id %>/editar-producto?_method=put" method="post">
+        <form class ="form-editar-producto" action="/products/<%= producto.id %>/editar-producto?_method=put" method="post">
             <h4>Edite los campos necesarios del producto seleccionado:</h4>
             <input type="text" name="category" value="<%= producto.categoria_id %>" id="categoria-producto" placeholder="Nueva categoria del producto">
             <input type="text" name="name" value="<%= producto.nombre %>" id="titulo-producto" placeholder="Nuevo titulo del producto">

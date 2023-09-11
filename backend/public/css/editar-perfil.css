@@ -1,0 +1,148 @@
+* {
+    background-color: black;
+    color: white;
+}
+
+p {
+    font-size: 22px;
+    align-self: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 110px;
+}
+
+h2 {
+    margin-bottom: 5px;
+    font-size: 22px;
+    align-self: center;
+    letter-spacing: 2px;
+    font-weight: 200;
+    color: white;
+}
+
+h4 {
+    font-weight: lighter;
+    font-size: 14px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+
+
+h3 {
+    margin-bottom: 35px;
+    font-size: 14px;
+    align-self: center;
+    letter-spacing: 2px;
+    font-weight: 100;
+    color: white;
+    opacity: 70%;
+}
+
+button {
+    margin-top: 30px;
+}
+
+.form-editar-perfil {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 75vw;
+    align-self: center;
+    align-items: flex-start
+}
+
+
+input[type="email"] {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 35px;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 2px solid white;
+    border-radius: 12px;
+}
+
+input[type="text"] {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 35px;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 2px solid white;
+    border-radius: 12px;
+}
+
+input[type="password"] {
+    width: 100%;
+    margin-bottom: 8px;
+    height: 35px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 12px;
+}
+
+input[type="date"] {
+    width: 100%;
+    margin-bottom: 19px;
+    height: 35px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 12px;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+    font-size: 12px;
+    border-radius: 12px;
+}
+
+main button {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#enviar {
+    margin-bottom: 30px;
+    margin-top: 10px;
+    height: 30px;
+    border: 2px solid #ff6a0098;
+    background-color: #FF6900;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+
+
+@media(min-width:576px) {
+    .form-editar-perfil {
+        width: 55vw;
+    }
+}
+
+@media(min-width:768px) {
+    .form-editar-perfil {
+        width: 45vw;
+    }
+}
+
+@media(min-width:992px) {
+    .form-editar-perfil {
+        width: 35vw;
+    }
+}
+
+@media(min-width:1200px) {
+    .form-editar-perfil {
+        width: 30vw;
+    }
+}

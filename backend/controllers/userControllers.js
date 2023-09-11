@@ -61,7 +61,7 @@ const controllers = {
     getLogin: async (req, res) => {
         try {
             const error = req.query.error || "";
-            res.render("login", { error,});
+            res.render("login", { error,errors:[] });
         } catch (error) {
             console.error(error);
             res.redirect("/");

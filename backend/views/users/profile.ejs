@@ -21,7 +21,7 @@
             <div class="container-img-name">
                 <% if (perfil.img) { %>
                     <!-- Si la imagen existe, mostrarla -->
-                    <img src="/imgs/users/<%= perfil.img %>" alt="Foto de perfil">
+                        <img src="/imgs/users/<%= perfil.img %>" alt="Foto de perfil">
                     <% } else { %>
                         <!-- Si la imagen no existe, no mostrar nada -->
                         <% } %>
@@ -29,16 +29,13 @@
                                 <%= perfil.nombre %>
                                     <%= perfil.apellido %>
                             </h3>
-                            <p>
-                                <%= perfil.email %>
-                            </p>
             </div>
 
             <div class="container-list-profile">
                 <ul class="list-profile">
 
                     <li class="list">
-                        <i class="fa-solid fa-user fa-lg" ></i>
+                        <i class="fa-solid fa-user fa-lg"></i>
                         <p>Mi perfil</p>
                     </li>
                     <ul class="container-my-acount">
@@ -46,24 +43,38 @@
                             <p>Email: <%= perfil.email %>
                             </p>
                         </li>
-        
+
                         <li class="my-acount-list">
                             <p>Fecha de nacimiento: <%= perfil.nacimiento %>
                             </p>
                         </li>
-        
+
                     </ul>
 
                     <li class="list">
-                        <i class="fa-solid fa-location-dot fa-lg" ></i>
+                        <i class="fa-solid fa-location-dot fa-lg"></i>
                         <p>Mis direcciones</p>
                     </li>
 
-                    <li class="list">
-                        <i class="fa-solid fa-receipt fa-lg" ></i>
-                        <p>Mis pedidos</p>
-                    </li>
+                    <ul class="container-my-acount">
+                        <li class="my-acount-list">
+                            <p>
+                                <%= perfil.direccion %>
+                            </p>
+                        </li>
+
+                    </ul>
+
                 </ul>
+            </div>
+
+            <div class="agregar-eliminar-editar-button">
+
+                <a href="/users/profile/<%= perfil.email %>/editar-perfil">
+                    <button class="agregar-quitar-button-detail">EDITAR PERFIL</button>
+                </a>
+
+
             </div>
 
         </section>

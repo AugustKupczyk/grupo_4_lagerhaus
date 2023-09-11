@@ -8,7 +8,6 @@
             <li><a href="/products/menu">HACE TU PEDIDO</a></li>
             <li><a href="/locales">LOCALES</a></li>
             <li><a href="/franquicias">FRANQUICIAS</a></li>
-            <li><a href="#contacto">CONTACTO</a></li>
 
             <% if (userData && userData.email) { %> <!-- Verificar si el usuario está logeado -->
                 <!-- Mostrar el nombre del usuario y enlace a su perfil -->
@@ -20,7 +19,7 @@
 
                 <!-- Mostrar enlace para cerrar sesión -->
                 <li>
-                    <form action="/users/sign-out" method="get">
+                    <form class="form-navbar" action="/users/sign-out" method="get">
                         <a href="/users/sign-out"><i class="fa-solid fa-right-from-bracket"></i></a>
                     </form>
                 </li>

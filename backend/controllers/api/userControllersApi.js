@@ -5,12 +5,12 @@ const userControllers = {
   // Obtener la lista completa de usuarios
   getAllUsers: async (req, res) => {
     try {
-      const users = await Usuario.findAll({ attributes: ['id', 'nombre', 'email'] });
+      const users = await Usuario.findAll({ attributes: ['id', 'nombre', 'apellido', 'email'] });
       const userCount = users.length;
 
       // Obtener el último usuario creado
-      const { id, nombre, img } = await Usuario.findOne({
-        attributes: ['id', 'nombre', 'img'], // Ajusta las columnas que deseas mostrar
+      const { id, nombre, apellido, img } = await Usuario.findOne({
+        attributes: ['id', 'nombre','apellido','img'], // Ajusta las columnas que deseas mostrar
         order: [['id', 'DESC']], // Ordena por ID en orden descendente para obtener el último usuario
       });
 
@@ -20,11 +20,12 @@ const userControllers = {
         users: users.map(user => ({
           id: user.id,
           nombre: user.nombre,
+          apellido:user.apellido,
           email: user.email,
           detail: `/api/users/${user.id}` // URL para obtener el detalle del usuario
         })),
         ultimoUsuario: {
-          id, nombre, img
+          id, nombre, apellido, img
           // Agrega otras propiedades del usuario aquí
         },
       };

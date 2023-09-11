@@ -13,64 +13,68 @@
     </header>
     <main>
 
-        <main>
-            <div class="titulo">
-                <h1>Tu pedido</h1>
-            </div>
+        <div class="titulo">
+            <h1>Tu pedido</h1>
+        </div>
 
-            <div class="carrito">
-                <ul class="todos-los-items">
-                    <% carrito.productosCarrito.forEach((productoCarrito, index)=> { %>
-                        <li id="item-<%= index %>" class="item-carrito">
-                            <div class="foto-nombre-cantidad">
-                                <a href="/products/detalle-producto/<%= productoCarrito.producto.id %>">
-                                    <img src="<%= productoCarrito.producto.img %>" width=60px alt="Foto Producto">
-                                </a>
-                                <div class="nombre-cantidad">
-                                    <h2>
-                                        <%= productoCarrito.producto.nombre %>
-                                    </h2>
-                                    <h4>Cantidad: <%= productoCarrito.cantidad %>
-                                    </h4>
-                                </div>
+        <div class="carrito">
+            <ul class="todos-los-items">
+                <% carrito.productosCarrito.forEach((productoCarrito, index)=> { %>
+                    <li id="item-<%= index %>" class="item-carrito">
+                        <div class="foto-nombre-cantidad">
+                            <a href="/products/detalle-producto/<%= productoCarrito.producto.id %>">
+                                <img src="<%= productoCarrito.producto.img %>" width=60px alt="Foto Producto">
+                            </a>
+                            <div class="nombre-cantidad">
+                                <h2>
+                                    <%= productoCarrito.producto.nombre %>
+                                </h2>
+                                <h4>Cantidad: <%= productoCarrito.cantidad %>
+                                </h4>
                             </div>
-                            <div>
-                                <h3>$ <%= productoCarrito.precio_unitario %></h3>
-                            </div>
-                            <div>
-                                <form class="" action="/products/eliminar-producto/<%= productoCarrito.producto.id %>?_method=delete" method="post">
-                                    <button class="eliminar-producto-carrito-btn" type="submit">
-                                        <i class="fa-solid fa-trash-can fa-2xl" style="color: orange;"></i>
-                                    </button>
-                                </form>
-                            </div>
-                            
+                        </div>
+                        <div>
+                            <h3>$ <%= productoCarrito.precio_unitario %>
+                            </h3>
+                        </div>
+                        <div>
+                            <form class=""
+                                action="/products/eliminar-producto/<%= productoCarrito.producto.id %>?_method=delete"
+                                method="post">
+                                <button class="eliminar-producto-carrito-btn" type="submit">
+                                    <i class="fa-solid fa-trash-can fa-2xl" style="color: orange;"></i>
+                                </button>
+                            </form>
+                        </div>
 
 
 
-                            </div>
 
-                        </li>
-                        <% }) %>
-                </ul>
+        </div>
+
+        </li>
+        <% }) %>
+            </ul>
             </div>
 
             <div class="total-carrito">
                 <ul>
                     <li id="total" class="subtotales">
                         <h6>TOTAL</h6>
-                        <h6>$ <span id="precioTotal"><%= precioTotal %></span></h6>
+                        <h6>$ <span id="precioTotal">
+                                <%= precioTotal %>
+                            </span></h6>
                     </li>
                 </ul>
             </div>
 
-        </main>
+    </main>
 
-        <footer>
-            <%- include("./partials/footer-carrito") %>
-        </footer>
+    <footer>
+        <%- include("./partials/footer-carrito") %>
+    </footer>
 
-        
+
 </body>
 
 </html>

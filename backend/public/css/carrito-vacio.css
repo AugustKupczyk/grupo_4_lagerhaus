@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/imgs/products/MIX DE BURGERS.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y:31%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+}
+
+.div-logo-lager {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    height: 20vh;
+}
+
+.mensaje-carrito {
+    text-align: center;
+}
+
+.hace-tu-pedido:visited {
+    color: white;
+}

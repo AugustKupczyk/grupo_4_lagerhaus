@@ -2,20 +2,29 @@
 <html lang="en">
 
 <head>
-    <%- include("./partials/head") %>
-        <title>Detalle de producto</title>
-        <link href="/css/detalle-producto.css" rel="stylesheet">
+  <%- include("./partials/head") %>
+    <title>carrito-vacio</title>
+    <link href="/css/carrito-vacio.css" rel="stylesheet">
 </head>
 
 <body>
+  <header>
+    <%- include("./partials/header-main") %>
+  </header>
 
-    <main>
-      <h1> Tenes el carrito vacio! <a class="hace-tu-pedido" href="/products/menu">Realizá tu pedido</a>, no te quedes con hambre!</h1>
+  <main>
+    <div class="div-logo-lager">
+      <img src="/imgs/logo-lagerhaus - blanco.png" alt="logo lager">
+    </div>
+    <div class="mensaje-carrito">
+      <h1> Tenes el carrito vacio! <a class="hace-tu-pedido" href="/products/menu">Realizá tu pedido</a>, no te quedes
+        con hambre!
+      </h1>
+    </div>
+  </main>
+  <footer>
 
-    </main>
-    <footer>
-
-    </footer>
+  </footer>
 </body>
 
 </html>

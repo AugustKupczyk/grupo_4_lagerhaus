@@ -24,7 +24,7 @@ button{
     margin-top: 30px;
 }
 
-form{
+.form-editar-producto{
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
@@ -33,8 +33,10 @@ form{
     align-items: flex-start
 }
 
+
+
 @media (min-width:920px){
-    form{
+    .form-editar-producto{
         display: flex;
         flex-direction: column;
         margin-bottom: 10px;
@@ -45,7 +47,7 @@ form{
 }
 
 @media(min-width:1200px){
-    form{
+    .form-editar-producto{
         display: flex;
         flex-direction: column;
         margin-bottom: 10px;

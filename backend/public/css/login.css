@@ -126,6 +126,11 @@ main button{
     align-items: center;
 }
 
+.error-contraseña{
+    color: red;
+    list-style: none;
+}
+
 .fa-facebook-f{
     margin-right: 8px;
     background-color: white;

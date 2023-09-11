@@ -24,19 +24,22 @@ function DetalleUltimoUsuario() {
 
   return ultimoUsuario && (
     <div className="col-lg-6 mb-4">
-      <div className="card shadow mb-4">
+      <div className="card shadow mb-4 h-100" >
         <div className="card-header py-3 d-flex justify-content-between">
           <h5 className="m-0 font-weight-bold text-gray-800">Ultimo usuario creado</h5>
           <p>ID: {ultimoUsuario.id}</p>
         </div>
         <div className="card-body">
-          <div className="text-center">
+          <div className="custom-flex-container">
             <p>Nombre: {ultimoUsuario.nombre}</p>
-            <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: 40 + 'rem' }} src={`http://localhost:3030${ultimoUsuario.img}`} alt={ultimoUsuario.nombre} />
+            <p>Apellido: {ultimoUsuario.apellido}</p>
           </div>
-          <div className='flex'>
+          <div class="d-flex justify-content-center">
+            <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" src={`http://localhost:3030/imgs/users/${ultimoUsuario.img}`} alt={ultimoUsuario.nombre} />
           </div>
-          <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver detalle del ultimo usuario creado</a>
+          <div class="d-flex align-items-end">
+            <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver detalle del ultimo usuario creado</a>
+          </div>
         </div>
       </div>
     </div>

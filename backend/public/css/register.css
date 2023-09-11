@@ -28,13 +28,28 @@ h3{
     opacity: 70%;
 }
 
-form{
+.form-register{
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     width: 75vw;
     align-self: center;
-    align-items: left;
+}
+
+.form-google{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 40vw;
+    align-self: center;
+}
+
+.form-facebook{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 40vw;
+    align-self: center;
 }
 
 input[type="email"]{
@@ -136,25 +151,25 @@ main button{
 }
 
 @media(min-width:576px){
-form{
+    .form-register{
     width: 55vw;
 }
 }
 
 @media(min-width:768px){
-    form{
+    .form-register{
         width: 45vw;
     }   
 }
 
 @media(min-width:992px){
-    form{
+    .form-register{
         width: 35vw;
     }    
 }
 
 @media(min-width:1200px){
-    form{
+    .form-register{
         width: 30vw;
     }    
 }

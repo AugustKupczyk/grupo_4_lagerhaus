@@ -17,6 +17,8 @@
 
     <main>
 
+
+
         <h2>INGRESÁ</h2>
         <h3>al mundo LagerHaus :)</h3>
         <form action="/users/login" method="post">
@@ -31,6 +33,17 @@
                 </div>
                 <a id="olvide" href="#">Olvidé mi contraseña</a>
             </div>
+            <% if (errors && errors.length > 0) { %>
+                <div class="error-messages">
+                    <ul>
+                        <% errors.forEach(error => { %>
+                            <li class="error-contraseña"><%= error.msg %></li>
+                        <% }); %>
+                        <br>
+                    </ul>
+                </div>
+            <% } %>
+
             <button id="ingresar" disabled type="submit">Ingresar</button>
         </form>
         <br>

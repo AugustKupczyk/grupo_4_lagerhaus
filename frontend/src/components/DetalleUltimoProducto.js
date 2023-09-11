@@ -23,7 +23,7 @@ function DetalleUltimoProducto() {
 
     return ultimoProducto && (
         <div className="col-lg-6 mb-4">
-            <div className="card shadow mb-4">
+            <div className="card shadow mb-4 h-100">
                 <div className="card-header py-3 d-flex justify-content-between">
                     <h5 className="m-0 font-weight-bold text-gray-800">Último Producto Creado</h5>
                     <p>ID: {ultimoProducto.id}</p>

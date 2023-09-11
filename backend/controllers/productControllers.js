@@ -47,16 +47,14 @@ const controllers = {
 
     listForm: async (req, res) => {
 
-        let userData = req.session.user || {};
-
         try {
             const categorias = await CategoriaProducto.findAll({
                 include: [{ model: Producto, as: 'productos' }]
             });
 
-            res.render('menu', { categorias, userData });
+            res.render('menu', { categorias, user: req.session.user });
         } catch (error) {
-            res.render('menu', { categorias: [], userData });
+            res.render('menu', { categorias: [], });
             console.log(error);
         }
     },

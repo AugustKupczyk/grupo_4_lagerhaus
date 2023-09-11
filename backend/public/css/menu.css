@@ -94,19 +94,15 @@ main {
 }
 
 .titulo-producto{
-    font-size: 12px;
+    font-size: 13px;
 }
 
-.detalle-producto{
-    font-size: 10px;
-    opacity: 60%;
-}
 .precio{
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .boton-detalle-producto{
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 50;
     text-decoration: underline;
     border: none;
@@ -116,10 +112,30 @@ main {
 }
 
 .detalle-producto {
-    font-size: 10px;
+    font-size: 13px;
     opacity: 60%;
     max-width: 200px; /* Ajusta el valor según el máximo de altura que desees */
     overflow: hidden;
+}
+
+.agregar-quitar-button-detail {
+    background-color: orange;
+    color: black;
+    font-weight: bolder;
+    padding: 5px;
+    border: 1px solid orange;
+    border-radius: 50px;
+    text-align: center;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.agregar-eliminar-editar-button {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0px 0px 15px;
 }
 
 @media(min-width:768px){

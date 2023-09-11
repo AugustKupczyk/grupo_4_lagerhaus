@@ -16,7 +16,7 @@
     <main>
         <h2>REGÍSTRATE</h2>
         <h3>y sé parte del mundo LagerHaus :)</h3>
-        <form action="/users" method="POST" enctype="multipart/form-data">
+        <form class="form-register" action="/users" method="POST" enctype="multipart/form-data">
             <input type="text" name="nombre" id="nombre" placeholder="Nombre">
             <p class="error" style="color: red;"></p>
             <input type="text" name="apellido" id="apellido" placeholder="Apellido">
@@ -43,11 +43,11 @@
             <button id="enviar" disabled type="submit">Enviar</button>
         </form>
         <br>
-        <form action="/Google" method="get">
+        <form class ="form-google" action="/Google" method="get">
             <button class="botones-app" type="submit"><i class="fa-brands fa-google"
                     style="color: #000000;"></i>Regístrate con Google</button>
         </form>
-        <form action="/Facebook" method="get">
+        <form class="form-facebook" action="/Facebook" method="get">
             <button class="botones-app" type="submit"><i class="fa-brands fa-facebook-f"
                     style="color: #000000;"></i>Regístrate con Facebook</button>
         </form>

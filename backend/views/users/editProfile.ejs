@@ -4,8 +4,7 @@
 <head>
     <%- include("./partials/head") %>
         <title>Editar Perfil</title>
-        <link href="/css/register.css" rel="stylesheet">
-        <link href="/css/editar-producto.css" rel="stylesheet">
+        <link href="/css/editar-perfil.css" rel="stylesheet">
 </head>
 
 <body>
@@ -16,8 +15,8 @@
 
     <main>
         <p>Editar Perfil</p>
-        <form action="/users/profile/<%= perfil.email %>/editar-perfil?_method=put" method="post"
-            enctype="multipart/form-data">
+        <form class="form-editar-perfil" action="/users/profile/<%= perfil.email %>/editar-perfil?_method=put"
+            method="post" enctype="multipart/form-data">
             <h4>Edite los campos necesarios de su perfil:</h4>
             <input type="text" name="nombre" value="<%= perfil.nombre %>" id="nombre-usuario"
                 placeholder="Nuevo nombre">
@@ -29,7 +28,8 @@
             <div class="container-img-name">
                 <% if (perfil.img) { %>
                     <!-- Si la imagen existe, mostrarla -->
-                    <img src="/imgs/users/<%= perfil.img %>" style="width: 300px;height: 300px;object-fit: cover;border-radius: 50%;"alt="Foto de perfil">
+                    <img src="/imgs/users/<%= perfil.img %>"
+                        style="width: 300px;height: 300px;object-fit: cover;border-radius: 50%;" alt="Foto de perfil">
                     <% } else { %>
                         <!-- Si la imagen no existe, no mostrar nada -->
                         <% } %>

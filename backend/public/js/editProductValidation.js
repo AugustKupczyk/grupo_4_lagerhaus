@@ -41,8 +41,8 @@ descriptionInp.oninput = (e) => {
     const value = e.target.value;
     const length = e.target.value.length;
 
-    if (length < 10) {
-        e.target.nextElementSibling.innerHTML = "La descripción del producto debe tener al menos 10 caracteres.";
+    if (length < 20) {
+        e.target.nextElementSibling.innerHTML = "La descripción del producto debe tener al menos 20 caracteres.";
     } else {
         e.target.nextElementSibling.innerHTML = ""    
     }

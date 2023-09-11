@@ -5,8 +5,8 @@
     box-sizing: border-box;
 }
 
-p{
-font-weight: bold;
+p {
+    font-weight: bold;
 }
 
 body {
@@ -43,17 +43,22 @@ footer {
 }
 
 .container-img-name {
+    width: 100%;
     display: flex;
     justify-content: center;
     text-align: center;
     flex-direction: column;
     margin-bottom: 20px;
+    align-content: center;
+    align-items: center;
 }
 
-.container-img-name p {
-    font-size: 12px;
+.container-img-name img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
 }
-
 .list .fa-solid {
     color: orange;
 }
@@ -93,6 +98,26 @@ footer {
     color: orange;
 }
 
+.agregar-quitar-button-detail {
+    background-color: orange;
+    color: black;
+    font-weight: bolder;
+    padding: 5px;
+    border: 1px solid orange;
+    border-radius: 50px;
+    text-align: center;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.agregar-eliminar-editar-button {
+    display: flex;
+    justify-content: center;
+}
+
+
 #paragraph-footer {
     color: white;
     font-size: 0.7rem;
@@ -106,9 +131,7 @@ footer {
 /* Media query para pantallas de 360px o más */
 @media (min-width: 360px) {
     .container-img-name img {
-        max-width: 80%;
         /* Ajusta el tamaño máximo de la imagen al 80% del contenedor */
-        height: auto;
         display: block;
         margin: 0 auto;
         /* Centra horizontalmente la imagen */
@@ -117,8 +140,8 @@ footer {
 
 /* Media queries adicionales para ajustar el diseño en pantallas más grandes si es necesario */
 @media (min-width: 768px) {
-    .container-img-name img {
-        max-width: 60%;
+    .container-img {
+        width: 30%;
     }
 
     .section-profile {
@@ -133,8 +156,9 @@ footer {
 }
 
 @media (min-width: 920px) {
-    .container-img-name img {
-        max-width: 50%;
+
+    .container-img {
+        width: 23%;
     }
 
     /* Estilos adicionales para pantallas de 992px o más */
@@ -143,14 +167,14 @@ footer {
     }
 
     @media (min-width:1200px) {
-        .container-img-name img {
-            max-width: 40%;
+        .container-img{
+            width: 15%;
         }
     }
 
     @media (min-width:1600px) {
-        .container-img-name img {
-            max-width: 20%;
+        .container-img{
+            width: 13%;
         }
     }
 }

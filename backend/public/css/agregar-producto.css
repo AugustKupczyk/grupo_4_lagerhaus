@@ -24,7 +24,7 @@ button{
     margin-top: 30px;
 }
 
-form{
+.form-agregar-producto{
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
@@ -34,7 +34,7 @@ form{
 }
 
 @media (min-width:920px){
-    form{
+    .form-agregar-producto{
         display: flex;
         flex-direction: column;
         margin-bottom: 10px;
@@ -45,7 +45,7 @@ form{
 }
 
 @media(min-width:1200px){
-    form{
+    .form-agregar-producto{
         display: flex;
         flex-direction: column;
         margin-bottom: 10px;

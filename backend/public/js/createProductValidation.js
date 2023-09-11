@@ -46,9 +46,9 @@ descriptionInp.oninput = (e) => {
     if (length === 0) {
         console.log("Description is empty");
         e.target.nextElementSibling.innerHTML = "La descripción del producto es obligatoria.";
-    } else if (length < 10) {
+    } else if (length < 20) {
         console.log("Description is too short");
-        e.target.nextElementSibling.innerHTML = "La descripción del producto debe tener al menos 10 caracteres.";
+        e.target.nextElementSibling.innerHTML = "La descripción del producto debe tener al menos 20 caracteres.";
     } else {
         console.log("Description is valid");
         e.target.nextElementSibling.innerHTML = "";

@@ -13,12 +13,22 @@
     </header>
 
     <main>
+        <div class="agregar-eliminar-editar-button">
+            <% if (user.rol_id===1 ) { %>
+                <a href="/products/agregar-producto">
+                    <button class="agregar-quitar-button-detail">AGREGAR PRODUCTO</button>
+                </a>
+
+                <% } %>
+        </div>
+
         <% categorias.forEach(categoria=> { %>
             <div class="seccion" id="<%= categoria.nombre %>">
                 <div class="contenedor-banner">
                     <img class="image-banner" src="/imgs/<%= categoria.nombre.toLowerCase() %>-banner.jpg"
                         alt="Foto <%= categoria.nombre %>">
-                    <h2 class="title-banner"><%= categoria.nombre %>
+                    <h2 class="title-banner">
+                        <%= categoria.nombre %>
                     </h2>
                 </div>
                 <div class="contenedor-listado-producto">
@@ -35,19 +45,22 @@
                                             <p class="titulo-producto">
                                                 <%= producto.nombre %>
                                             </p>
-                                            <div class="descripcion-producto"> <!-- Agrega un contenedor para la descripción -->
+                                            <div class="descripcion-producto">
+                                                <!-- Agrega un contenedor para la descripción -->
                                                 <p class="detalle-producto">
                                                     <%= producto.descripcion %>
                                                 </p>
                                             </div>
-                                            
+
                                             <a class="boton-detalle-producto"
                                                 href="/products/<%= producto.id %>/detalle-producto">Haz click para ver
                                                 el detalle</a>
                                         </div>
                                     </div>
-                                    <p class="precio">$<%= producto.precio %>
-                                    </p>
+                                    <div class="div-precio">
+                                        <p class="precio">$<%= producto.precio %>
+                                        </p>
+                                    </div>
                                 </li>
                                 <% }); %>
                                     <% } else { %>
