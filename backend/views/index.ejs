@@ -5,37 +5,41 @@
     <%- include("./partials/head") %>
         <title>LagerHaus</title>
         <link href="/css/index.css" rel="stylesheet">
+        <link href="/css/header-index.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <%- include("./partials/header-main") %>
+        <%- include("./partials/header-index") %>
     </header>
 
 
     <main>
-        <h2> NACIMOS PARA MEZCLARNOS </h2>
         <section class="fotos">
-            <div class="foto-top-container">
-                <img src="/imgs/FOTO SOCIAL 4.jpg" alt="Foto Social" class="foto-top fade-in">
-            </div>
-            <div class="fotos-container">
-                <div class="foto-bottom-container">
-                    <img src="/imgs/products/sandwich-double-down.jpg" alt="Foto Social"
-                        class="foto-bottom fade-in">
+            <div class="carousel">
+                <div class="carousel-slide">
+                    <img src="/imgs/FOTO SOCIAL 4.jpg" alt="Foto Social" class="foto-top fade-in">
                 </div>
-                <div class="foto-bottom-container">
-                    <img src="/imgs/FOTO SOCIAL 2.jpg" alt="Foto Social"
-                        class="foto-bottom fade-in">
+                <div class="carousel-slide">
+                    <img src="/imgs/products/sandwich-double-down.jpg" alt="Foto Social" class="foto-bottom fade-in">
+                </div>
+                <div class="carousel-slide">
+                    <img src="/imgs/FOTO SOCIAL 2.jpg" alt="Foto Social" class="foto-bottom fade-in">
                 </div>
             </div>
+            <button id="prevButton">Anterior</button>
+            <button id="nextButton">Siguiente</button>
         </section>
+
+
     </main>
     <br>
 
+    <script src="/js/indexCarousel.js"></script>
+
     <footer>
         <%- include("./partials/footer") %>
-        <p id="paragraph-footer">© 2018 Todos los derechos reservados. LAGERHAUS.</p>
+            <p id="paragraph-footer">© 2018 Todos los derechos reservados. LAGERHAUS.</p>
     </footer>
 
 </body>

@@ -1,0 +1,58 @@
+<div class="list-container-index">
+    <nav class="navbar-index">
+        <ul class="navbar-left">
+            <li><a href="/products/menu">HACE TU PEDIDO</a></li>
+            <li><a href="/locales">LOCALES</a></li>
+        </ul>
+        <div id="navbar-middle">
+            <a href="/"> <img class="logo" src="/imgs/logo-lagerhaus - blanco.png" alt="Logo Largerhaus"
+                    id="logo-navbar"> </a>
+        </div>
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="navbar-right">
+            <li><a href="/franquicias">FRANQUICIAS</a></li>
+            <% if (userData && userData.email) { %> <!-- Verificar si el usuario está logeado -->
+                <!-- Mostrar el nombre del usuario y enlace a su perfil -->
+                <li>
+                    <a href="/users/profile/<%= userData.email %>">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </li>
+
+                <!-- Mostrar enlace para cerrar sesión -->
+                <li>
+                    <form class="form-navbar" action="/users/sign-out" method="get">
+                        <a href="/users/sign-out"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </form>
+                </li>
+
+                <!-- Mostrar enlace para el carrito de compras -->
+                <li>
+                    <a href="/products/carrito-compras"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
+                </li>
+                <% } else { %>
+                    <!-- Mostrar enlace para iniciar sesión -->
+                    <li><a href="/users/login">LOGIN</a></li>
+                    <% } %>
+        </ul>
+    </nav>
+</div>
+
+<script>
+    // Espera a que se cargue el documento antes de ejecutar el código
+    document.addEventListener("DOMContentLoaded", function () {
+        // Obtén una referencia al elemento del burger menu
+        var burgerMenu = document.querySelector(".burger-menu");
+        // Obtén una referencia a las listas de navegación
+        var navbarRight = document.querySelector(".navbar-right");
+        var navbarLeft = document.querySelector(".navbar-left");
+        // Agrega un event listener al burger menu para manejar el clic
+        burgerMenu.addEventListener("click", function () {
+            // Toggle la clase 'active' en ambas listas de navegación
+            navbarRight.classList.toggle("active");
+            navbarLeft.classList.toggle("active");
+        });
+    });
+</script>

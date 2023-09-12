@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <%- include("./partials/head") %>
+
+<head>
+    <%- include("./partials/head") %>
         <title>Franquicias</title>
         <link href="/css/franquicias.css" rel="stylesheet">
-    </head>
+        <link href="/css/header.css" rel="stylesheet">
+</head>
+
 <body>
+
     <header>
-        <%- include("./partials/header-main") %>
+        <%- include("./partials/header") %>
     </header>
+
     <main class="main-franquicias">
         <section class="franquicias-section-left">
             <div class="franquicias-section-left-img">
@@ -20,9 +25,13 @@
             <div class="container-que-brindamos">
                 <h2 class="titulo-que-brindamos">QUE BRINDAMOS</h2>
                 <p class="que-brindamos">
-                Somos una empresa en constante crecimiento que siente pasión por lo que hace, y por ello, buscamos un perfil de franquiciado que tenga las mismas ganas y motivación para superarse día a día. Vamos en busca de personas proactivas, con un enfoque comercial, que puedan apreciar el arte culinario, aplicar los controles necesarios para garantizar la máxima calidad del producto, y manejar sus equipos de trabajo a la perfección con una mezcla de conocimientos, ganas y empuje.</p>
+                    Somos una empresa en constante crecimiento que siente pasión por lo que hace, y por ello, buscamos
+                    un perfil de franquiciado que tenga las mismas ganas y motivación para superarse día a día. Vamos en
+                    busca de personas proactivas, con un enfoque comercial, que puedan apreciar el arte culinario,
+                    aplicar los controles necesarios para garantizar la máxima calidad del producto, y manejar sus
+                    equipos de trabajo a la perfección con una mezcla de conocimientos, ganas y empuje.</p>
             </div>
-            
+
             <div class="franquicias-contacto">
                 <h2 class="titulo-que-brindamos">DEJANOS TUS DATOS!</h2>
                 <form class="franquicias-contacto-form" action="/" method="get">
@@ -30,13 +39,14 @@
                     <input type="email" name="email" id="email" placeholder="Email">
                     <input type="tel" name="telefono" id="telefono" placeholder="Teléfono">
                     <textarea name="mensaje" id="mensaje">Mensaje</textarea>
-                    <button id ="ingresar" type="submit">Enviar</button>
+                    <button id="ingresar" type="submit">Enviar</button>
                 </form>
             </div>
         </section>
     </main>
-    <footer >
+    <footer>
         <%- include("./partials/footer-franquicias") %>
-    </footer>    
+    </footer>
 </body>
+
 </html>

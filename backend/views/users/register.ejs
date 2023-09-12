@@ -5,12 +5,13 @@
     <%- include("./partials/head") %>
         <title>Register</title>
         <link href="/css/register.css" rel="stylesheet">
+        <link href="/css/header.css" rel="stylesheet">
 </head>
 
 <body> 
 
     <header>
-        <%- include("./partials/header-main") %>
+        <%- include("./partials/header") %>
     </header>
 
     <main>
@@ -34,7 +35,7 @@
                 <div class="error-messages">
                     <ul>
                         <% errors.forEach(error => { %>
-                            <li><%= error.msg %></li>
+                            <li class="mensaje-error"><%= error.msg %></li>
                         <% }); %>
                     </ul>
                 </div>

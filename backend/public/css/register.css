@@ -150,6 +150,11 @@ main button{
     margin-bottom: 10px;
 }
 
+.mensaje-error{
+    color: red;
+    list-style-type: none;
+}
+
 @media(min-width:576px){
     .form-register{
     width: 55vw;
