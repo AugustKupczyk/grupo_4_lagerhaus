@@ -7,6 +7,11 @@
     border-bottom: 2px solid orange;
 }
 
+.navbar {
+    padding: 10px;
+    align-items: center;
+}
+
 #navbar-left {
     float: left;
     margin-right: auto;
@@ -60,6 +65,8 @@
 .burger-menu {
     display: flex;
     justify-content: flex-end;
+    color: white;
+    margin-right: 5px;
 }
 
 #logo-navbar {

@@ -105,10 +105,11 @@
 .burger-menu {
     display: flex;
     justify-content: flex-end;
+    margin-right: 5px;
+    color: white;
 }
 
 #logo-navbar {
-    height: 50px;
     width: 145px;
 }
 
@@ -120,7 +121,7 @@
 }
 
 /* Agrega este estilo para mostrar la lista de navegación cuando se agrega la clase 'active' */
-.navbar-right.active {
+.navbar-list.active {
     display: flex;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -128,9 +129,6 @@
     flex-direction: column;
     align-items: flex-end;
 }
-
-
-
 
 nav ul {
     list-style: none;
@@ -144,63 +142,80 @@ nav li {
 }
 
 
-navbar-index {
+/* navbar-index {
     background-color: transparent;
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 10px 0 10px;
-}
+} */
 
-@media(min-width:0px) and (max-width:576px) {
+
+
+@media(min-width:0px) and (max-width:919px) {
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 20px;
     }
 
     nav ul {
         display: none;
     }
-}
 
-@media(min-width:576px) {
-    nav {
-        display: flex;
-    }
+    /*Aca empieza lo nuevo */
 
-    nav ul {
+    .navbar-list {
         display: none;
     }
-}
 
-@media(min-width:768px) {
-    nav {
-        display: flex;
-
-    }
-
-    nav ul {
-        display: none;
-    }
-}
-
-@media(min-width:992px) {
     .burger-menu {
-        display: none;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 5px;
+        color: white;
     }
 
-    nav {
-        display: flex;
+    .burger-menu.active {
+        display: block;
     }
 
-    nav ul {
+    /* Agrega estilos para las listas de navegación en pantallas pequeñas */
+    .navbar-left.active {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            position: absolute;
+            top: 60%; /* Alinea las listas debajo del burger-menu */
+            right: 0; /* Alinea las listas a la derecha */
+            /* Elimina cualquier fondo gris o estilos no deseados aquí */
+            padding: 10px; /* Espacio entre elementos si lo deseas */
+            z-index: 101; /* Asegura que las listas estén encima de otros elementos */
+        }
+
+    .navbar-right.active {
         display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 125%; /* Alinea las listas debajo del burger-menu */
+        right: 0; /* Alinea las listas a la derecha */
+        /* Elimina cualquier fondo gris o estilos no deseados aquí */
+        padding: 10px; /* Espacio entre elementos si lo deseas */
+        z-index: 101; /* Asegura que las listas estén encima de otros elementos */
     }
+
+    .navbar-left.active li,
+    .navbar-right.active li {
+        margin: 5px; /* Ajusta la cantidad de margen según tus preferencias */
+    }
+
+
 }
 
-@media(min-width:1200px) {
+@media(min-width:920px) {
     .burger-menu {
         display: none;
     }
@@ -210,6 +225,7 @@ navbar-index {
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
+        padding: 40px;
     }
 
     nav ul {
@@ -217,3 +233,4 @@ navbar-index {
         align-items: center;
     }
 }
+
