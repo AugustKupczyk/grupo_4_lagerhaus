@@ -2,11 +2,12 @@
     box-sizing: border-box;
 }
 
-body {
+.div-carrito-vacio {
+    height: 100vh;
     background-image: url("/imgs/products/MIX DE BURGERS.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y:31%;
+    background-position-y: 31%;
 }
 
 p,
@@ -19,11 +20,12 @@ h6 {
     color: white;
 }
 
+
 .div-logo-lager {
     display: flex;
     width: auto;
     justify-content: center;
-    height: 20vh;
+    height: 15vh;
 }
 
 .mensaje-carrito {
@@ -32,4 +34,26 @@ h6 {
 
 .hace-tu-pedido:visited {
     color: white;
+}
+
+@media(min-width:768px) {
+    .div-carrito-vacio {
+        height: 796px;
+    }
+}
+
+@media(min-width:920px) {
+    .div-carrito-vacio {
+        height: 795px;
+    }
+    .div-logo-lager{
+        height: 20vh;
+    }
+}
+
+
+@media(min-width:1600px) {
+    .div-carrito-vacio {
+        height: 883px;
+    }
 }

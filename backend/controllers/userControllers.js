@@ -70,11 +70,7 @@ const controllers = {
 
     loginUser: async (req, res) => {
         try {
-            console.log(req.body);
             const searchedUser = await Usuario.findOne({ where: { email: req.body.email } });
-
-            console.log(req.body.password);
-            console.log(searchedUser.contraseña);
 
             const isCorrect = await bcrypt.compare(req.body.password, searchedUser.contraseña);
 

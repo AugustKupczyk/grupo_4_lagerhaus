@@ -68,6 +68,7 @@ footer {
 }
 
 #redes-paragraph {
+    font-size: small;
     color: white;
     text-align: center;
 }
@@ -117,6 +118,9 @@ footer {
     justify-content: center;
 }
 
+.fa-brands{
+font-size: 20px;
+}
 
 #paragraph-footer {
     color: white;
@@ -126,6 +130,7 @@ footer {
     margin-top: 10px;
     /* Agrega espacio superior */
     position: absolute;
+    font-weight: normal;
 }
 
 /* Media query para pantallas de 360px o más */

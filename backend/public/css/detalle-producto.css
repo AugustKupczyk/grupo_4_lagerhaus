@@ -101,7 +101,7 @@ p, h1, h2, h3, h4, h5, h6 {
     background-color: orange;
     color: black;
     font-weight: bolder;
-    padding: 5px;
+    padding: 4px;
     border: 1px solid orange;
     border-radius: 50px;
     text-align: center;
@@ -114,6 +114,13 @@ p, h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
 }
 
+
+@media(min-width:360px){
+    .agregar-quitar-button-detail {
+        padding: 0px;
+        height: 40px;
+    }
+}
 
 @media(min-width:768px){
 

@@ -1,3 +1,7 @@
+body{
+    color: white;
+}
+
 p{
     font-size: 22px;
     align-self: center;
@@ -31,6 +35,23 @@ button{
     width: 70vw;
     align-self: center;
     align-items: flex-start
+}
+
+.form-label{
+    margin-bottom: 5px;
+}
+
+.error-messages{
+    color: red;
+}
+
+#enviar{
+    color: whitesmoke;
+}
+
+#category{
+    color: whitesmoke;
+    margin-bottom: 20px;
 }
 
 @media (min-width:920px){

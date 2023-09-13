@@ -2,109 +2,95 @@ footer {
     padding: 20px;
 }
 
-h2 {
+h3{
     color: orange;
     text-align: center;
     padding: 0px 0px 10px 0px;
 }
 
-.fotos {
+.carousel-container {
     position: relative;
-    /* overflow: hidden; */
-    /* width: 100vw; */
-    /* max-height: 883px; */
-    box-sizing: content-box;
-  }
-  
-  .carousel {
+    overflow: hidden;
+}
+
+.carousel-slides {
     display: flex;
     transition: transform 0.5s ease;
-  }
-  
-  .carousel-slide {
+}
+
+.carousel-slide {
     flex: 0 0 100%;
-  }
-  
-  .carousel-slide img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  #prevButton, #nextButton {
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 510px;
+}
+
+.carousel-controls {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  #prevButton {
-    left: 10px;
-  }
-  
-  #nextButton {
-    right: 10px;
-  }
-  
-
-.foto-top-container {
-    height: 50%;
-    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
 }
 
-.foto-top {
+.prev-button,
+.next-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+    display: none;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    /* Ajusta la posición vertical según tus preferencias */
+    left: 0;
+    right: 0;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    z-index: 3;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.indicator.active {
+    background-color: #333;
+}
+
+.carousel-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-}
-
-.foto-top.fade-in {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-    /* Duración de la animación */
-}
-
-.fotos-container {
-    height: 50%;
-    display: flex;
-    gap: 10px;
-}
-
-.foto-bottom-container {
-    width: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.foto-bottom {
-    width: 125%;
-    height: 100%;
-}
-
-.foto-bottom.fade-in {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-    /* Duración de la animación */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Color semitransparente (ajusta la opacidad según tu preferencia) */
+    z-index: 1;
+    /* Asegura que esté por encima de las imágenes del carrusel */
 }
 
 #paragraph-footer {
     color: white;
     font-size: 0.7rem;
     text-align: initial;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
 }
 
 #texto-logo {
@@ -136,12 +122,12 @@ h2 {
 
 .fa-brands {
     color: orange;
-    /* font-size: 30px; */
+    font-size: 20px;
 }
 
 .redes-container {
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -168,12 +154,9 @@ p {
         padding-left: 20px;
     }
 
-    .foto-bottom {
-        object-fit: cover;
-    }
-
-    .foto-top {
-        object-fit: cover;
+    .carousel-slide img {
+        max-width: 100%;
+        height: 618px;
     }
 
 }
@@ -183,28 +166,25 @@ p {
         gap: 40px;
         padding-left: 10px;
     }
+
+    .carousel-slide img {
+        max-width: 100%;
+        height: 852px;
+    }
 }
 
 @media (min-width:1200px) {
-    .fotos {
-        height: 110vh;
+    .carousel-slide img {
+        max-width: 100%;
+        height: 852px;
     }
 
-    .foto-top-container {
-        height: 50%;
-        margin-bottom: 10px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
+    h3{
+        font-size: 30px;
     }
 
-    .foto-top {
-        height: 170%;
-    }
-
-    .foto-bottom {
-        width: 100%;
-        height: 110%;
+    .carousel-indicators {
+        bottom: 30px;
     }
 
     .sponsors {
@@ -223,5 +203,29 @@ p {
     .foto-sponsors {
         width: 60%;
         height: 100%;
+    }
+}
+
+@media (min-width:1600px) {
+    .image-container {
+        width: 100%;
+
+        overflow: hidden;
+        /* 50% horizontal, 0 vertical (centro superior) */
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-indicators {
+        bottom: 40px;
+    }
+
+    .carousel-slide img {
+        max-width: 100%;
+        max-height: 940px;
     }
 }

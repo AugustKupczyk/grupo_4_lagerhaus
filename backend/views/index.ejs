@@ -15,21 +15,53 @@
 
 
     <main>
-        <section class="fotos">
-            <div class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slides">
                 <div class="carousel-slide">
-                    <img src="/imgs/FOTO SOCIAL 4.jpg" alt="Foto Social" class="foto-top fade-in">
+                    <div class="image-container">
+                        <img src="/imgs/products/1686089746026-burger-doble-smash.JPG" alt="Imagen 1">
+                    </div>
                 </div>
                 <div class="carousel-slide">
-                    <img src="/imgs/products/sandwich-double-down.jpg" alt="Foto Social" class="foto-bottom fade-in">
+                    <div class="image-container">
+                        <img src="/imgs/FOTO SOCIAL 1.jpg" alt="Imagen 2">
+                    </div>
                 </div>
                 <div class="carousel-slide">
-                    <img src="/imgs/FOTO SOCIAL 2.jpg" alt="Foto Social" class="foto-bottom fade-in">
+                    <div class="image-container">
+                        <img src="/imgs/products/sandwich-double-down.jpg" alt="Imagen 3">
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="image-container">
+                        <img src="/imgs/FOTO SOCIAL 5.jpg" alt="Imagen 4">
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="image-container">
+                        <img src="/imgs/products/tapeo-tequeños.jpg" alt="Imagen 5">
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="image-container">
+                        <img src="/imgs/FOTO SOCIAL 3.jpg" alt="Imagen 6">
+                    </div>
                 </div>
             </div>
-            <button id="prevButton">Anterior</button>
-            <button id="nextButton">Siguiente</button>
-        </section>
+            <ul class="carousel-indicators">
+                <li class="indicator active"></li>
+                <li class="indicator"></li>
+                <li class="indicator"></li>
+                <li class="indicator"></li>
+                <li class="indicator"></li>
+                <li class="indicator"></li>
+            </ul>
+            <div class="carousel-controls">
+                <button class="prev-button">&#9664;</button>
+                <button class="next-button">&#9654;</button>
+            </div>
+        </div>
+
 
 
     </main>
@@ -41,6 +73,7 @@
         <%- include("./partials/footer") %>
             <p id="paragraph-footer">© 2018 Todos los derechos reservados. LAGERHAUS.</p>
     </footer>
+
 
 </body>
 
