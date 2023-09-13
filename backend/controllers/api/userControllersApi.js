@@ -58,6 +58,7 @@ const userControllers = {
         // Agrega otras propiedades del usuario aquí
         image: `http://localhost:3030${user.img}`,
       };
+      console.log(response.image);
 
       res.json(response);
     } catch (error) {

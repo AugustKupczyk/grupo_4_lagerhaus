@@ -25,7 +25,6 @@ const controllers = {
 
     registerUser: async (req, res) => {
         try {
-            console.log(req.body)
             const { nombre, apellido, email, password,nacimiento, direccion } = req.body;
             const saltRounds = 12;
             const hashedPassword = await bcrypt.hash(password, saltRounds);
@@ -40,14 +39,14 @@ const controllers = {
                 contraseña: hashedPassword,
                 nacimiento,
                 direccion,
-                img: req.file ? `/imgs/users/${req.file.filename}` : "user_placeholder.png",
+                img: req.file ? `${req.file.filename}` : "user_placeholder.png",
                 rol_id,
                 // Agregar otros campos según sea necesario
             });
 
             console.log('User Created:', createdUser); // Agrega este console log
 
-            const userWithoutPassword = { ...createdUser.get(), contraseña: undefined, id: undefined };
+            const userWithoutPassword = { ...createdUser.get(), contraseña: undefined, id: createdUser.id };
 
             req.session.user = userWithoutPassword;
 

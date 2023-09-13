@@ -1,18 +1,19 @@
-.ambos-contenedores{
-    display:flex;
+.ambos-contenedores {
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.title{
+.title {
     color: #ffa500;
     text-align: center;
     font-size: 18px;
 }
 
-.contenedor-local1, .contenedor-local2{
+.contenedor-local1,
+.contenedor-local2 {
     width: 90vw;
-    margin:20px 20px 10px 20px;
+    margin: 20px 20px 10px 20px;
     padding: 20px 20px 20px 20px;
     border: 1px solid #ffa500;
     display: flex;
@@ -22,7 +23,7 @@
     color: white;
 }
 
-.foto-local{
+.foto-local {
     width: 100%;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -30,46 +31,92 @@
 
 }
 
-.titulo-local{
+.titulo-local {
     margin-bottom: 10px;
 
 }
 
-.descripcion-local{
+.descripcion-local {
     margin-bottom: 5px;
-    line-height: 22px ;
+    line-height: 22px;
     text-align: justify;
 }
 
+.main-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
 
-@media (min-width:920px){
-    .title{
+#paragraph-footer {
+    color: white;
+    font-size: 0.7rem;
+    position: absolute;
+}
+
+.fa-brands {
+    color: orange;
+    font-size: 20px;
+}
+
+.redes-container {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#redes-paragraph {
+    margin-top: 15px;
+    color: orange;
+    font-weight: bold;
+    font-size: medium;
+    text-align: center;
+}
+
+#paragraph-footer {
+    color: white;
+    font-size: 0.7rem;
+    text-align: initial;
+}
+
+
+@media (min-width:920px) {
+    .title {
         font-size: 30px;
     }
-    .contenedor-local1{
+
+    .contenedor-local1 {
         width: 70vw;
-        flex-direction:row;
-        
+        flex-direction: row;
+
     }
-    .contenedor-local2{
+
+    .contenedor-local2 {
         width: 70vw;
-        flex-direction:row-reverse;
+        flex-direction: row-reverse;
     }
-    .foto-local{
+
+    .foto-local {
         width: 40%;
         height: 100%;
         margin-bottom: 0px;
     }
-    .titulo-y-descripcion{
+
+    .titulo-y-descripcion {
         margin: 10px 20px 0px 20px;
     }
-    .titulo-local{
+
+    .titulo-local {
         font-size: 25px;
-        margin-bottom: 20px ;
+        margin-bottom: 20px;
     }
-    .descripcion-local{
+
+    .descripcion-local {
         font-size: 18px;
-        line-height: 30px ;
+        line-height: 30px;
     }
 
 
